@@ -1,4 +1,4 @@
-package cardGame;
+package cardGame.screens;
 
 public interface Screen {
 	

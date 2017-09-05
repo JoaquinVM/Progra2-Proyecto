@@ -1,6 +1,6 @@
-package cardGame;
+package cardGame.screens;
 
-public class GameScreen implements Screen{
+public class GameScreen implements Screen {
 
 	@Override
 	public void show() {
