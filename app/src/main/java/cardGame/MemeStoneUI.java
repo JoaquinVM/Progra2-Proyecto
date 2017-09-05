@@ -30,7 +30,7 @@ public class MemeStoneUI implements UI{
 			}
 		}
 		//Joaco ejecuta en blue stacks!!
-		//Mierda
+
 	}
 	
 	public void configureGrid(int numberOfRows, int numberOfColumns, int verticalSpacing, int horizontalSpacing, int textSize){
