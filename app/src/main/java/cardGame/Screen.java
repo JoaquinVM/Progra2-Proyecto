@@ -10,6 +10,6 @@ public interface Screen {
 
 	public void hide();
 
-	//hola samuel
+	//hola rodri
 	
 }
