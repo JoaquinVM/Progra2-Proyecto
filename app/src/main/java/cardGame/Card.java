@@ -8,7 +8,7 @@ public class Card {
     private int cost;
     private String name;
 
-    public Card(String name, int costo) {
+    public Card(String name, int cost) {
         this.name = name;
         this.cost = cost;
     }
