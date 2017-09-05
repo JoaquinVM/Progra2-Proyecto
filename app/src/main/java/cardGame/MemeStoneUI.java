@@ -23,10 +23,10 @@ public class MemeStoneUI implements UI{
 
 	@Override
 	public void initialiseInterface() {
-		configureGrid(2, 8, 1, 1, 0);
-		for(int i = 0; i < 2; i++){
+		configureGrid(3, 8, 1, 1, 0);
+		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 8; j++){
-				gui.setImageOnCell(i, j, "hCard");
+				gui.setImageOnCell(i, j, "fondo");
 			}
 		}
 		
