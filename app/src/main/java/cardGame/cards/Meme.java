@@ -14,6 +14,7 @@ public class Meme extends Card {
     private boolean poisonous = false;
     private boolean charge = false;
     private boolean speelInmune = false;
+    private boolean canAttack = false;
 
     public Meme(String name, int cost, int damage, int health) {
         super(name, cost);
@@ -37,7 +38,11 @@ public class Meme extends Card {
         this.speelInmune = spellinmune;
     }
 
-    public void draw(){
+    public void setCanAttack(boolean canAttack){
+        this.canAttack = canAttack;
+    }
+
+    public void image(){
         Assets.getInstance().image(this);
     }
 }
