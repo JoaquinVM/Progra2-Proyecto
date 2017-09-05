@@ -30,6 +30,7 @@ public class MemeStoneUI implements UI{
 			}
 		}
 		//Joaco ejecuta en blue stacks!!
+		//klzdfksdjfnskd
 
 	}
 	
