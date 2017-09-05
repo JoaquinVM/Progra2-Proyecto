@@ -25,12 +25,11 @@ public class MemeStoneUI implements UI{
 	public void initialiseInterface() {
 		configureGrid(3, 8, 1, 1, 0);
 		for(int i = 0; i < 3; i++){
-
 			for(int j = 0; j < 8; j++){
 				gui.setImageOnCell(i, j, "fondo");
 			}
 		}
-		//Joaco ejecuta en blue stacks
+		//Joaco ejecuta en blue stacks!!!
 	}
 	
 	public void configureGrid(int numberOfRows, int numberOfColumns, int verticalSpacing, int horizontalSpacing, int textSize){
