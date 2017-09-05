@@ -1,4 +1,4 @@
-package cardGame;
+package cardGame.cards;
 
 /**
  * Created by Joaco99 on 05/09/2017.

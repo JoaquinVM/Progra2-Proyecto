@@ -2,7 +2,7 @@ package cardGame.utils;
 
 import java.util.HashMap;
 
-import cardGame.Card;
+import cardGame.cards.Card;
 import cardGame.MemeStoneUI;
 
 /**
@@ -10,11 +10,11 @@ import cardGame.MemeStoneUI;
  */
 
 public class Assets {
-    private Assets instance = new Assets();
+    private static Assets instance = new Assets();
     private MemeStoneUI ui;
     private HashMap<Card, String> map = new HashMap<>();
 
-    public Assets getInstance(){
+    public static Assets getInstance(){
         return instance;
     }
 
