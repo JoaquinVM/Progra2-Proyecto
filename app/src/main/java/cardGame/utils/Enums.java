@@ -5,10 +5,11 @@ package cardGame.utils;
  */
 
 public class Enums {
-    public enum Tipo{
-        FUEGO,
-        HIELO,
-        AIRE,
-        TIERRA
+    public enum playerType{
+        FIRE,
+        ICE,
+        WIND,
+        EARTH
     }
+
 }

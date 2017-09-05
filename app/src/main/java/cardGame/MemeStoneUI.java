@@ -3,11 +3,10 @@ package cardGame;
 import edu.upb.lp.progra.adapterFiles.AndroidGameGUI;
 import edu.upb.lp.progra.adapterFiles.UI;
 
-public class CardGameUI implements UI{
+public class MemeStoneUI implements UI{
 
 	AndroidGameGUI gui;
-	public CardGameUI(AndroidGameGUI gui) {
-
+	public MemeStoneUI(AndroidGameGUI gui) {
 		this.gui = gui;
 	}
 	@Override
@@ -24,10 +23,10 @@ public class CardGameUI implements UI{
 
 	@Override
 	public void initialiseInterface() {
-		configureGrid(3, 8, 0, 0, 0);
-		for(int i = 0; i < 3; i++){
+		configureGrid(2, 8, 1, 1, 0);
+		for(int i = 0; i < 2; i++){
 			for(int j = 0; j < 8; j++){
-				gui.setImageOnCell(i, j, "alexis");
+				gui.setImageOnCell(i, j, "hCard");
 			}
 		}
 		
@@ -40,12 +39,4 @@ public class CardGameUI implements UI{
 	public void setImageOnCell(int vertical, int horizontal, String image){
 		gui.setImageOnCell(vertical, horizontal, image);
 	}
-
-
-
-
-
-
-
-
 }
