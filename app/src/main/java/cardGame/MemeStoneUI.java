@@ -3,10 +3,10 @@ package cardGame;
 import edu.upb.lp.progra.adapterFiles.AndroidGameGUI;
 import edu.upb.lp.progra.adapterFiles.UI;
 
-public class CardGameUI implements UI{
+public class MemeStoneUI implements UI{
 
 	AndroidGameGUI gui;
-	public CardGameUI(AndroidGameGUI gui) {
+	public MemeStoneUI(AndroidGameGUI gui) {
 		this.gui = gui;
 	}
 	@Override

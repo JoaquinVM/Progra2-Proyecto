@@ -5,19 +5,20 @@ package cardGame;
  */
 
 public class Card {
-    private int costo;
-    private String nombre;
+    private int cost;
+    private String name;
 
-    public Card(String nombre, int costo) {
-        this.nombre = nombre;
-        this.costo = costo;
+    public Card(String name, int costo) {
+        this.name = name;
+        this.cost = cost;
     }
 
-    public int getCosto() {
-        return costo;
+    public int getCost() {
+        return cost;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
+
 }

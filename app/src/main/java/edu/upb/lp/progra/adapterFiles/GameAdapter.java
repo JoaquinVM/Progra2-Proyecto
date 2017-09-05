@@ -1,6 +1,6 @@
 package edu.upb.lp.progra.adapterFiles;
 
-import cardGame.CardGameUI;
+import cardGame.MemeStoneUI;
 
 
 /**
@@ -11,6 +11,6 @@ import cardGame.CardGameUI;
  */
 public class GameAdapter {
 	public static UI selectGame(AndroidGameGUI gui) {
-		return new CardGameUI(gui);
+		return new MemeStoneUI(gui);
 	}	
 }
