@@ -29,6 +29,7 @@ public class MemeStoneUI implements UI{
 				gui.setImageOnCell(i, j, "fondo");
 			}
 		}
+		//jvhvbhjbvj
 		
 	}
 	
