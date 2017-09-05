@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\colors_blue.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\colors_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_happy_bug_selected.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_happy_bug_selected.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_dead_bug_selected.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_dead_bug_selected.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_sad_bug.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_sad_bug.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\colors_white.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\colors_white.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_sad_bug_selected.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_sad_bug_selected.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_happy_bug.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_happy_bug.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_old_bug_selected.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_old_bug_selected.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_hungry_bug_selected.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_hungry_bug_selected.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_old_bug.jpg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_old_bug.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_dead_bug.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_dead_bug.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_hungry_bug.jpeg",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_hungry_bug.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\colors_grey.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\colors_grey.png"
+    }
+]
