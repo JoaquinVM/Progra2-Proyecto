@@ -20,7 +20,14 @@ public abstract class Player {
     public void damaged(int damage){
         health-=damage;
     }
+    public int getHealth(){
+        return health;
+    }
+    public String getType(){
+        return type;
+    }
     public Game getGame(){
+
         return game;
     }
     public abstract void power(Meme meme);
