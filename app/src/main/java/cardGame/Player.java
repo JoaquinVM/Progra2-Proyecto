@@ -27,7 +27,6 @@ public abstract class Player {
         return type;
     }
     public Game getGame(){
-
         return game;
     }
     public abstract void power(Meme meme);
