@@ -20,4 +20,10 @@ public class Game {
     public void burn(Meme meme) {
 
     }
+    public void increaseHealth(int n){
+
+    }
+    public void attackAll(int n){
+
+    }
 }

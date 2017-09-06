@@ -9,11 +9,14 @@ import cardGame.cards.Meme;
  */
 
 public class PlayerFire extends Player {
-    public PlayerFire(){
-        super("Fire",30);
+    public PlayerFire() {
+
+        super("Fire", 30);
     }
+
     @Override
-    public void power(Meme meme){
+    public void power(Meme meme) {
+
         getGame().burn(meme);
     }
 }

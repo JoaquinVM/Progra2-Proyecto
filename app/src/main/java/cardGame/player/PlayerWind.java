@@ -15,6 +15,6 @@ public class PlayerWind extends Player {
     }
     @Override
     public void power(Meme meme){
-
+        getGame().attackAll(1);
     }
 }
