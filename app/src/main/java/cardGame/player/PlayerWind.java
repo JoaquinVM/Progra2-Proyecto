@@ -14,7 +14,7 @@ public class PlayerWind extends Player {
         super("Air",30);
     }
     @Override
-    public void power(Meme meme){
-        getGame().attackAll(1);
+    public void power(Meme mleme){
+            getGame().attackAl(1);
     }
 }

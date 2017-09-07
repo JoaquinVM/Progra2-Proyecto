@@ -1,13 +1,24 @@
 package cardGame.screens;
 
+import cardGame.MemeStoneUI;
+
 /**
  * Created by Joaco99 on 06/09/2017.
  */
 
-public class MenuScreen implements Screen {
+
+public class MenuScreen implements Screen  {
+
+    private MemeStoneUI ui;
+
+
+    public MenuScreen(MemeStoneUI ui){
+        this.ui = ui;
+    }
     @Override
+
     public void show() {
-        //TODO
+        ui.configureGrid(4,3,0,0,0);
     }
 
     @Override
