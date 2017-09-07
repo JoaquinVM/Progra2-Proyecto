@@ -11,10 +11,10 @@ import cardGame.cards.Meme;
 
 public class PlayerWind extends Player {
     public PlayerWind(){
-        super("Air",30);
+        super(30);
     }
     @Override
-    public void power(Meme mleme){
-            getGame().attackAl(1);
+    public void power(Meme meme){
+        getGame().damageAll(1);
     }
 }

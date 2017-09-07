@@ -11,7 +11,7 @@ import cardGame.cards.Meme;
 public class PlayerFire extends Player {
     public PlayerFire() {
 
-        super("Fire", 30);
+        super(30);
     }
 
     @Override

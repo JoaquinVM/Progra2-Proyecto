@@ -23,7 +23,9 @@ public class MemeStoneUI implements UI{
 
 	@Override
 	public void initialiseInterface() {
+		gui.setBottomSectionProportion(0);
 		configureGrid(3, 8, 1, 1, 0);
+
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 8; j++){
 				gui.setImageOnCell(i, j, "alexis");

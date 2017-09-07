@@ -9,25 +9,27 @@ import cardGame.cards.Meme;
  */
 
 
-public abstract class Player implements Damagable{
+public abstract class Player implements Damagable {
     private int health;
-    private String name;
     private Deck deck;
     private Game game;
 
     private boolean dead = false;
-    public Player(String type, int health){
-        this.health=health;
+
+    public Player(int health) {
+        this.health = health;
     }
-    public int getHealth(){
+
+    public int getHealth() {
         return health;
     }
+
     public abstract void power(Meme meme);
 
     @Override
     public void damage(int damage) {
         health -= damage;
-        if(health <= 0){
+        if (health <= 0) {
             dead = true;
         }
     }
@@ -36,7 +38,7 @@ public abstract class Player implements Damagable{
         return game;
     }
 
-    private void setDeck(Deck deck){
+    private void setDeck(Deck deck) {
         this.deck = deck;
     }
 

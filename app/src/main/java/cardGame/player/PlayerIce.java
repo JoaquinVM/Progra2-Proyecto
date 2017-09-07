@@ -10,7 +10,7 @@ import cardGame.cards.Meme;
 
 public class PlayerIce extends Player {
     public PlayerIce(){
-        super("Ice",30);
+        super(30);
     }
     @Override
     public void power(Meme meme){
