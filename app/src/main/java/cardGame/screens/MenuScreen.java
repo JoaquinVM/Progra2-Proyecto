@@ -28,7 +28,11 @@ public class MenuScreen implements Screen  {
 
     @Override
     public void onCellPressed(int v, int h) {
-        // TODO
+        if(v=2 && h=2){
+
+        }else if(v=2 && h=3){
+
+        }
     }
 
     @Override
