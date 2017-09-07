@@ -27,5 +27,10 @@ public class Game {
     }
     public void attackAll(int n){
         //TODO pensar
+        //TODO que habra aqui?
+    }
+
+    public void dealDamage(Damagable d, int damage){
+        d.damage(damage);
     }
 }

@@ -1,15 +1,17 @@
 package cardGame.cards;
 
+import cardGame.Damagable;
 import cardGame.utils.Assets;
 
 /**
  * Created by Joaco99 on 05/09/2017.
  */
 
-public class Meme extends Card {
+public class Meme extends Card implements Damagable{
 
     private int damage;
     private int health;
+    private boolean dead = false;
     private boolean taunt = false;
     private boolean poisonous = false;
     private boolean charge = false;
@@ -50,8 +52,16 @@ public class Meme extends Card {
             health--;
         }
         // TODO falta que sea cada turno
+        //TODO game deberia hacer el burn
+
     }
     public void increaseHealth(int n, Meme healedMeme){
         health+=n;
+    }
+
+    @Override
+    public void damage(int damage) {
+        health -= damage;
+        dead = health <= 0;
     }
 }
