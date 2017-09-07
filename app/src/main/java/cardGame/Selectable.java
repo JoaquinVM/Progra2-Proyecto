@@ -7,10 +7,10 @@ package cardGame;
 public interface Selectable {
     //TODO improve
 
-    public boolean isSelected();
+    boolean isSelected();
 
-    public void select();
+    void select();
 
-    public void selectedAfter(Selectable s);
+    void selectedAfter(Selectable s);
 
 }

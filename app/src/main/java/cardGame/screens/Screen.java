@@ -2,14 +2,13 @@ package cardGame.screens;
 
 public interface Screen {
 	
-	public void show();
+	void show();
 	
-	public void update();
+	void update();
 	
-	public void onCellPressed(int v, int h);
+	void onCellPressed(int v, int h);
 
-	public void hide();
+	void hide();
 
-	//hola rodri
 	
 }

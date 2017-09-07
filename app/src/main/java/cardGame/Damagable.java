@@ -5,5 +5,5 @@ package cardGame;
  */
 
 public interface Damagable {
-    public void damage(int damage);
+    void damage(int damage);
 }
