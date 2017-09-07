@@ -11,5 +11,6 @@ public class Enums {
         WIND,
         EARTH
     }
+    //TODO check if it is a necessary class
 
 }

@@ -10,6 +10,8 @@ import cardGame.MemeStoneUI;
  */
 
 public class Assets {
+    //TODO check if class do something important or is dispensable
+
     private static Assets instance = new Assets();
     private MemeStoneUI ui;
     private HashMap<Card, String> map = new HashMap<>();

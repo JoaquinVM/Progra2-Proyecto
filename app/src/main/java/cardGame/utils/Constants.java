@@ -6,4 +6,5 @@ package cardGame.utils;
 
 public class Constants {
     public static final int MAX_CARDS_PER_DECK = 20;
+    //TODO add alll constants of the game
 }
