@@ -47,14 +47,7 @@ public class Meme extends Card implements Damagable{
     public void image(){
         Assets.getInstance().image(this);
     }
-    public void burn(){
-        while(health>=0) {
-            health--;
-        }
-        // TODO falta que sea cada turno
-        //TODO game deberia hacer el burn
 
-    }
     public void increaseHealth(int n, Meme healedMeme){
         health+=n;
     }

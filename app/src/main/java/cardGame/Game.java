@@ -24,14 +24,14 @@ public class Game {
     }
 
     public void burn(Meme meme) {
-        meme.burn();
+        //TODO completar
     }
 
     public void increaseHealth(int n, Meme meme) {
         meme.increaseHealth(n, meme);
     }
 
-    public void attackAll(int n) {
+    public void damageAll(int n) {
         //TODO pensar
         //TODO que habra aqui?
     }
