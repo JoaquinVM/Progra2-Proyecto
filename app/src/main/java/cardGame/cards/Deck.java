@@ -27,8 +27,8 @@ public class Deck {
 
     public void shuffle(){
         Collections.shuffle(initialDeck);
-        for(Card card : initialDeck){
-            deck.push(card);
+        for(int i = 0; i < initialDeck.size(); i++){
+            deck.push(initialDeck.remove(0));
         }
     }
 
