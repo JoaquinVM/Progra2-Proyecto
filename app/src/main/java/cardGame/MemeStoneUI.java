@@ -26,7 +26,7 @@ public class MemeStoneUI implements UI{
 		configureGrid(3, 8, 1, 1, 0);
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 8; j++){
-				gui.setImageOnCell(i, j, "fondo");
+				gui.setImageOnCell(i, j, "alexis");
 			}
 		}
 		//Joaco ejecuta en blue stacks!!
