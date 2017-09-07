@@ -1,6 +1,7 @@
 package cardGame;
 
 
+import cardGame.cards.Deck;
 import cardGame.cards.Meme;
 
 /**
@@ -11,6 +12,8 @@ import cardGame.cards.Meme;
 public abstract class Player implements Damagable{
     private int health;
     private String name;
+    private Deck deck;
+    private Game game;
 
     private boolean dead = false;
     public Player(String type, int health){
@@ -28,4 +31,13 @@ public abstract class Player implements Damagable{
             dead = true;
         }
     }
+
+    public Game getGame() {
+        return game;
+    }
+
+    private void setDeck(Deck deck){
+        this.deck = deck;
+    }
+
 }
