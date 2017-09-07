@@ -33,7 +33,7 @@ public class Game {
 
     public void damageAll(int n) {
         //TODO pensar
-        //TODO que habra aqui?
+        //TODO que habra aqui?//ni idea
     }
 
     public void dealDamage(Damagable d, int damage) {
