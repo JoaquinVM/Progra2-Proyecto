@@ -30,6 +30,8 @@ public class Assets {
         return map.get(card.getName());
     }
 
-    public String image
+    public String image(){
+        return null;
+    }
 
 }
