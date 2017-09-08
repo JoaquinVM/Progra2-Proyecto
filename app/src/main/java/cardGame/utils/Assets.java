@@ -1,11 +1,7 @@
 package cardGame.utils;
 
-import android.preference.PreferenceActivity;
-
 import java.util.HashMap;
-import java.util.Objects;
 
-import cardGame.Buttom;
 import cardGame.cards.Card;
 import cardGame.MemeStoneUI;
 
@@ -35,11 +31,11 @@ public class Assets {
 
 }
 
-class Memeimage{
+class MemeImage {
     private int health;
     private Card card;
 
-    public Memeimage(Card c, int h){
+    public MemeImage(Card c, int h){
         health = h;
         card = c;
     }
@@ -52,5 +48,12 @@ class Memeimage{
         return card;
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof MemeImage){
+            MemeImage m = (MemeImage)o;
+            return health == m.getHealth() && card.equals(m.getCard());
+        }
+        return false;
+    }
 }
