@@ -1,5 +1,7 @@
 package cardGame.utils;
 
+import android.preference.PreferenceActivity;
+
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -35,5 +37,20 @@ public class Assets {
 
 class Memeimage{
     private int health;
-    private String name;
+    private Card card;
+
+    public Memeimage(Card c, int h){
+        health = h;
+        card = c;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+
 }

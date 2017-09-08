@@ -84,7 +84,8 @@ public class Meme extends Card implements Damagable{
     public boolean equals(Object o) {
         if(o instanceof Meme){
             Meme meme = (Meme)o;
-            return getName().equals(meme.getName()) && getCost() == meme.getCost() && maxHealth == meme.getMaxHealth();
+            return getName().equals(meme.getName()) && getCost() == meme.getCost() && maxHealth == meme.getMaxHealth()
+                    && damage == meme.getDamage();
         }
         return false;
     }
