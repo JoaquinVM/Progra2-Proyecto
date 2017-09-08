@@ -20,7 +20,7 @@ public abstract class Player implements Damagable {
     private Deck deck;
     private Game game;
     private List<Card> hand = new LinkedList<>();
-    private List<Card> arena = new LinkedList<>();
+    private List<Meme> arena = new LinkedList<>();
 
     private boolean dead = false;
 
@@ -66,5 +66,11 @@ public abstract class Player implements Damagable {
         this.deck = deck;
     }
 
+    public List<Meme> getArena() {
+        return arena;
+    }
 
+    public List<Card> getHand() {
+        return hand;
+    }
 }
