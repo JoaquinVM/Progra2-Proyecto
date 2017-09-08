@@ -52,5 +52,16 @@ public class CardDatabase {
                 game.heal(game.getPlayer(), 8);
             }
         };
+
+        Card notBad = new Card("not_bad", 4, game){
+            @Override
+            public void ability(Meme meme) {
+                game.damageRandomEnemies(2, 3);
+            }
+        };
+
+        Card trumpcito = new Card("trumpcito", 0, game){
+            //TODO
+        };
     }
 }

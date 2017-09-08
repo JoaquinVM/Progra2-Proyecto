@@ -57,9 +57,11 @@ public class Game {
         //TODO
     }
 
-    public void damageRandomEnemies(int numEnemy){
+    public void damageRandomEnemies(int numEnemy, int damage){
         Random r = new Random();
         for(int i = 0; i < numEnemy; i++){
+            int n = r.nextInt(player.getArena().size());
+            dealDamage(player.getArena().get(n), damage);
         }
     }
 
