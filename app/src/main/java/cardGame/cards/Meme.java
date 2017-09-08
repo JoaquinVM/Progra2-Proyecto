@@ -1,6 +1,7 @@
 package cardGame.cards;
 
 import cardGame.Damagable;
+import cardGame.Game;
 import cardGame.utils.Assets;
 
 /**
@@ -19,8 +20,8 @@ public class Meme extends Card implements Damagable{
     private boolean speelInmune = false;
     private boolean canAttack = false;
 
-    public Meme(String name, int cost, int damage, int health) {
-        super(name, cost);
+    public Meme(String name, int cost, Game game, int damage, int health) {
+        super(name, cost, game);
         this.damage = damage;
         this.health = health;
         maxHealth = health;

@@ -1,6 +1,10 @@
 package cardGame;
 
 
+import java.util.LinkedList;
+import java.util.List;
+
+import cardGame.cards.Card;
 import cardGame.cards.Deck;
 import cardGame.cards.Meme;
 import cardGame.utils.Constants;
@@ -15,6 +19,8 @@ public abstract class Player implements Damagable {
     private int maxHealth = Constants.MAX_PLAYER_HEALTH;
     private Deck deck;
     private Game game;
+    private List<Card> hand = new LinkedList<>();
+    private List<Card> arena = new LinkedList<>();
 
     private boolean dead = false;
 
@@ -44,6 +50,14 @@ public abstract class Player implements Damagable {
         }
     }
 
+    public void drawCard(){
+        hand.add(deck.drawCard());
+    }
+
+    public void summon(Meme meme){
+        arena.add(meme);
+    }
+
     public Game getGame() {
         return game;
     }
@@ -51,5 +65,6 @@ public abstract class Player implements Damagable {
     private void setDeck(Deck deck) {
         this.deck = deck;
     }
+
 
 }

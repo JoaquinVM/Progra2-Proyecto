@@ -23,6 +23,8 @@ public class Assets {
         this.ui = ui;
 
 
+
+
     }
 
     public String image(Object object){
