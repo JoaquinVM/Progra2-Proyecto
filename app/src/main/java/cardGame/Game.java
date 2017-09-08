@@ -12,6 +12,7 @@ public class Game {
     private MemeStoneUI memeUI;
     private Player player;
     private Player enemy;
+    private Random r = new Random();
 
     public Game(MemeStoneUI memeUI, Player player, Player enemy) {
         //TODO memeUI no se usa
@@ -41,11 +42,11 @@ public class Game {
 
     }
 
-    public void dealDamage(Damagable d, int damage) {
+    public void dealDamage(cardGame.Damagable d, int damage) {
         d.damage(damage);
     }
 
-    public void heal(Damagable d, int health){
+    public void heal(cardGame.Damagable d, int health){
         d.heal(health);
     }
 
@@ -58,11 +59,22 @@ public class Game {
     }
 
     public void damageRandomEnemies(int numEnemy, int damage){
-        Random r = new Random();
         for(int i = 0; i < numEnemy; i++){
             int n = r.nextInt(player.getArena().size());
             dealDamage(player.getArena().get(n), damage);
         }
+    }
+
+    public void healAllies(int health){
+        //TODO
+    }
+
+    public void resurrect(){
+        //TODO
+    }
+    public void discard(){
+        int n = r.nextInt(player.getHand().size());
+        player.getHand().remove(n);
     }
 
     public Player getPlayer() {

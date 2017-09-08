@@ -1,6 +1,5 @@
 package cardGame.cards;
 
-import cardGame.Damagable;
 import cardGame.Game;
 import cardGame.utils.Assets;
 
@@ -8,7 +7,7 @@ import cardGame.utils.Assets;
  * Created by Joaco99 on 05/09/2017.
  */
 
-public class Meme extends Card implements Damagable{
+public class Meme extends Card implements cardGame.Damagable {
 
     private int damage;
     private int health;
@@ -18,9 +17,10 @@ public class Meme extends Card implements Damagable{
     private boolean poisonous = false;
     private boolean charge = false;
     private boolean speelInmune = false;
+    private boolean freeze = false;
     private boolean canAttack = false;
 
-    public Meme(String name, int cost, Game game, int damage, int health) {
+    public Meme(String name, int cost, int damage, int health, Game game) {
         super(name, cost, game);
         this.damage = damage;
         this.health = health;
@@ -41,6 +41,10 @@ public class Meme extends Card implements Damagable{
 
     public void setSpellinmune(boolean spellinmune) {
         this.speelInmune = spellinmune;
+    }
+
+    public void setFreeze(boolean freeze) {
+        this.freeze = freeze;
     }
 
     public void setCanAttack(boolean canAttack){

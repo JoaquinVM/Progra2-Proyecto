@@ -14,13 +14,15 @@ import cardGame.utils.Constants;
  */
 
 
-public abstract class Player implements Damagable {
+public abstract class Player implements cardGame.Damagable {
     private int health;
     private int maxHealth = Constants.MAX_PLAYER_HEALTH;
+    private int mana = 0;
     private Deck deck;
     private Game game;
     private List<Card> hand = new LinkedList<>();
     private List<Meme> arena = new LinkedList<>();
+    private List<Meme> graveyard = new LinkedList<>();
 
     private boolean dead = false;
 
@@ -72,5 +74,20 @@ public abstract class Player implements Damagable {
 
     public List<Card> getHand() {
         return hand;
+    }
+
+    public List<Meme> getGraveyard() {
+        return graveyard;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public void increaseMana(){
+        mana++;
+        if(mana > 7){
+            mana = 7;
+        }
     }
 }
