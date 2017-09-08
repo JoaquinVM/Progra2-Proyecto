@@ -10,11 +10,16 @@ import cardGame.cards.Meme;
  */
 
 public class PlayerEarth extends Player {
+
     public PlayerEarth(){
         super(30);
     }
+
+
     @Override
     public void power(Meme meme){
         getGame().increaseHealth(4, meme);
     }
+
+
 }

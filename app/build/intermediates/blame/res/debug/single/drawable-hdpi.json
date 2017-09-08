@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     }

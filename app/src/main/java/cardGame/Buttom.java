@@ -9,6 +9,8 @@ import cardGame.utils.Assets;
 public class Buttom {
 
     private boolean touched;
+
+
     public void touched(){
         touched = !touched;
         if(touched){

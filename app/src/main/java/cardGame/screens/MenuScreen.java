@@ -15,8 +15,9 @@ public class MenuScreen implements Screen  {
     public MenuScreen(MemeStoneUI ui){
         this.ui = ui;
     }
-    @Override
 
+
+    @Override
     public void show() {
         ui.configureGrid(4,3,0,0,0);
     }
