@@ -6,4 +6,6 @@ package cardGame;
 
 public interface Damagable {
     void damage(int damage);
+
+    void heal(int health);
 }

@@ -3,6 +3,7 @@ package cardGame;
 
 import cardGame.cards.Deck;
 import cardGame.cards.Meme;
+import cardGame.utils.Constants;
 
 /**
  * Created by Rodrigo on 5/9/2017.
@@ -11,6 +12,7 @@ import cardGame.cards.Meme;
 
 public abstract class Player implements Damagable {
     private int health;
+    private int maxHealth = Constants.MAX_PLAYER_HEALTH;
     private Deck deck;
     private Game game;
 
@@ -31,6 +33,14 @@ public abstract class Player implements Damagable {
         health -= damage;
         if (health <= 0) {
             dead = true;
+        }
+    }
+
+    @Override
+    public void heal(int health) {
+        this.health += health;
+        if(this.health > maxHealth){
+            this.health = maxHealth;
         }
     }
 

@@ -11,6 +11,7 @@ public class Meme extends Card implements Damagable{
 
     private int damage;
     private int health;
+    private int maxHealth;
     private boolean dead = false;
     private boolean taunt = false;
     private boolean poisonous = false;
@@ -22,6 +23,7 @@ public class Meme extends Card implements Damagable{
         super(name, cost);
         this.damage = damage;
         this.health = health;
+        maxHealth = health;
     }
 
     public void setTaunt(boolean taunt) {
@@ -52,9 +54,39 @@ public class Meme extends Card implements Damagable{
         health+=n;
     }
 
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
     @Override
     public void damage(int damage) {
         health -= damage;
         dead = health <= 0;
+    }
+
+    @Override
+    public void heal(int health) {
+        this.health += health;
+        if(this.health > maxHealth){
+            this.health = maxHealth;
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof Meme){
+            Meme meme = (Meme)o;
+            return getName().equals(meme.getName()) && getCost() == meme.getCost() && maxHealth == meme.getMaxHealth()
+                    && 
+        }
+        return false;
     }
 }

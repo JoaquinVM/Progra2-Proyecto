@@ -1,7 +1,9 @@
 package cardGame.utils;
 
 import java.util.HashMap;
+import java.util.Objects;
 
+import cardGame.Buttom;
 import cardGame.cards.Card;
 import cardGame.MemeStoneUI;
 
@@ -10,11 +12,10 @@ import cardGame.MemeStoneUI;
  */
 
 public class Assets {
-    //TODO check if class do something important or is dispensable
 
     private static Assets instance = new Assets();
     private MemeStoneUI ui;
-    private HashMap<Card, String> map = new HashMap<>();
+    private HashMap<Object, String> map = new HashMap<>();
 
     public static Assets getInstance(){
         return instance;
@@ -26,12 +27,13 @@ public class Assets {
 
     }
 
-    public String image(Card card){
-        return map.get(card.getName());
+    public String image(Object object){
+        return map.get(object);
     }
 
-    public String image(){
-        return null;
-    }
+}
 
+class Memeimage{
+    private int health;
+    private String name;
 }
