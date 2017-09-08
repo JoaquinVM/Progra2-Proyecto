@@ -31,9 +31,21 @@ public class MemeStoneUI implements UI {
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 8; j++) {
-                gui.setImageOnCell(i, j, "fire_5");
             }
         }
+        gui.setImageOnCell(0, 0, "fire_20");
+        gui.setImageOnCell(2, 7, "ice_13");
+        for (int j = 1; j < 8; j++) {
+            gui.setImageOnCell(0, j, "di_caprio_2");
+        }
+        for (int j = 3; j < 7; j++) {
+            gui.setImageOnCell(1, j, "chuck_norris_3");
+        }
+
+        for (int j = 3; j < 5; j++) {
+            gui.setImageOnCell(2, j, "kitten_8");
+        }
+
 
         //CardPreviewScreen s = new CardPreviewScreen(this);
        // s.show();

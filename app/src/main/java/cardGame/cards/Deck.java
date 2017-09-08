@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
+import cardGame.Game;
 import cardGame.utils.Constants;
 
 /**
@@ -12,6 +13,7 @@ import cardGame.utils.Constants;
  */
 
 public class Deck {
+    private Game game;
 
     private List<Card> initialDeck = new LinkedList<>();
     private Stack<Card> deck = new Stack<>();
@@ -32,4 +34,7 @@ public class Deck {
         }
     }
 
+    public Game getGame() {
+        return game;
+    }
 }

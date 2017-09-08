@@ -1,6 +1,7 @@
 package cardGame;
 
-import cardGame.cards.Card;
+import java.util.Random;
+
 import cardGame.cards.Meme;
 
 /**
@@ -9,14 +10,14 @@ import cardGame.cards.Meme;
 
 public class Game {
     private MemeStoneUI memeUI;
-    private Player p1;
-    private Player p2;
+    private Player player;
+    private Player enemy;
 
-    public Game(MemeStoneUI memeUI, Player p1, Player p2) {
+    public Game(MemeStoneUI memeUI, Player player, Player enemy) {
         //TODO memeUI no se usa
         this.memeUI = memeUI;
-        this.p1 = p1;
-        this.p2 = p2;
+        this.player = player;
+        this.enemy = enemy;
     }
 
     public void freeze(Meme meme) {
@@ -31,12 +32,43 @@ public class Game {
         meme.increaseHealth(n, meme);
     }
 
-    public void damageAll(int n) {
+    public void damageAll(int damage) {
         //TODO pensar
         //TODO que habra aqui?//ni idea
+    }
+
+    public void damageEnemies(int damage){
+
     }
 
     public void dealDamage(Damagable d, int damage) {
         d.damage(damage);
     }
+
+    public void heal(Damagable d, int health){
+        d.heal(health);
+    }
+
+    public void destroy(Meme m){
+        //TODO
+    }
+
+    public void control(Meme m){
+        //TODO
+    }
+
+    public void damageRandomEnemies(int numEnemy){
+        Random r = new Random();
+        for(int i = 0; i < numEnemy; i++){
+        }
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Player getEnemy() {
+        return enemy;
+    }
+
 }
