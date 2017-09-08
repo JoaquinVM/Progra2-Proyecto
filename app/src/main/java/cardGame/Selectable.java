@@ -5,7 +5,6 @@ package cardGame;
  */
 
 public interface Selectable {
-    //TODO improve
 
     boolean isSelected();
 

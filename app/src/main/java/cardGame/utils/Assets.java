@@ -24,7 +24,6 @@ public class Assets {
         this.ui = ui;
 
 
-
     }
 
     public String image(Card card){

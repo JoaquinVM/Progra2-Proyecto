@@ -1,5 +1,6 @@
 package cardGame;
 
+import cardGame.screens.CardPreviewScreen;
 import edu.upb.lp.progra.adapterFiles.AndroidGameGUI;
 import edu.upb.lp.progra.adapterFiles.UI;
 
@@ -31,6 +32,9 @@ public class MemeStoneUI implements UI{
 				gui.setImageOnCell(i, j, "alexis");
 			}
 		}
+
+		CardPreviewScreen s = new CardPreviewScreen(this);
+		s.show();
 		//Joaco ejecuta en blue stacks!!
 		//klzdfksdjfnskd
 

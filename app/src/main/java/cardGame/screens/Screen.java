@@ -1,6 +1,6 @@
 package cardGame.screens;
 
-						public interface Screen {
+public interface Screen {
 	
 	void show();
 	
