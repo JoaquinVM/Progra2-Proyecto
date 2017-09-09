@@ -61,6 +61,7 @@ public class PlayerSelectionScreen implements Screen {
             gameScreen.setPlayer1(p);
         } else {
             gameScreen.setPlayer2(p);
+            hide();
         }
         player1 = false;
         show();
@@ -68,6 +69,7 @@ public class PlayerSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-
+        Screen sc= new CardSelectionScreen(ui);
+        sc.show();
     }
 }
