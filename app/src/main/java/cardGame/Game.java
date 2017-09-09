@@ -51,11 +51,11 @@ public class Game {
     }
 
     public void destroy(Meme m){
-        //TODO
+        m.killMeme(m);
     }
 
     public void control(Meme m){
-        //TODO
+
     }
 
     public void damageRandomEnemies(int numEnemy, int damage){
