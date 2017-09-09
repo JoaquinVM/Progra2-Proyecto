@@ -6,6 +6,7 @@ import cardGame.player.PlayerEarth;
 import cardGame.player.PlayerFire;
 import cardGame.player.PlayerIce;
 import cardGame.player.PlayerWind;
+import cardGame.utils.Constants;
 
 /**
  * Created by Rodrigo on 9/9/2017.
@@ -49,13 +50,13 @@ public class PlayerSelectionScreen implements Screen {
     public void onCellPressed(int v, int h) {
         Player p;
         if (v < 2 && h == 0) {
-            p = new PlayerFire();
+            p = new PlayerFire(Constants.FIRE_TYPE);
         } else if (v < 4 && h == 0) {
-            p = new PlayerIce();
+            p = new PlayerIce(Constants.ICE_TYPE);
         } else if (v < 2 && h == 2) {
-            p = new PlayerEarth();
+            p = new PlayerEarth(Constants.EARTH_TYPE);
         } else {
-            p = new PlayerWind();
+            p = new PlayerWind(Constants.WIND_TYPE);
         }
         if (player1) {
             gameScreen.setPlayer1(p);
