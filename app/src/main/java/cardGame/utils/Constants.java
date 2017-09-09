@@ -13,5 +13,10 @@ public class Constants {
     public static final String EARTH_POWER = "earth_power";
     public static final String WIND_POWER = "wind_power";
 
+    public static final String FIRE_TYPE = "fire";
+    public static final String ICE_TYPE = "ice";
+    public static final String EARTH_TYPE = "earth";
+    public static final String WIND_TYPE = "wind";
+
     //TODO add alll constants of the game
 }
