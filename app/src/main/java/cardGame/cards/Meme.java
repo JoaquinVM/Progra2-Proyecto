@@ -70,6 +70,9 @@ public class Meme extends Card implements cardGame.Damagable {
     public int getDamage() {
         return damage;
     }
+    public void killMeme(Meme meme){
+        meme.health=0;
+    }
 
     @Override
     public void damage(int damage) {
