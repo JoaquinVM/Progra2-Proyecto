@@ -41,8 +41,12 @@ public class CardSelectionScreen implements Screen {
         int o = 0;
         for(int v =0; v < 2; v++){
             for(int h = 0; h < 6;h++){
-                ui.setImageOnCell(v, h, lista.get(o).getName());
-                o++;
+                if(!(lista.get(o) == null)){
+                    ui.setImageOnCell(v, h, lista.get(o).getName());
+                    o++;
+                }else{
+                    ui.setImageOnCell(v,h,);
+                }
             }
         }
     }
