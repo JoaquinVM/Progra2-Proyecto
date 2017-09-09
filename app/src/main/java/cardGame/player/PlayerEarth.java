@@ -2,7 +2,8 @@ package cardGame.player;
 
 import cardGame.Player;
 import cardGame.cards.Meme;
-
+import cardGame.utils.Constants;
+import cardGame.utils.Enums;
 
 
 /**
@@ -11,8 +12,9 @@ import cardGame.cards.Meme;
 
 public class PlayerEarth extends Player {
 
-    public PlayerEarth(){
-        super(30);
+    public PlayerEarth(String type){
+        super(type);
+        setPowerImage(Constants.EARTH_POWER);
     }
 
 

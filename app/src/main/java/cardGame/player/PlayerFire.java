@@ -2,6 +2,8 @@ package cardGame.player;
 
 import cardGame.Player;
 import cardGame.cards.Meme;
+import cardGame.utils.Constants;
+import cardGame.utils.Enums;
 
 
 /**
@@ -9,9 +11,9 @@ import cardGame.cards.Meme;
  */
 
 public class PlayerFire extends Player {
-    public PlayerFire() {
-
-        super(30);
+    public PlayerFire(String type){
+        super(type);
+        setPowerImage(Constants.FIRE_POWER);
     }
 
     @Override

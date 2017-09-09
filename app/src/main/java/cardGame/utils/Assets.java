@@ -2,10 +2,12 @@ package cardGame.utils;
 
 import java.util.HashMap;
 
+import cardGame.Player;
 import cardGame.cards.Card;
 import cardGame.MemeStoneUI;
 import cardGame.cards.CardDatabase;
 import cardGame.cards.Meme;
+import cardGame.player.PlayerFire;
 
 /**
  * Created by Joaco99 on 05/09/2017.
@@ -38,13 +40,14 @@ public class Assets {
                 map.put(meme, meme.getName()+"_"+meme.getHealth());
             }
         }
-
-
-
     }
 
-    public String image(Object object){
-        return map.get(object);
+    public String image(Card card){
+        return map.get(card);
+    }
+
+    public String image(Player player, int health){
+        return player.getType() + "_" + health;
     }
 
 }

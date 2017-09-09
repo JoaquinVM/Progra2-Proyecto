@@ -5,12 +5,11 @@ package cardGame.utils;
  */
 
 public class Enums {
-    public enum playerType{
+    public static enum playerType{
         FIRE,
         ICE,
         WIND,
         EARTH
     }
-    //TODO check if it is a necessary class
 
 }

@@ -8,6 +8,7 @@ import cardGame.cards.Card;
 import cardGame.cards.Deck;
 import cardGame.cards.Meme;
 import cardGame.utils.Constants;
+import cardGame.utils.Enums;
 
 /**
  * Created by Rodrigo on 5/9/2017.
@@ -15,8 +16,10 @@ import cardGame.utils.Constants;
 
 
 public abstract class Player implements cardGame.Damagable {
-    private int health;
+    private String powerImage;
+    private String type;
     private int maxHealth = Constants.MAX_PLAYER_HEALTH;
+    private int health = Constants.MAX_PLAYER_HEALTH;
     private int mana = 0;
     private Deck deck;
     private Game game;
@@ -24,17 +27,26 @@ public abstract class Player implements cardGame.Damagable {
     private List<Meme> arena = new LinkedList<>();
     private List<Meme> graveyard = new LinkedList<>();
 
+    public Player(String type){
+        this.type = type;
+    }
+
     private boolean dead = false;
 
-    public Player(int health) {
-        this.health = health;
-    }
 
     public int getHealth() {
         return health;
     }
 
     public abstract void power(Meme meme);
+
+    public void setPowerImage(String powerImage){
+        this.powerImage = powerImage;
+    }
+
+    public String getPowerImage() {
+        return powerImage;
+    }
 
     @Override
     public void damage(int damage) {
@@ -89,5 +101,9 @@ public abstract class Player implements cardGame.Damagable {
         if(mana > 7){
             mana = 7;
         }
+    }
+
+    public String getType() {
+        return type;
     }
 }
