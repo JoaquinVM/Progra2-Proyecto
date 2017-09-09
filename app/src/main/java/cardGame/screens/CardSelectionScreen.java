@@ -13,8 +13,10 @@ import cardGame.cards.Card;
 public class CardSelectionScreen implements Screen {
     private MemeStoneUI ui;
     private Screen screen;
-    private List<Card> usedCards;
+    private List<Card> selectedCards;
     private  List<Card> cardList;
+    private int páginaCartasAEscoger = 0;
+    private boolean finalDeLista = false;
 
 
 
@@ -28,35 +30,57 @@ public class CardSelectionScreen implements Screen {
         this.screen = screen;
     }
 
-    public void recivirListas(List<Card> cardList){
-        List<Card> usedCards = new LinkedList<Card>();
+    public void recibirYOrdenarLista(List<Card> cardList){
+        //List<Card> usedCards = new LinkedList<Card>();TODO tienes que crearla durante la seleccion
+        Card aux = null;
+        for(int i = 0;i<cardList.size();i++){
+            for(int j = i +1 ;j<cardList.size()-1 ;j++){
+                if(cardList.get(i).getCost() > cardList.get(j).getCost()){
+                    aux = cardList.get(i);
+                    cardList.add(i, cardList.get(j));
+                    cardList.add(j, aux);
+                }
+            }
+        }
         this.cardList = cardList;
-        this.usedCards = usedCards;
+        //this.usedCards = usedCards;TODO
     }
 
 
 
-    public void setCardsOnBoard(List<Card> lista){
-        int indice = lista.size();
-        int o = 0;
+    public void setCardsOnBoardByButtom(List<Card> lista){
+        if(lista.get(páginaCartasAEscoger + 18) == null){
+          páginaCartasAEscoger = 0;
+        } else  {
+          páginaCartasAEscoger += 17;
+        }
+        int indice = páginaCartasAEscoger;
+        setCardsOnBoard(lista, indice);
+    }
+
+
+    public void setCardsOnBoard(List<Card> lista,int indice){
         for(int v =0; v < 2; v++){
             for(int h = 0; h < 6;h++){
-                if(!(lista.get(o) == null)){
-                    ui.setImageOnCell(v, h, lista.get(o).getName());
-                    o++;
+                if(!(lista.get(indice) == null)){
+                    ui.setImageOnCell(v, h, lista.get(indice).getName());
+                    indice++;
                 }else{
-                    ui.setImageOnCell(v,h,);
+                    ui.setImageOnCell(v,h, "fondo_v");
                 }
             }
         }
+    }
+
+    public void addCardsToDeck(){
+
     }
 
 
     @Override
     public void show() {
         ui.configureGrid(3,8,0,0,0);
-
-
+        setCardsOnBoard(cardList, 0);
     }
 
     @Override
@@ -68,19 +92,19 @@ public class CardSelectionScreen implements Screen {
     public void onCellPressed(int v, int h) {
         if(h == 6){
             if(v == 0){
-                //menu
+                //show
             } else if(v == 1){
                 //add
             } else {
-                //derecha cartas usadas
+                //fin
             }
         } else if(h ==7){
             if(v == 0){
-
+                setCardsOnBoardByButtom(cardList);
             } else if(v == 1){
                 //delete cartas usadas
             } else {
-                //fin
+                //derechaCartasSeleccionadas
             }
         }
 
@@ -88,7 +112,8 @@ public class CardSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-
+        //TODO a quiíen llamo despues
+        //a mi mismo si no es false
     }
 
 
