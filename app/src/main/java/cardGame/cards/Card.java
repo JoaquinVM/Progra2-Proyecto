@@ -16,6 +16,7 @@ public class Card {
         this.name = name;
         this.cost = cost;
         this.game = game;
+        //jufwejewj
     }
 
     public int getCost() {
