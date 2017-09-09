@@ -1,5 +1,6 @@
 package cardGame.cards;
 
+import cardGame.Damagable;
 import cardGame.Game;
 
 /**
@@ -29,7 +30,9 @@ public class Card {
         return game;
     }
 
-    public void ability(Meme meme){
+    public void ability(Meme meme){}
 
-    }
+    public void ability(Damagable damagable){}
+
+    public void ability(){}
 }
