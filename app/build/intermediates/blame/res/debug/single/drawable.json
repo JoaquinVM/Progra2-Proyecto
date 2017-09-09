@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\kitten_6.png"
     },
     {
-        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_dead_bug_selected.png",
-        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_dead_bug_selected.png"
-    },
-    {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tommy_2.png",
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\tommy_2.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_dead_bug_selected.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\bugs_dead_bug_selected.png"
     },
     {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\earth_5.png",
@@ -44,16 +44,20 @@
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\piter_el_koala_4.png"
     },
     {
-        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fondo_menu_juego.png",
-        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\fondo_menu_juego.png"
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kitten_5.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\kitten_5.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wind_15.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\wind_15.png"
     },
     {
-        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kitten_5.png",
-        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\kitten_5.png"
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fondo_menu_juego.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\fondo_menu_juego.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris5.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\chuck_norris5.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bugs_old_bug.jpg",
@@ -196,6 +200,10 @@
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\card_preview.jpg"
     },
     {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dr_pickels_3.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\dr_pickels_3.png"
+    },
+    {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\earth_3.png",
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\earth_3.png"
     },
@@ -262,6 +270,10 @@
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\earth_15.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\earth_15.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris3.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\chuck_norris3.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\alexis_5.png",
@@ -346,6 +358,10 @@
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dr_pickles_3.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\dr_pickles_3.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fondo.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\fondo.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ice_4.png",
@@ -612,12 +628,24 @@
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\kitten_2.png"
     },
     {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yoda_1.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\yoda_1.png"
+    },
+    {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ice_17.png",
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\ice_17.png"
     },
     {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris2.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\chuck_norris2.png"
+    },
+    {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wind_4.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\wind_4.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris1.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\chuck_norris1.png"
     },
     {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris4.png",
@@ -730,6 +758,10 @@
     {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris2.png",
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\chuck_norris2.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chuck_norris4.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\chuck_norris4.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wind_16.png",
@@ -978,6 +1010,10 @@
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fire_power.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\fire_power.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dr_pickels_4.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\dr_pickels_4.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ice_1.png",
@@ -1240,6 +1276,10 @@
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\vamo_a_calmarno.png"
     },
     {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fondo_v.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\fondo_v.png"
+    },
+    {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\earth_2.png",
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\earth_2.png"
     },
@@ -1338,6 +1378,10 @@
     {
         "merged": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wind_10.png",
         "source": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\drawable\\wind_10.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tommy_2.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\tommy_2.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fire_7.png",
@@ -1474,6 +1518,10 @@
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ice_16.png",
         "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\ice_16.png"
+    },
+    {
+        "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dr_pickels_2.png",
+        "source": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\drawable\\dr_pickels_2.png"
     },
     {
         "merged": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\colors_grey.png",
