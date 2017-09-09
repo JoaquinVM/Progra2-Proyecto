@@ -11,12 +11,21 @@ import cardGame.Game;
  */
 
 public class CardDatabase {
-    List<Card> list = new ArrayList<>();
+    private List<Meme> memes = new ArrayList<>();
+    private List<Card> spells = new ArrayList<>();
 
-    CardDatabase instance = new CardDatabase();
+    private static CardDatabase instance = new CardDatabase();
 
-    public CardDatabase getInstance() {
+    public static CardDatabase getInstance() {
         return instance;
+    }
+
+    public List<Meme> getMemes() {
+        return memes;
+    }
+
+    public List<Card> getSpells() {
+        return spells;
     }
 
     public void initSpells(Game game) {
@@ -26,7 +35,7 @@ public class CardDatabase {
                 game.damageEnemies(1);
             }
         };
-        list.add(aliens);
+        spells.add(aliens);
 
         Card chuckApproves = new Card("chuck_approves", 5, game) {
             @Override
@@ -34,7 +43,7 @@ public class CardDatabase {
                 game.destroy(meme);
             }
         };
-        list.add(chuckApproves);
+        spells.add(chuckApproves);
 
         Card controlMental = new Card("control_mental", 6, game) {
             @Override
@@ -42,7 +51,7 @@ public class CardDatabase {
                 game.control(meme);
             }
         };
-        list.add(controlMental);
+        spells.add(controlMental);
 
         Card crazyPeach = new Card("crazy_peach", 5, game) {
             @Override
@@ -50,7 +59,7 @@ public class CardDatabase {
                 game.damageAll(5);
             }
         };
-        list.add(crazyPeach);
+        spells.add(crazyPeach);
 
         Card magicFriend = new Card("magic_friend", 5, game) {
             @Override
@@ -58,7 +67,7 @@ public class CardDatabase {
                 game.heal(game.getPlayer(), 8);
             }
         };
-        list.add(magicFriend);
+        spells.add(magicFriend);
 
         Card notBad = new Card("not_bad", 4, game) {
             @Override
@@ -66,7 +75,7 @@ public class CardDatabase {
                 game.damageRandomEnemies(2, 3);
             }
         };
-        list.add(notBad);
+        spells.add(notBad);
 
         Card trumpcito = new Card("trumpcito", 0, game) {
             @Override
@@ -76,7 +85,7 @@ public class CardDatabase {
                 //game.getPlayer().summon();
             }
         };
-        list.add(trumpcito);
+        spells.add(trumpcito);
 
         Card unknown = new Card("unknown", 1, game) {
             @Override
@@ -84,7 +93,7 @@ public class CardDatabase {
                 game.dealDamage(damagable, 2);
             }
         };
-        list.add(unknown);
+        spells.add(unknown);
 
         Card vamoACalmarno = new Card("vamo_a_calmarno", 6, game) {
             @Override
@@ -92,7 +101,7 @@ public class CardDatabase {
                 game.damageEnemies(4);
             }
         };
-        list.add(vamoACalmarno);
+        spells.add(vamoACalmarno);
 
         Card yas = new Card("yas", 3, game) {
             @Override
@@ -100,7 +109,7 @@ public class CardDatabase {
                 game.healAllies(2);
             }
         };
-        list.add(yas);
+        spells.add(yas);
 
         Card yisus = new Card("yisus", 3, game) {
             @Override
@@ -108,15 +117,17 @@ public class CardDatabase {
                 game.resurrect();
             }
         };
-        list.add(yisus);
+        spells.add(yisus);
     }
 
     public void initMemes(Game game) {
         Meme alexis = new Meme("alexis", 5, 5, 5, game);
         alexis.setCharge(true);
+        memes.add(alexis);
 
         Meme bobToronja = new Meme("bob_toronja", 3, 4, 3, game);
         bobToronja.setCharge(true);
+        memes.add(bobToronja);
 
         Meme brianMalaSuerte = new Meme("brian_mala_suerte", 2, 5, 2, game) {
             @Override
@@ -125,6 +136,7 @@ public class CardDatabase {
             }
         };
         brianMalaSuerte.setCharge(true);
+        memes.add(brianMalaSuerte);
 
         Meme chuckNorris = new Meme("chuck_norris", 6, 6, 6, game) {
             @Override
@@ -132,6 +144,7 @@ public class CardDatabase {
                 game.damageEnemies(1);
             }
         };
+        memes.add(chuckNorris);
 
         Meme darthOzman = new Meme("darthoz_man", 4, 3, 2, game) {
             @Override
@@ -140,6 +153,7 @@ public class CardDatabase {
                 //TODO
             }
         };
+        memes.add(darthOzman);
 
         Meme diCaprio = new Meme("di_caprio", 3, 2, 3, game) {
             @Override
@@ -147,27 +161,35 @@ public class CardDatabase {
                 game.damageEnemies(1);
             }
         };
+        memes.add(diCaprio);
 
         Meme dockyG = new Meme("docky_g", 4, 3, 6, game);
         dockyG.setFreeze(true);
+        memes.add(dockyG);
 
         Meme doge = new Meme("doge", 1, 1, 2, game);
         doge.setSpellinmune(true);
+        memes.add(doge);
 
         Meme drPickels = new Meme("dr_pickels", 4, 1, 5, game);
         drPickels.setPoisonous(true);
+        memes.add(drPickels);
 
         Meme jeanPaoltter = new Meme("jean_paoltter", 1, 1, 3, game);
         jeanPaoltter.setTaunt(true);
+        memes.add(jeanPaoltter);
 
         Meme kitten = new Meme("kitten", 7, 5, 10, game);
         kitten.setTaunt(true);
         kitten.setSpellinmune(true);
+        memes.add(kitten);
 
         Meme mexican = new Meme("mexican", 0, 1, 1, game);
+        memes.add(mexican);
 
         Meme noMeDigas = new Meme("no_me_digas", 3, 2, 1, game);
         noMeDigas.setSpellinmune(true);
+        memes.add(noMeDigas);
 
         Meme pitereElKoala = new Meme("piter_el_koala", 5, 6, 5, game) {
             @Override
@@ -175,18 +197,21 @@ public class CardDatabase {
                 game.discard();
             }
         };
+        memes.add(pitereElKoala);
 
         Meme really = new Meme("really", 2, 0, 5, game);
         really.setTaunt(true);
+        memes.add(really);
 
         Meme tommy = new Meme("tommy", 2, 1, 2, game);
         tommy.setPoisonous(true);
+        memes.add(tommy);
 
         Meme uglyface = new Meme("ugly_face", 2, 2, 4, game);
         uglyface.setTaunt(true);
+        memes.add(uglyface);
 
         Meme yoda = new Meme("yoda", 0, 1, 1, game);
-
-
+        memes.add(yoda);
     }
 }

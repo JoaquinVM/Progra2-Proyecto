@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import cardGame.cards.Card;
 import cardGame.MemeStoneUI;
+import cardGame.cards.CardDatabase;
+import cardGame.cards.Meme;
 
 /**
  * Created by Joaco99 on 05/09/2017.
@@ -13,7 +15,7 @@ public class Assets {
 
     private static Assets instance = new Assets();
     private MemeStoneUI ui;
-    private HashMap<Object, String> map = new HashMap<>();
+    private static HashMap<Card, String> map = new HashMap<>();
 
     public static Assets getInstance(){
         return instance;
@@ -22,6 +24,20 @@ public class Assets {
     public void init(MemeStoneUI ui){
         this.ui = ui;
 
+        CardDatabase db = CardDatabase.getInstance();
+
+        for(Card c : db.getSpells()){
+            map.put(c, c.getName());
+        }
+
+        for(Meme m : db.getMemes()){
+            Meme meme = m.clone();
+            map.put(meme, meme.getName());
+            for(int i = 0; i < meme.getMaxHealth(); i++){
+                meme.damage(1);
+                map.put(meme, meme.getName()+"_"+meme.getHealth());
+            }
+        }
 
 
 

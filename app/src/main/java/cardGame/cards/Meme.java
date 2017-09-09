@@ -47,16 +47,16 @@ public class Meme extends Card implements cardGame.Damagable {
         this.freeze = freeze;
     }
 
-    public void setCanAttack(boolean canAttack){
+    public void setCanAttack(boolean canAttack) {
         this.canAttack = canAttack;
     }
 
-    public void image(){
+    public void image() {
         Assets.getInstance().image(this);
     }
 
-    public void increaseHealth(int n, Meme healedMeme){
-        health+=n;
+    public void increaseHealth(int n, Meme healedMeme) {
+        health += n;
     }
 
     public int getMaxHealth() {
@@ -80,18 +80,23 @@ public class Meme extends Card implements cardGame.Damagable {
     @Override
     public void heal(int health) {
         this.health += health;
-        if(this.health > maxHealth){
+        if (this.health > maxHealth) {
             this.health = maxHealth;
         }
     }
 
     @Override
     public boolean equals(Object o) {
-        if(o instanceof Meme){
-            Meme meme = (Meme)o;
+        if (o instanceof Meme) {
+            Meme meme = (Meme) o;
             return getName().equals(meme.getName()) && getCost() == meme.getCost() && maxHealth == meme.getMaxHealth()
                     && damage == meme.getDamage();
         }
         return false;
+    }
+
+    @Override
+    public Meme clone() {
+        return (Meme) super.clone();
     }
 }
