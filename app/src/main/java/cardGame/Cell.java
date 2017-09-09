@@ -9,10 +9,9 @@ public class Cell {
     private int h;
     private Object o;
 
-    public Cell(int v, int h, Object o) {
+    public Cell(int v, int h) {
         this.v = v;
         this.h = h;
-        this.o = o;
     }
 
     public int getV() {
