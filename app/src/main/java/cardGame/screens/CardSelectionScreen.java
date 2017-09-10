@@ -16,6 +16,7 @@ public class CardSelectionScreen implements Screen {
     private List<Card> selectedCards;
     private  List<Card> cardList;
     private int páginaCartasAEscoger = 0;
+    private int pageSelectedCards = 0;
     private boolean finalDeLista = false;
 
 
@@ -52,12 +53,11 @@ public class CardSelectionScreen implements Screen {
         if(lista.get(páginaCartasAEscoger + 18) == null){
           páginaCartasAEscoger = 0;
         } else  {
-          páginaCartasAEscoger += 17;
+          páginaCartasAEscoger += 18;
         }
         int indice = páginaCartasAEscoger;
         setCardsOnBoard(lista, indice);
     }
-
 
     public void setCardsOnBoard(List<Card> lista,int indice){
         for(int v =0; v < 2; v++){
@@ -71,8 +71,28 @@ public class CardSelectionScreen implements Screen {
             }
         }
     }
+    public void slideSelectedCards(List<Card> lista){
+        if(lista.get(pageSelectedCards+8) == null){
+            pageSelectedCards = 0;
+        }else{
+            pageSelectedCards +=8;
+        }
+        int indice = pageSelectedCards;
+        setSellectedCardsOnBoard(lista, indice);
+    }
+    public void setSellectedCardsOnBoard(List<Card> lista,int indice){
+        for(int h = 0; h < 8; h++ ){
+            if(!(lista.get(indice) == null)){
+                ui.setImageOnCell(3, h, lista.get(indice).getName());
+                indice++;
+            }else{
+                ui.setImageOnCell(3,h, "fondo_v");
+            }
+        }
+    }
 
     public void addCardsToDeck(){
+        //TODO
 
     }
 
@@ -98,16 +118,15 @@ public class CardSelectionScreen implements Screen {
             } else {
                 //fin
             }
-        } else if(h ==7){
-            if(v == 0){
+        } else if(h ==7) {
+            if (v == 0) {
                 setCardsOnBoardByButtom(cardList);
-            } else if(v == 1){
+            } else if (v == 1) {
                 //delete cartas usadas
             } else {
-                //derechaCartasSeleccionadas
+                slideSelectedCards(selectedCards);
             }
         }
-
     }
 
     @Override
