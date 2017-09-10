@@ -47,7 +47,7 @@ public class Card implements Cloneable{
     public boolean equals(Object o) {
         if(o instanceof Card){
             Card card = (Card) o;
-            return cost == cost && name.equals(card.getName());
+            return cost == card.getCost() && name.equals(card.getName());
         }
         return false;
     }

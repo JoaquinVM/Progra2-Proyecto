@@ -7,7 +7,6 @@ import cardGame.cards.Card;
 import cardGame.MemeStoneUI;
 import cardGame.cards.CardDatabase;
 import cardGame.cards.Meme;
-import cardGame.player.PlayerFire;
 
 /**
  * Created by Joaco99 on 05/09/2017.

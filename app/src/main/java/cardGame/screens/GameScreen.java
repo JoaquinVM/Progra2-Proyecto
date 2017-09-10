@@ -11,22 +11,16 @@ public class GameScreen implements Screen {
 	private MemeStoneUI ui;
 	private Screen sc;
 	private Game game;
-	private Player player1;
-	private Player player2;
-	public GameScreen(MemeStoneUI ui) {
+	private Player player;
+	private Player enemy;
+	public GameScreen(MemeStoneUI ui, Player player, Player enemy) {
 		this.ui = ui;
+		this.player = player;
+		this.enemy = enemy;
 	}
 
 
-	public void setPlayer1(Player player1){
-		this.player1=player1;
-	}
-	public void setPlayer2(Player player2){
-		this.player2=player2;
-	}
-	public void setScreen(Screen sc){
-		this.sc=sc;
-	}
+
 
 	public GameScreen(Player p1, Player p2){
 		//TODO improve constructor

@@ -1,12 +1,14 @@
 package cardGame;
 
-import cardGame.screens.CardPreviewScreen;
+import cardGame.screens.MenuScreen;
+import cardGame.screens.Screen;
 import edu.upb.lp.progra.adapterFiles.AndroidGameGUI;
 import edu.upb.lp.progra.adapterFiles.UI;
 
 public class MemeStoneUI implements UI {
 
     AndroidGameGUI gui;
+    Screen screen;
 
     public MemeStoneUI(AndroidGameGUI gui) {
         this.gui = gui;
@@ -20,31 +22,15 @@ public class MemeStoneUI implements UI {
 
     @Override
     public void onCellPressed(int vertical, int horizontal) {
-        // TODO Auto-generated method stub
-
+        screen.onCellPressed(vertical, horizontal);
     }
 
     @Override
     public void initialiseInterface() {
         gui.setBottomSectionProportion(0);
-        configureGrid(3, 8, 1, 1, 0);
-
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 8; j++) {
-            }
-        }
-        gui.setImageOnCell(0, 0, "fire_20");
-        gui.setImageOnCell(2, 7, "ice_13");
-        for (int j = 1; j < 8; j++) {
-            gui.setImageOnCell(0, j, "di_caprio_2");
-        }
-        for (int j = 3; j < 7; j++) {
-            gui.setImageOnCell(1, j, "chuck_norris_3");
-        }
-
-        for (int j = 3; j < 5; j++) {
-            gui.setImageOnCell(2, j, "kitten_8");
-        }
+        configureGrid(3, 3, 1, 1, 0);
+        //setScreen(new MenuScreen(this));
+        setScreen(new MenuScreen(this));
 
 
         //CardPreviewScreen s = new CardPreviewScreen(this);
@@ -60,5 +46,13 @@ public class MemeStoneUI implements UI {
 
     public void setImageOnCell(int vertical, int horizontal, String image) {
         gui.setImageOnCell(vertical, horizontal, image);
+    }
+
+    public void setScreen(Screen screen){
+        if(this.screen != null){
+            this.screen.hide();
+        }
+        this.screen = screen;
+        this.screen.show();
     }
 }

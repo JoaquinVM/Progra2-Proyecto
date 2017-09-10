@@ -2,7 +2,6 @@ package cardGame.screens;
 
 import cardGame.MemeStoneUI;
 import cardGame.cards.Card;
-import cardGame.utils.Assets;
 
 /**
  * Created by Joaco99 on 06/09/2017.
