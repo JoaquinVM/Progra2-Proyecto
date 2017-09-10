@@ -34,7 +34,7 @@ public class Assets {
 
         for(Meme m : db.getMemes()){
             Meme meme = m.clone();
-            map.put(meme, meme.getName());
+            map.put(meme, meme.getName() + "_" + meme.getHealth());
             for(int i = 0; i < meme.getMaxHealth(); i++){
                 meme.damage(1);
                 map.put(meme, meme.getName()+"_"+meme.getHealth());

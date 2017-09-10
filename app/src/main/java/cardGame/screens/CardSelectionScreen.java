@@ -1,10 +1,11 @@
 package cardGame.screens;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import cardGame.MemeStoneUI;
+import cardGame.Player;
 import cardGame.cards.Card;
+import cardGame.utils.Assets;
 
 /**
  * Created by Samuel on 08/09/2017.
@@ -18,8 +19,18 @@ public class CardSelectionScreen implements Screen {
     private int páginaCartasAEscoger = 0;
     private int pageSelectedCards = 0;
     private boolean finalDeLista = false;
+    private Player player1;
 
+    public void setPlayer1(Player player1) {
+        this.player1 = player1;
+    }
 
+    public void setPlayer2(Player player2) {
+        this.player2 = player2;
+    }
+
+    private Player player2;
+    private GameScreen g;
 
     public CardSelectionScreen(MemeStoneUI ui){
         this.ui = ui;
@@ -46,21 +57,18 @@ public class CardSelectionScreen implements Screen {
         this.cardList = cardList;
         //this.usedCards = usedCards;TODO
     }
-
-
-
     public void setCardsOnBoardByButtom(List<Card> lista){
-        if(lista.get(páginaCartasAEscoger + 18) == null){
+        if(lista.get(páginaCartasAEscoger + 12) == null){
           páginaCartasAEscoger = 0;
         } else  {
-          páginaCartasAEscoger += 18;
+          páginaCartasAEscoger += 12;
         }
         int indice = páginaCartasAEscoger;
         setCardsOnBoard(lista, indice);
     }
 
     public void setCardsOnBoard(List<Card> lista,int indice){
-        for(int v =0; v < 2; v++){
+        for(int v =0; v < 1; v++){
             for(int h = 0; h < 6;h++){
                 if(!(lista.get(indice) == null)){
                     ui.setImageOnCell(v, h, lista.get(indice).getName());
@@ -72,28 +80,26 @@ public class CardSelectionScreen implements Screen {
         }
     }
     public void slideSelectedCards(List<Card> lista){
-        if(lista.get(pageSelectedCards+8) == null){
+        if(lista.get(pageSelectedCards+6) == null){
             pageSelectedCards = 0;
         }else{
-            pageSelectedCards +=8;
+            pageSelectedCards +=6;
         }
         int indice = pageSelectedCards;
         setSellectedCardsOnBoard(lista, indice);
     }
     public void setSellectedCardsOnBoard(List<Card> lista,int indice){
-        for(int h = 0; h < 8; h++ ){
+        for(int h = 0; h < 6; h++ ){
             if(!(lista.get(indice) == null)){
-                ui.setImageOnCell(3, h, lista.get(indice).getName());
+                ui.setImageOnCell(2, h, Assets.getInstance().image(lista.get(indice)));
                 indice++;
             }else{
-                ui.setImageOnCell(3,h, "fondo_v");
+                ui.setImageOnCell(2,h, "fondo_v");
             }
         }
     }
-
     public void addCardsToDeck(){
         //TODO
-
     }
 
 
@@ -101,6 +107,7 @@ public class CardSelectionScreen implements Screen {
     public void show() {
         ui.configureGrid(3,8,0,0,0);
         setCardsOnBoard(cardList, 0);
+        //TODO crear matriz, que funcione
     }
 
     @Override
@@ -128,7 +135,6 @@ public class CardSelectionScreen implements Screen {
             }
         }
     }
-
     @Override
     public void hide() {
         //TODO a quiíen llamo despues
