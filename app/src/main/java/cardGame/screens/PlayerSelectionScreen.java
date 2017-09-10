@@ -14,7 +14,7 @@ import cardGame.utils.Constants;
 
 public class PlayerSelectionScreen implements Screen {
     private MemeStoneUI ui;
-    private GameScreen gameScreen = new GameScreen(ui);
+    private CardSelectionScreen cardScreen = new CardSelectionScreen(ui);
     private boolean player1 = true;
 
     public PlayerSelectionScreen(MemeStoneUI ui) {
@@ -59,9 +59,9 @@ public class PlayerSelectionScreen implements Screen {
             p = new PlayerWind(Constants.WIND_TYPE);
         }
         if (player1) {
-            gameScreen.setPlayer1(p);
+            cardScreen.setPlayer1(p);
         } else {
-            gameScreen.setPlayer2(p);
+            cardScreen.setPlayer2(p);
             hide();
         }
         player1 = false;
@@ -70,7 +70,6 @@ public class PlayerSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-        Screen sc= new CardSelectionScreen(ui);
-        sc.show();
+        cardScreen.show();
     }
 }

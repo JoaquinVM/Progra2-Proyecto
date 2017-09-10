@@ -12,6 +12,14 @@ public class Card implements Cloneable{
     private String name;
     private Game game;
 
+    public Card clone() {
+        try{
+            return (Card)super.clone();
+        }catch(CloneNotSupportedException c){
+            return null;
+        }
+    }
+
     public Card(String name, int cost, Game game) {
         this.name = name;
         this.cost = cost;
@@ -42,13 +50,5 @@ public class Card implements Cloneable{
             return cost == cost && name.equals(card.getName());
         }
         return false;
-    }
-
-    public Card clone() {
-        try{
-            return (Card)super.clone();
-        }catch(CloneNotSupportedException c){
-            return null;
-        }
     }
 }
