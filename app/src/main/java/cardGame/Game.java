@@ -14,11 +14,9 @@ public class Game {
     private Player enemy;
     private Random r = new Random();
 
-    public Game(MemeStoneUI memeUI, Player player, Player enemy) {
-        //TODO memeUI no se usa
-        this.memeUI = memeUI;
-        this.player = player;
-        this.enemy = enemy;
+
+    public Game(MemeStoneUI ui){
+        this.memeUI = ui;
     }
 
     public void freeze(Meme meme) {
@@ -85,4 +83,11 @@ public class Game {
         return enemy;
     }
 
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public void setEnemy(Player enemy) {
+        this.enemy = enemy;
+    }
 }

@@ -27,12 +27,7 @@ public class CardSelectionScreen implements Screen {
     private Player player1;
     private Player player2;
     private boolean sPlayer1 = true;
-<<<<<<< Updated upstream
-=======
-    private CardDatabase cardDataBase = new CardDatabase();
-    private Game game = new Game(ui, player1, player2);
-    private GameScreen g;
->>>>>>> Stashed changes
+
 
     public CardSelectionScreen(MemeStoneUI ui, Player player1, Player player2){
         this.ui = ui;
@@ -128,9 +123,6 @@ public class CardSelectionScreen implements Screen {
 
     @Override
     public void show() {
-        cardDataBase.initMemes(game);
-        cardDataBase.initSpells(game);
-
         ui.configureGrid(3, 8, 0, 0, 0);
         cardList.addAll(CardDatabase.getInstance().getSpells());
         cardList.addAll(CardDatabase.getInstance().getMemes());
@@ -146,6 +138,7 @@ public class CardSelectionScreen implements Screen {
 
         } else{
             player2.setDeck(d);
+            ui.setScreen(new GameScreen(ui, player1, player2));
         }
     }
 

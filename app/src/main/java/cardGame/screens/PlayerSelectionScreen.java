@@ -71,10 +71,5 @@ public class PlayerSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-<<<<<<< Updated upstream
-
-=======
-        ui.setScreen(new CardSelectionScreen(ui));
->>>>>>> Stashed changes
     }
 }
