@@ -5,7 +5,8 @@ import java.util.List;
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.cards.Card;
-import cardGame.utils.Assets;
+import cardGame.cards.Deck;
+
 
 /**
  * Created by Samuel on 08/09/2017.
@@ -13,7 +14,6 @@ import cardGame.utils.Assets;
 
 public class CardSelectionScreen implements Screen {
     private MemeStoneUI ui;
-    private Screen screen;
     private List<Card> selectedCards;
     private List<Card> cardList;
     private int pageCardList = 0;
@@ -23,6 +23,7 @@ public class CardSelectionScreen implements Screen {
     private Card[] selectedCardVec = new Card[6];
     private Player player1;
     private Player player2;
+    private boolean sPlayer1 = true;
     private GameScreen g;
 
     public CardSelectionScreen(MemeStoneUI ui) {
@@ -42,7 +43,7 @@ public class CardSelectionScreen implements Screen {
         Card aux = null;
         for (int i = 0; i < cardList.size(); i++) {
             for (int j = i + 1; j < cardList.size() - 1; j++) {
-                if (cardList.get(i).getCost() > cardList.get(j).getCost()) {
+                if (cardList.get(i).getCost() < cardList.get(j).getCost()) {
                     aux = cardList.get(i);
                     cardList.add(i, cardList.get(j));
                     cardList.add(j, aux);
@@ -52,9 +53,6 @@ public class CardSelectionScreen implements Screen {
         this.cardList = cardList;
     }
 
-    public void setScreen(Screen screen) {
-        this.screen = screen;
-    }
 
     public void setCardsOnBoardByButton(List<Card> lista) {
         if (lista.get(pageCardList + 12) == null) {
@@ -70,7 +68,7 @@ public class CardSelectionScreen implements Screen {
         for (int v = 0; v < 1; v++) {
             for (int h = 0; h < 6; h++) {
                 if (!(lista.get(indice) == null)) {
-                    ui.setImageOnCell(v, h, lista.get(indice).getName());
+                    ui.setImageOnCell(v, h, lista.get(indice).image());
                     indice++;
                 } else {
                     ui.setImageOnCell(v, h, "fondo_v");
@@ -82,7 +80,7 @@ public class CardSelectionScreen implements Screen {
     public void setSellectedCardsOnBoard(List<Card> lista, int indice) {
         for (int h = 0; h < 6; h++) {
             if (!(lista.get(indice) == null)) {
-                ui.setImageOnCell(2, h, Assets.getInstance().image(lista.get(indice)));
+                ui.setImageOnCell(2, h, lista.get(indice).image());
                 indice++;
             } else {
                 ui.setImageOnCell(2, h, "fondo_v");
@@ -101,7 +99,7 @@ public class CardSelectionScreen implements Screen {
     public void createVector(List<Card> cardList) {
         if (!selectedCards.isEmpty()){
             for (int i = 0; i < 6; i++) {
-                selectedCardVec[i] = selectedCards.get(pageSelectedCards + i);
+                selectedCardVec[i] = cardList.get(pageSelectedCards + i);
             }
         }
     }
@@ -121,7 +119,7 @@ public class CardSelectionScreen implements Screen {
         }
     }
 
-    public void deleteCards(int h){
+    public void deleteCards(int h) {
         selectedCards.remove(pageSelectedCards + h );
     }
 
@@ -131,6 +129,16 @@ public class CardSelectionScreen implements Screen {
         setCardsOnBoard(cardList, 0);
         createMatrix(cardList);
         setSellectedCardsOnBoard(selectedCards, 0);
+        Deck d = new Deck(selectedCards);
+        if(sPlayer1) {
+            sPlayer1 = false;
+            player1.setDeck(d);
+            selectedCards.removeAll(selectedCards);
+            show();
+
+        } else{
+            player2.setDeck(d);
+        }
     }
 
     @Override
@@ -149,7 +157,7 @@ public class CardSelectionScreen implements Screen {
                 setSellectedCardsOnBoard(selectedCards, pageSelectedCards);
                 createVector(selectedCards);
             } else {
-                hide();//TODO
+                show();//TODO
             }
         } else if (h == 7) {
             if (v == 0) {
@@ -177,6 +185,6 @@ public class CardSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-        //TODO a quiíen llamo despues
+        //TODO
     }
 }

@@ -51,4 +51,7 @@ public class Card implements Cloneable{
         }
         return false;
     }
+    public String image(){
+        return name;
+    }
 }

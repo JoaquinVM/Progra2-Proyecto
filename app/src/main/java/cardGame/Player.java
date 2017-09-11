@@ -76,7 +76,7 @@ public abstract class Player implements cardGame.Damagable {
         return game;
     }
 
-    private void setDeck(Deck deck) {
+    public void setDeck(Deck deck) {
         this.deck = deck;
     }
 

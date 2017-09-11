@@ -1,5 +1,4 @@
 package cardGame.screens;
-
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.player.PlayerEarth;

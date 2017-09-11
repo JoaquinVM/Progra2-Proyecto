@@ -19,6 +19,10 @@ public class Deck {
     private Stack<Card> deck = new Stack<>();
     private int maxCards = Constants.MAX_CARDS_PER_DECK;
 
+    public Deck (List<Card> initialDeck) {
+        this.initialDeck = initialDeck;
+    }
+
     public void add(Card card){
         initialDeck.add(card);
     }
@@ -37,4 +41,6 @@ public class Deck {
     public Game getGame() {
         return game;
     }
+
+
 }

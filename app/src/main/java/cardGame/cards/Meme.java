@@ -51,10 +51,6 @@ public class Meme extends Card implements cardGame.Damagable {
         this.canAttack = canAttack;
     }
 
-    public void image() {
-        Assets.getInstance().image(this);
-    }
-
     public void increaseHealth(int n, Meme healedMeme) {
         health += n;
     }
@@ -101,5 +97,10 @@ public class Meme extends Card implements cardGame.Damagable {
     @Override
     public Meme clone() {
         return (Meme) super.clone();
+    }
+
+    @Override
+    public String image(){
+        return getName() + "_" + health;
     }
 }
