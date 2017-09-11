@@ -1,10 +1,12 @@
 package cardGame.screens;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.cards.Card;
+import cardGame.cards.CardDatabase;
 import cardGame.cards.Deck;
 
 
@@ -14,8 +16,8 @@ import cardGame.cards.Deck;
 
 public class CardSelectionScreen implements Screen {
     private MemeStoneUI ui;
-    private List<Card> selectedCards;
-    private List<Card> cardList;
+    private List<Card> selectedCards = new LinkedList<>();
+    private List<Card> cardList = new LinkedList<>();
     private int pageCardList = 0;
     private int pageSelectedCards = 0;
     private int selectedV = -1, selectedH = -1;
@@ -24,18 +26,10 @@ public class CardSelectionScreen implements Screen {
     private Player player1;
     private Player player2;
     private boolean sPlayer1 = true;
-    private GameScreen g;
 
-    public CardSelectionScreen(MemeStoneUI ui) {
+    public CardSelectionScreen(MemeStoneUI ui, Player player1, Player player2){
         this.ui = ui;
-    }
-
-
-    public void setPlayer1(Player player1) {
         this.player1 = player1;
-    }
-
-    public void setPlayer2(Player player2) {
         this.player2 = player2;
     }
 
@@ -45,7 +39,8 @@ public class CardSelectionScreen implements Screen {
             for (int j = i + 1; j < cardList.size() - 1; j++) {
                 if (cardList.get(i).getCost() < cardList.get(j).getCost()) {
                     aux = cardList.get(i);
-                    cardList.add(i, cardList.get(j));
+                    cardList.add(i,
+                            cardList.get(j));
                     cardList.add(j, aux);
                 }
             }
@@ -67,6 +62,7 @@ public class CardSelectionScreen implements Screen {
     public void setCardsOnBoard(List<Card> lista, int indice) {
         for (int v = 0; v < 1; v++) {
             for (int h = 0; h < 6; h++) {
+                //TODO next line IndexOitOfBound
                 if (!(lista.get(indice) == null)) {
                     ui.setImageOnCell(v, h, lista.get(indice).image());
                     indice++;
@@ -126,6 +122,8 @@ public class CardSelectionScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
+        cardList.addAll(CardDatabase.getInstance().getSpells());
+        cardList.addAll(CardDatabase.getInstance().getMemes());
         setCardsOnBoard(cardList, 0);
         createMatrix(cardList);
         setSellectedCardsOnBoard(selectedCards, 0);

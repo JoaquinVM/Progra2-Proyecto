@@ -13,8 +13,9 @@ import cardGame.utils.Constants;
 
 public class PlayerSelectionScreen implements Screen {
     private MemeStoneUI ui;
-    private CardSelectionScreen cardScreen = new CardSelectionScreen(ui);
-    private boolean player1 = true;
+    private boolean sPlayer1 = true;
+    private Player player1;
+    private Player player2;
 
     public PlayerSelectionScreen(MemeStoneUI ui) {
         this.ui = ui;
@@ -23,7 +24,7 @@ public class PlayerSelectionScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(2, 4, 0, 0, 0);
-        if (player1) {
+        if (sPlayer1) {
             ui.setImageOnCell(0, 1, "fire_1");
             ui.setImageOnCell(0, 3, "ice_1");
             ui.setImageOnCell(1, 1, "earth_1");
@@ -57,18 +58,19 @@ public class PlayerSelectionScreen implements Screen {
         } else {
             p = new PlayerWind(Constants.WIND_TYPE);
         }
-        if (player1) {
-            cardScreen.setPlayer1(p);
+        if (sPlayer1) {
+            player1 = p;
+            sPlayer1 = false;
+            show();
         } else {
-            cardScreen.setPlayer2(p);
-            hide();
+            player2 = p;
+            ui.setScreen(new CardSelectionScreen(ui, player1, player2));
         }
-        player1 = false;
-        show();
+
     }
 
     @Override
     public void hide() {
-        cardScreen.show();
+
     }
 }
