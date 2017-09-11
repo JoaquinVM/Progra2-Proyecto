@@ -10,8 +10,8 @@ import cardGame.utils.Constants;
  */
 
 public class PlayerFire extends Player {
-    public PlayerFire(String type){
-        super(type);
+    public PlayerFire(){
+        setName("fire");
         setPowerImage(Constants.FIRE_POWER);
     }
 

@@ -11,8 +11,8 @@ import cardGame.utils.Enums;
  */
 
 public class PlayerIce extends Player {
-    public PlayerIce(String type){
-        super(type);
+    public PlayerIce(){
+        setName("ice");
         setPowerImage(Constants.ICE_POWER);
     }
     @Override

@@ -11,8 +11,8 @@ import cardGame.utils.Enums;
  */
 
 public class PlayerWind extends Player {
-    public PlayerWind(String type){
-        super(type);
+    public PlayerWind(){
+        setName("wind");
         setPowerImage(Constants.WIND_POWER);
     }
     @Override

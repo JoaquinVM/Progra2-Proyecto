@@ -12,8 +12,8 @@ import cardGame.utils.Enums;
 
 public class PlayerEarth extends Player {
 
-    public PlayerEarth(String type){
-        super(type);
+    public PlayerEarth(){
+        setName("earth");
         setPowerImage(Constants.EARTH_POWER);
     }
 
