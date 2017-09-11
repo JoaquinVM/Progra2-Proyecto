@@ -17,7 +17,7 @@ import cardGame.utils.Enums;
 
 public abstract class Player implements cardGame.Damagable {
     private String powerImage;
-    private String type;
+    private String name = "";
     private int maxHealth = Constants.MAX_PLAYER_HEALTH;
     private int health = Constants.MAX_PLAYER_HEALTH;
     private int mana = 0;
@@ -26,10 +26,6 @@ public abstract class Player implements cardGame.Damagable {
     private List<Card> hand = new LinkedList<>();
     private List<Meme> arena = new LinkedList<>();
     private List<Meme> graveyard = new LinkedList<>();
-
-    public Player(String type){
-        this.type = type;
-    }
 
     private boolean dead = false;
 
@@ -40,7 +36,7 @@ public abstract class Player implements cardGame.Damagable {
 
     public abstract void power(Meme meme);
 
-    public void setPowerImage(String powerImage){
+    public void setPowerImage(String powerImage) {
         this.powerImage = powerImage;
     }
 
@@ -59,16 +55,16 @@ public abstract class Player implements cardGame.Damagable {
     @Override
     public void heal(int health) {
         this.health += health;
-        if(this.health > maxHealth){
+        if (this.health > maxHealth) {
             this.health = maxHealth;
         }
     }
 
-    public void drawCard(){
+    public void drawCard() {
         hand.add(deck.drawCard());
     }
 
-    public void summon(Meme meme){
+    public void summon(Meme meme) {
         arena.add(meme);
     }
 
@@ -96,14 +92,22 @@ public abstract class Player implements cardGame.Damagable {
         return mana;
     }
 
-    public void increaseMana(){
+    public void increaseMana() {
         mana++;
-        if(mana > 7){
+        if (mana > 7) {
             mana = 7;
         }
     }
 
-    public String getType() {
-        return type;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String image() {
+        return getName() + "_" + health;
     }
 }

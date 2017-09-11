@@ -64,7 +64,7 @@ public class Game {
     }
 
     public void healAllies(int health){
-        //TODO
+        //TODO hacer
     }
 
     public void resurrect(){
