@@ -1,5 +1,6 @@
 package cardGame;
 
+import cardGame.cards.CardDatabase;
 import cardGame.screens.MenuScreen;
 import cardGame.screens.Screen;
 import edu.upb.lp.progra.adapterFiles.AndroidGameGUI;
@@ -8,7 +9,8 @@ import edu.upb.lp.progra.adapterFiles.UI;
 public class MemeStoneUI implements UI {
 
     AndroidGameGUI gui;
-    Screen screen;
+
+    Screen screen ;
 
     public MemeStoneUI(AndroidGameGUI gui) {
         this.gui = gui;
@@ -28,16 +30,13 @@ public class MemeStoneUI implements UI {
     @Override
     public void initialiseInterface() {
         gui.setBottomSectionProportion(0);
-        configureGrid(3, 3, 1, 1, 0);
-        //setScreen(new MenuScreen(this));
+    }
+
+    public void newGame(){
+        Game game = new Game(this);
+        CardDatabase.getInstance().initMemes(game);
+        CardDatabase.getInstance().initSpells(game);
         setScreen(new MenuScreen(this));
-
-
-        //CardPreviewScreen s = new CardPreviewScreen(this);
-       // s.show();
-        //Joaco ejecuta en blue stacks!!
-        //klzdfksdjfnskd
-
     }
 
     public void configureGrid(int numberOfRows, int numberOfColumns, int verticalSpacing, int horizontalSpacing, int textSize) {

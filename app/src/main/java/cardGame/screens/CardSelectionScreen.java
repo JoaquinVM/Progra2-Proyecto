@@ -3,6 +3,7 @@ package cardGame.screens;
 import java.util.LinkedList;
 import java.util.List;
 
+import cardGame.Game;
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.cards.Card;
@@ -26,6 +27,7 @@ public class CardSelectionScreen implements Screen {
     private Player player1;
     private Player player2;
     private boolean sPlayer1 = true;
+
 
     public CardSelectionScreen(MemeStoneUI ui, Player player1, Player player2){
         this.ui = ui;
@@ -136,6 +138,7 @@ public class CardSelectionScreen implements Screen {
 
         } else{
             player2.setDeck(d);
+            ui.setScreen(new GameScreen(ui, player1, player2));
         }
     }
 

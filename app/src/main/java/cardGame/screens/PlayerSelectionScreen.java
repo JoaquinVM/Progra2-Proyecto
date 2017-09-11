@@ -71,6 +71,5 @@ public class PlayerSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-
     }
 }
