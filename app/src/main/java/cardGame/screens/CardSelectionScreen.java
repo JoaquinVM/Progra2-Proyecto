@@ -142,14 +142,14 @@ public class CardSelectionScreen implements Screen {
     public void onCellPressed(int v, int h) {
         if (h == 6) {
             if (v == 0) {
-                //show
+                //show//TODO
             } else if (v == 1) {
                 //add cards to deck
                 addCardsToDeck(selectedV, selectedH);
                 setSellectedCardsOnBoard(selectedCards, pageSelectedCards);
                 createVector(selectedCards);
             } else {
-                //fin
+                hide();//TODO
             }
         } else if (h == 7) {
             if (v == 0) {
