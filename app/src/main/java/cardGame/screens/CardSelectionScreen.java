@@ -36,13 +36,12 @@ public class CardSelectionScreen implements Screen {
     }
 
     public void orderList(List<Card> cardList) {
-        Card aux = null;
+        Card aux;
         for (int i = 0; i < cardList.size(); i++) {
             for (int j = i + 1; j < cardList.size() - 1; j++) {
-                if (cardList.get(i).getCost() < cardList.get(j).getCost()) {
+                if (cardList.get(i).getCost() > cardList.get(j).getCost()) {
                     aux = cardList.get(i);
-                    cardList.add(i,
-                            cardList.get(j));
+                    cardList.add(i, cardList.get(j));
                     cardList.add(j, aux);
                 }
             }
@@ -62,9 +61,8 @@ public class CardSelectionScreen implements Screen {
     }
 
     public void setCardsOnBoard(List<Card> lista, int indice) {
-        for (int v = 0; v < 1; v++) {
+        for (int v = 0; v < 2; v++) {
             for (int h = 0; h < 6; h++) {
-                //TODO next line IndexOitOfBound
                 if (!(lista.get(indice) == null)) {
                     ui.setImageOnCell(v, h, lista.get(indice).image());
                     indice++;
@@ -122,11 +120,19 @@ public class CardSelectionScreen implements Screen {
     }
 
     @Override
-    public void show() {
+    public void show(){
+
+    }
+
+    public void showd() {
         ui.configureGrid(3, 8, 0, 0, 0);
         if(sPlayer1){
-            cardList.addAll(CardDatabase.getInstance().getSpells());
-            cardList.addAll(CardDatabase.getInstance().getMemes());
+            for(Card m : CardDatabase.getInstance().getMemes()){
+                cardList.add(m.clone());
+            }
+            for(Card s : CardDatabase.getInstance().getSpells()){
+                cardList.add(s.clone());
+            }
         }
 
         orderList(cardList);

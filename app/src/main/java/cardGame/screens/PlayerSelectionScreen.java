@@ -1,4 +1,5 @@
 package cardGame.screens;
+
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.player.PlayerEarth;
@@ -24,17 +25,11 @@ public class PlayerSelectionScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(2, 4, 0, 0, 0);
-        if (sPlayer1) {
-            ui.setImageOnCell(0, 1, "fire_1");
-            ui.setImageOnCell(0, 3, "ice_1");
-            ui.setImageOnCell(1, 1, "earth_1");
-            ui.setImageOnCell(1, 3, "wind_1");
-        } else {
-            ui.setImageOnCell(0, 1, "fire_2");
-            ui.setImageOnCell(0, 3, "ice_2");
-            ui.setImageOnCell(1, 1, "earth_2");
-            ui.setImageOnCell(1, 3, "wind_2");
-        }
+        String number = sPlayer1 ? "1" : "2";
+        ui.setImageOnCell(0, 1, "fire_" + number);
+        ui.setImageOnCell(0, 3, "ice_" + number);
+        ui.setImageOnCell(1, 1, "earth_" + number);
+        ui.setImageOnCell(1, 3, "wind_" + number);
         ui.setImageOnCell(0, 0, "fire_power");
         ui.setImageOnCell(0, 2, "ice_power");
         ui.setImageOnCell(1, 0, "earth_power");
@@ -50,13 +45,13 @@ public class PlayerSelectionScreen implements Screen {
     public void onCellPressed(int v, int h) {
         Player p;
         if (v < 2 && h == 0) {
-            p = new PlayerFire(Constants.FIRE_TYPE);
+            p = new PlayerFire();
         } else if (v < 4 && h == 0) {
-            p = new PlayerIce(Constants.ICE_TYPE);
+            p = new PlayerIce();
         } else if (v < 2 && h == 2) {
-            p = new PlayerEarth(Constants.EARTH_TYPE);
+            p = new PlayerEarth();
         } else {
-            p = new PlayerWind(Constants.WIND_TYPE);
+            p = new PlayerWind();
         }
         if (sPlayer1) {
             player1 = p;
@@ -64,7 +59,8 @@ public class PlayerSelectionScreen implements Screen {
             show();
         } else {
             player2 = p;
-            ui.setScreen(new CardSelectionScreen(ui, player1, player2));
+            //ui.setScreen(new CardSelectionScreen(ui, player1, player2));
+            ui.setScreen(new MenuScreen(ui));
         }
 
     }

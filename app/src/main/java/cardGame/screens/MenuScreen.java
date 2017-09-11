@@ -37,7 +37,7 @@ public class MenuScreen implements Screen  {
     @Override
     public void onCellPressed(int v, int h) {
         if(v==1 && h==0){
-            ui.setScreen(new PlayerSelectionScreen(ui));
+            ui.newGame();
         }else if(v==2 && h==0){
             System.exit(0);
         }

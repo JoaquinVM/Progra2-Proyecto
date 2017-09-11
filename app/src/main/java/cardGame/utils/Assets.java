@@ -45,9 +45,7 @@ public class Assets {
         return map.get(card);
     }
 
-    public String image(Player player, int health){
-        return player.getType() + "_" + health;
-    }
+
 
 }
 
