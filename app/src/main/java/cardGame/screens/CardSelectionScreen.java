@@ -35,7 +35,7 @@ public class CardSelectionScreen implements Screen {
         this.player2 = player2;
     }
 
-    public void setCardList(List<Card> cardList) {
+    public void orderList(List<Card> cardList) {
         Card aux = null;
         for (int i = 0; i < cardList.size(); i++) {
             for (int j = i + 1; j < cardList.size() - 1; j++) {
@@ -124,8 +124,12 @@ public class CardSelectionScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
-        cardList.addAll(CardDatabase.getInstance().getSpells());
-        cardList.addAll(CardDatabase.getInstance().getMemes());
+        if(sPlayer1){
+            cardList.addAll(CardDatabase.getInstance().getSpells());
+            cardList.addAll(CardDatabase.getInstance().getMemes());
+        }
+
+        orderList(cardList);
         setCardsOnBoard(cardList, 0);
         createMatrix(cardList);
         setSellectedCardsOnBoard(selectedCards, 0);
