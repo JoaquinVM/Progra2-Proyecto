@@ -14,7 +14,7 @@ import cardGame.cards.Meme;
 import cardGame.utils.Constants;
 
 /**
- * Created by Joaco99 on 12/09/2017.
+ * Created by Samuel on 12/09/2017.
  */
 
 public class CardSelectionScreen implements Screen {
