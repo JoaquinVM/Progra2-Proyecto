@@ -41,9 +41,6 @@ public class CardSelectionScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
-        page = 1;
-        deckPage = 0;
-        deck.clear();
 
         Collections.sort(cards);
 
