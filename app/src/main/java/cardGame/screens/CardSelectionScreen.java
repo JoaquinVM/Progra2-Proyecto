@@ -64,26 +64,31 @@ public class CardSelectionScreen implements Screen {
     public void onCellPressed(int v, int h) {
         if (h == 6) {
             if (v == 0) {
+                //show
                 ui.setScreen(new CardPreviewScreen(ui, this, cards.get(0)));
             } else if (v == 1) {
+                //add
                 if (selectedV >= 0 && selectedV < 2 && selecteH >= 0 && selecteH < 6) {
                     deck.add(cards.get(12 * (page + selectedV) + selecteH));
                     drawDeck();
                 }
             } else if (v == 2) {
                 if (selectedV == 2 && selecteH < 6) {
+                    //delete
                     deck.remove(selecteH + deckPage);
                     drawDeck();
                 }
             }
         } else if (h == 7) {
             if (v == 0) {
+                //rightPage
                 page++;
                 if (page > cards.size() / 12){
                     page = 1;
                 }
                 drawPage();
             } else if (v == 1 && cards.size() == Constants.MAX_CARDS_PER_DECK){
+                //en
                 if(sPlayer1){
                     sPlayer1 = false;
                     player1.setDeck(new Deck(deck));
@@ -96,6 +101,7 @@ public class CardSelectionScreen implements Screen {
                     ui.setScreen(new GameScreen(ui, player1, player2));
                 }
             }else if(v == 2){
+                //rightDeck
                 deckPage++;
                 if (deckPage > deck.size() / 6){
                     deckPage = 1;
