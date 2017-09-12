@@ -114,12 +114,9 @@ public class CardSelectionScreen implements Screen {
                 drawDeck();
             }
         }else{
-            if(selectedV == -1 && selecteH == -1){
+            if(selectedV == -1 && selecteH == -1 && h != 6 && h != 7){
                 selectedV = v;
                 selecteH = h;
-            }else{
-                selectedV = -1;
-                selecteH = -1;
             }
         }
     }
@@ -146,7 +143,7 @@ public class CardSelectionScreen implements Screen {
 
     public void drawDeck(){
         for (int i = deckPage; i < 6; i++) {
-            if(i < deck.size()){
+            if(deckPage * 6 + i < deck.size()){
                 ui.setImageOnCell(2, i, deck.get(deckPage * 6 + i).image());
             } else {
                 ui.setImageOnCell(2,i ,"fondo_v");
