@@ -65,11 +65,16 @@ public class CardSelectionScreen implements Screen {
         if (h == 6) {
             if (v == 0) {
                 //show
+                if(selectedV == 0 || selectedV == 1){
+                    ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + 6 * selectedV + selecteH)));
+                }else{
+                    ui.setScreen(new CardPreviewScreen(ui, this, deck.get(deckPage * 6 + h)));
+                }
                 ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + selectedV + selecteH)));
             } else if (v == 1) {
                 //add
                 if (selectedV >= 0 && selectedV < 2 && selecteH >= 0 && selecteH < 6) {
-                    deck.add(cards.get(12 * page + selectedV + selecteH));
+                    deck.add(cards.get(12 * page + 6 * selectedV + selecteH));
                     drawDeck();
                 }
             } else if (v == 2) {
@@ -104,7 +109,7 @@ public class CardSelectionScreen implements Screen {
                 //rightDeck
                 deckPage++;
                 if (deckPage > deck.size() / 6){
-                    deckPage = 1;
+                    deckPage = 0;
                 }
                 drawDeck();
             }
@@ -142,7 +147,7 @@ public class CardSelectionScreen implements Screen {
     public void drawDeck(){
         for (int i = deckPage; i < 6; i++) {
             if(i < deck.size()){
-                ui.setImageOnCell(2, i, deck.get(i).image());
+                ui.setImageOnCell(2, i, deck.get(deckPage * 6 + i).image());
             } else {
                 ui.setImageOnCell(2,i ,"fondo_v");
             }
