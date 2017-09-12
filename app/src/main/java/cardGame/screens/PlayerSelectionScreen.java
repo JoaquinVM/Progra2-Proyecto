@@ -59,8 +59,7 @@ public class PlayerSelectionScreen implements Screen {
             show();
         } else {
             player2 = p;
-            //ui.setScreen(new CardSelectionScreen(ui, player1, player2));
-            ui.setScreen(new MenuScreen(ui));
+            ui.setScreen(new CardSelectionScreen(ui, player1, player2));
         }
 
     }

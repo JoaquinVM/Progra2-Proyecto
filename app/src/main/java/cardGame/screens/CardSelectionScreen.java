@@ -63,7 +63,7 @@ public class CardSelectionScreen implements Screen {
     public void setCardsOnBoard(List<Card> lista, int indice) {
         for (int v = 0; v < 2; v++) {
             for (int h = 0; h < 6; h++) {
-                if (!(lista.get(indice) == null)) {
+                if (indice < lista.size()){//!(lista.get(indice) == null)) {
                     ui.setImageOnCell(v, h, lista.get(indice).image());
                     indice++;
                 } else {
@@ -120,11 +120,7 @@ public class CardSelectionScreen implements Screen {
     }
 
     @Override
-    public void show(){
-
-    }
-
-    public void showd() {
+    public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
         if(sPlayer1){
             for(Card m : CardDatabase.getInstance().getMemes()){
@@ -135,10 +131,12 @@ public class CardSelectionScreen implements Screen {
             }
         }
 
-        orderList(cardList);
+
+
+        //orderList(cardList);
         setCardsOnBoard(cardList, 0);
-        createMatrix(cardList);
-        setSellectedCardsOnBoard(selectedCards, 0);
+        //createMatrix(cardList);
+        //setSellectedCardsOnBoard(selectedCards, 0);
         Deck d = new Deck(selectedCards);
         if(sPlayer1) {
             sPlayer1 = false;
