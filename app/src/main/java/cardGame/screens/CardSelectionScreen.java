@@ -25,7 +25,7 @@ public class CardSelectionScreen implements Screen {
     private List<Card> cards = new LinkedList<>();
     private List<Card> deck = new LinkedList<>();
     private int page = 1;
-    private int deckPage = 1;
+    private int deckPage = 0;
     private int selectedV = -1;
     private int selecteH = -1;
     private boolean sPlayer1 = true;
@@ -42,7 +42,7 @@ public class CardSelectionScreen implements Screen {
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
         page = 1;
-        deckPage = 1;
+        deckPage = 0;
         deck.clear();
 
         Collections.sort(cards);
@@ -107,10 +107,9 @@ public class CardSelectionScreen implements Screen {
 
     public void drawPage() {
         int index = page * 12;
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 6; j++) {
                 if (index < cards.size()) {
-
                     ui.setImageOnCell(i, j, cards.get(index).image());
                 } else {
                     ui.setImageOnCell(i, j, "fondo_v");
@@ -122,8 +121,12 @@ public class CardSelectionScreen implements Screen {
     }
 
     public void drawDeck(){
-        for (int i = deckPage; i < deck.size(); i++) {
-            ui.setImageOnCell(2, i, deck.get(i).image());
+        for (int i = deckPage; i < 6; i++) {
+            if(i < deck.size()){
+                ui.setImageOnCell(2, i, deck.get(i).image());
+            } else {
+                ui.setImageOnCell(2,i ,"fondo_v");
+            }
         }
     }
 }
