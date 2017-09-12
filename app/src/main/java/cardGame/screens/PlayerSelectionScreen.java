@@ -6,7 +6,6 @@ import cardGame.player.PlayerEarth;
 import cardGame.player.PlayerFire;
 import cardGame.player.PlayerIce;
 import cardGame.player.PlayerWind;
-import cardGame.utils.Constants;
 
 /**
  * Created by Rodrigo on 9/9/2017.
@@ -59,7 +58,7 @@ public class PlayerSelectionScreen implements Screen {
             show();
         } else {
             player2 = p;
-            ui.setScreen(new CardSelectionScreen(ui, player1, player2));
+            ui.setScreen(new CardSelectionScreen1(ui, player1, player2));
         }
 
     }
