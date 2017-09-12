@@ -4,6 +4,7 @@ import cardGame.player.PlayerEarth;
 import cardGame.player.PlayerFire;
 import cardGame.screens.CardSelectionScreen1;
 import cardGame.screens.MenuScreen;
+import cardGame.screens.PlayerSelectionScreen;
 import cardGame.screens.Screen;
 import edu.upb.lp.progra.adapterFiles.AndroidGameGUI;
 import edu.upb.lp.progra.adapterFiles.UI;
@@ -39,8 +40,7 @@ public class MemeStoneUI implements UI {
         Game game = new Game(this);
         CardDatabase.getInstance().initMemes(game);
         CardDatabase.getInstance().initSpells(game);
-        //setScreen(new PlayerSelectionScreen(this));
-        setScreen(new CardSelectionScreen1(this, new PlayerFire(), new PlayerEarth()));
+        setScreen(new PlayerSelectionScreen(this));
     }
 
     public void configureGrid(int numberOfRows, int numberOfColumns, int verticalSpacing, int horizontalSpacing, int textSize) {
