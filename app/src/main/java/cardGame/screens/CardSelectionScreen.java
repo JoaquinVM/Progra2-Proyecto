@@ -37,8 +37,10 @@ public class CardSelectionScreen implements Screen {
                 if(index < cards.size()){
 
                     ui.setImageOnCell(i,j,cards.get(index).image());
+                } else {
+                    ui.setImageOnCell(i,j,"fondo_v");
                 }
-
+                index++;
             }
         }
     }
