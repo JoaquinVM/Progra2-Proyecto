@@ -46,7 +46,12 @@ public class CardSelectionScreen implements Screen {
 
         drawPage();
         drawDeck();
-
+        ui.setImageOnCell(0, 6, "show");
+        ui.setImageOnCell(1, 6, "add");
+        ui.setImageOnCell(2, 6, "delete");
+        ui.setImageOnCell(0, 7, "right");
+        ui.setImageOnCell(1, 7, "end");
+        ui.setImageOnCell(2, 7, "right");
 
     }
 
@@ -62,12 +67,12 @@ public class CardSelectionScreen implements Screen {
                 //ui.setScreen(new CardPreviewScreen(ui, ));
             } else if (v == 1) {
                 if (selectedV >= 0 && selectedV < 2 && selecteH >= 0 && selecteH < 6) {
-                    deck.add(cards.get(6 * (page + v) + h));
+                    deck.add(cards.get(12 * (page + selectedV) + selecteH));
                     drawDeck();
                 }
             } else if (v == 2) {
-                if (selectedV == 2 && h < 6) {
-                    deck.remove(selecteH);
+                if (selectedV == 2 && selecteH < 6) {
+                    deck.remove(selecteH + deckPage);
                     drawDeck();
                 }
             }
@@ -83,6 +88,9 @@ public class CardSelectionScreen implements Screen {
                     sPlayer1 = false;
                     player1.setDeck(new Deck(deck));
                     show();
+                    page = 1;
+                    deckPage = 0;
+                    deck.clear();
                 }else{
                     player2.setDeck(new Deck(deck));
                     ui.setScreen(new GameScreen(ui, player1, player2));
@@ -93,6 +101,14 @@ public class CardSelectionScreen implements Screen {
                     deckPage = 1;
                 }
                 drawDeck();
+            }
+        }else{
+            if(selectedV == -1 && selecteH == -1){
+                selectedV = v;
+                selecteH = h;
+            }else{
+                selectedV = -1;
+                selecteH = -1;
             }
         }
     }
