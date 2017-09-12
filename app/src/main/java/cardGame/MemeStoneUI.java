@@ -1,5 +1,4 @@
 package cardGame;
-
 import cardGame.cards.CardDatabase;
 import cardGame.screens.MenuScreen;
 import cardGame.screens.PlayerSelectionScreen;
