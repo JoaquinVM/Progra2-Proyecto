@@ -1,5 +1,7 @@
 package cardGame.cards;
 
+import android.support.annotation.NonNull;
+
 import cardGame.Damagable;
 import cardGame.Game;
 
@@ -7,7 +9,7 @@ import cardGame.Game;
  * Created by Joaco99 on 05/09/2017.
  */
 
-public class Card implements Cloneable{
+public class Card implements Cloneable, Comparable{
     private int cost;
     private String name;
     private Game game;
@@ -53,5 +55,21 @@ public class Card implements Cloneable{
     }
     public String image(){
         return name;
+    }
+
+    @Override
+    public int compareTo(@NonNull Object another) {
+        if(another instanceof Card){
+            Card c = (Card)another;
+            if(cost < c.getCost()){
+                return -1;
+            }else if(cost > c.getCost()){
+                return 1;
+            }else{
+                return 0;
+            }
+        }else{
+            throw new IllegalArgumentException();
+        }
     }
 }
