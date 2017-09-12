@@ -84,7 +84,7 @@ public class CardSelectionScreen implements Screen {
                 //rightPage
                 page++;
                 if (page > cards.size() / 12){
-                    page = 1;
+                    page = 0;
                 }
                 drawPage();
             } else if (v == 1 && cards.size() == Constants.MAX_CARDS_PER_DECK){
