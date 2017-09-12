@@ -184,7 +184,7 @@ public class CardDatabase {
         kitten.setSpellinmune(true);
         memes.add(kitten);
 
-        Meme mexican = new Meme("mexican_1", 0, 1, 1, game);
+        Meme mexican = new Meme("mexican", 0, 1, 1, game);
         memes.add(mexican);
 
         Meme noMeDigas = new Meme("no_me_digas", 3, 2, 1, game);

@@ -65,11 +65,11 @@ public class CardSelectionScreen implements Screen {
         if (h == 6) {
             if (v == 0) {
                 //show
-                ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * (page + selectedV) + selecteH)));
+                ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + selectedV + selecteH)));
             } else if (v == 1) {
                 //add
                 if (selectedV >= 0 && selectedV < 2 && selecteH >= 0 && selecteH < 6) {
-                    deck.add(cards.get(12 * (page + selectedV) + selecteH));
+                    deck.add(cards.get(12 * page + selectedV + selecteH));
                     drawDeck();
                 }
             } else if (v == 2) {
