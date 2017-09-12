@@ -153,7 +153,7 @@ int drawable menu_screen_5 0x7f020095
 int drawable menu_screen_6 0x7f020096
 int drawable menu_screen_7 0x7f020097
 int drawable menu_screen_8 0x7f020098
-int drawable mexican 0x7f020099
+int drawable mexican_1 0x7f020099
 int drawable no_me_digas_1 0x7f02009a
 int drawable no_me_digas_2 0x7f02009b
 int drawable no_me_digas_3 0x7f02009c

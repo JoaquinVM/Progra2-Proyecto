@@ -25,7 +25,7 @@ public class CardPreviewScreen implements Screen {
         ui.configureGrid(1, 3, 0, 0, 0);
         ui.setImageOnCell(0, 0, "fondo_v");
         ui.setImageOnCell(0, 1, card.image());
-        ui.setImageOnCell(0,2,"fonoo_v");
+        ui.setImageOnCell(0,2,"fondo_v");
     }
 
     @Override
