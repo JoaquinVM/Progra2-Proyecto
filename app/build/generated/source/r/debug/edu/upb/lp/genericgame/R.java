@@ -168,7 +168,7 @@ public final class R {
         public static final int menu_screen_6=0x7f020096;
         public static final int menu_screen_7=0x7f020097;
         public static final int menu_screen_8=0x7f020098;
-        public static final int mexican=0x7f020099;
+        public static final int mexican_1 =0x7f020099;
         public static final int no_me_digas_1=0x7f02009a;
         public static final int no_me_digas_2=0x7f02009b;
         public static final int no_me_digas_3=0x7f02009c;
