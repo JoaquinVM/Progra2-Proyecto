@@ -30,8 +30,22 @@ public class CardSelectionScreen implements Screen {
         this.player2 = player2;
     }
 
+    public void drawCards(){
+        int index = page*12;
+        for(int i = 0; i<3;i++){
+            for(int j = 0; j < 6; j++){
+                if(index < cards.size()){
+
+                    ui.setImageOnCell(i,j,cards.get(index).image());
+                }
+
+            }
+        }
+    }
+
     @Override
     public void show() {
+        ui.configureGrid(3,8,0,0,0);
         cards.addAll(CardDatabase.getInstance().getSpells());
         cards.addAll(CardDatabase.getInstance().getMemes());
 
