@@ -24,7 +24,7 @@ public class CardSelectionScreen implements Screen {
     private Player player2;
     private List<Card> cards = new LinkedList<>();
     private List<Card> deck = new LinkedList<>();
-    private int page = 1;
+    private int page = 0;
     private int deckPage = 0;
     private int selectedV = -1;
     private int selecteH = -1;
@@ -64,7 +64,7 @@ public class CardSelectionScreen implements Screen {
     public void onCellPressed(int v, int h) {
         if (h == 6) {
             if (v == 0) {
-                //ui.setScreen(new CardPreviewScreen(ui, ));
+                ui.setScreen(new CardPreviewScreen(ui, this, cards.get(0)));
             } else if (v == 1) {
                 if (selectedV >= 0 && selectedV < 2 && selecteH >= 0 && selecteH < 6) {
                     deck.add(cards.get(12 * (page + selectedV) + selecteH));
@@ -88,7 +88,7 @@ public class CardSelectionScreen implements Screen {
                     sPlayer1 = false;
                     player1.setDeck(new Deck(deck));
                     show();
-                    page = 1;
+                    page = 0;
                     deckPage = 0;
                     deck.clear();
                 }else{

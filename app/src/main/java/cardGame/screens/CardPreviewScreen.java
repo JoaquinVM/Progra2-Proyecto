@@ -12,20 +12,20 @@ public class CardPreviewScreen implements Screen {
     Card card;
     Screen screen;
 
-    public CardPreviewScreen(MemeStoneUI ui, Screen screen) {
+    public CardPreviewScreen(MemeStoneUI ui, Screen screen, Card card) {
         this.ui = ui;
         this.screen = screen;
+        this.card=card;
     }
 
-    public CardPreviewScreen(MemeStoneUI ui) {
-        this.ui = ui;
-    }
+
 
     @Override
     public void show() {
         ui.configureGrid(1, 3, 0, 0, 0);
-        ui.setImageOnCell(0, 1, "card_preview");
-        ui.setImageOnCell(0, 1, "alexis");
+        ui.setImageOnCell(0, 0, "fondo_v");
+        ui.setImageOnCell(0, 1, card.image());
+        ui.setImageOnCell(0,2,"fonoo_v");
     }
 
     @Override
@@ -35,19 +35,12 @@ public class CardPreviewScreen implements Screen {
 
     @Override
     public void onCellPressed(int v, int h) {
-        this.hide();
+        ui.setScreen(screen);
     }
 
     @Override
     public void hide() {
-        screen.show();
     }
 
-    public void setCard(Card card) {
-        this.card = card;
-    }
 
-    public void setScreen(Screen screen) {
-        this.screen = screen;
-    }
 }
