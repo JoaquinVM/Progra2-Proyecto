@@ -1,6 +1,9 @@
 package cardGame.screens;
+
 import java.util.LinkedList;
 import java.util.List;
+
+import cardGame.Game;
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.cards.Card;
@@ -35,10 +38,10 @@ public class CardSelectionScreen implements Screen {
     public void orderList(List<Card> cardList) {
         Card aux;
         for (int i = 0; i < cardList.size(); i++) {
-            for (int j = 1; j < cardList.size() - i; j++) {
-                if (cardList.get(j-1).getCost() > cardList.get(j).getCost()) {
-                    aux = cardList.get(j-1);
-                    cardList.add(j-1, cardList.get(j));
+            for (int j = i + 1; j < cardList.size() - 1; j++) {
+                if (cardList.get(i).getCost() > cardList.get(j).getCost()) {
+                    aux = cardList.get(i);
+                    cardList.add(i, cardList.get(j));
                     cardList.add(j, aux);
                 }
             }
@@ -60,7 +63,7 @@ public class CardSelectionScreen implements Screen {
     public void setCardsOnBoard(List<Card> lista, int indice) {
         for (int v = 0; v < 2; v++) {
             for (int h = 0; h < 6; h++) {
-                if (!(lista.get(indice) == null)) {
+                if (indice < lista.size()){//!(lista.get(indice) == null)) {
                     ui.setImageOnCell(v, h, lista.get(indice).image());
                     indice++;
                 } else {
@@ -116,11 +119,7 @@ public class CardSelectionScreen implements Screen {
         selectedCards.remove(pageSelectedCards + h );
     }
 
-    //@Override
-    //public void show(){
-
-    //}
-
+    @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
         if(sPlayer1){
@@ -132,10 +131,12 @@ public class CardSelectionScreen implements Screen {
             }
         }
 
-        orderList(cardList);
+
+
+        //orderList(cardList);
         setCardsOnBoard(cardList, 0);
-        createMatrix(cardList);
-        setSellectedCardsOnBoard(selectedCards, 0);
+        //createMatrix(cardList);
+        //setSellectedCardsOnBoard(selectedCards, 0);
         Deck d = new Deck(selectedCards);
         if(sPlayer1) {
             sPlayer1 = false;
