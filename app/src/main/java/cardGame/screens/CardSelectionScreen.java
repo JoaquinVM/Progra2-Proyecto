@@ -1,16 +1,16 @@
 package cardGame.screens;
 
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import cardGame.MemeStoneUI;
 import cardGame.Player;
 import cardGame.cards.Card;
 import cardGame.cards.CardDatabase;
 import cardGame.cards.Deck;
-import cardGame.cards.Meme;
 import cardGame.utils.Constants;
 
 /**
@@ -27,8 +27,9 @@ public class CardSelectionScreen implements Screen {
     private int page = 0;
     private int deckPage = 0;
     private int selectedV = -1;
-    private int selecteH = -1;
+    private int selectedH = -1;
     private boolean sPlayer1 = true;
+    private Map<Card, Integer> map = new HashMap<>();
 
     public CardSelectionScreen(MemeStoneUI ui, Player player1, Player player2) {
         this.ui = ui;
@@ -66,22 +67,29 @@ public class CardSelectionScreen implements Screen {
             if (v == 0) {
                 //show
                 if(selectedV == 0 || selectedV == 1){
-                    ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + 6 * selectedV + selecteH)));
+                    ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + 6 * selectedV + selectedH)));
                 }else{
-                    ui.setScreen(new CardPreviewScreen(ui, this, deck.get(deckPage * 6 + h)));
+                    ui.setScreen(new CardPreviewScreen(ui, this, deck.get(deckPage * 6 + selectedH)));
                 }
-                ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + selectedV + selecteH)));
             } else if (v == 1) {
                 //add
-                if (selectedV >= 0 && selectedV < 2 && selecteH >= 0 && selecteH < 6) {
-                    deck.add(cards.get(12 * page + 6 * selectedV + selecteH));
-                    drawDeck();
+                if (selectedV >= 0 && selectedV < 2 && selectedH >= 0 && selectedH < 6 && deck.size() < Constants.MAX_CARDS_PER_DECK) {
+                   int index = 12 * page + 6 * selectedV + selectedH;
+                    if(map.get(cards.get(index)) == null || map.get(cards.get(index)) < 2){
+                        deck.add(cards.get(12 * page + 6 * selectedV + selectedH).clone());
+                        drawDeck();
+                    }
+                    changeMap(cards.get(index), true);
                 }
             } else if (v == 2) {
-                if (selectedV == 2 && selecteH < 6) {
+                if (selectedV == 2 && selectedH < 6) {
                     //delete
-                    deck.remove(selecteH + deckPage);
-                    drawDeck();
+                    int index = page * 6 + selectedH;
+                    if(index < deck.size()){
+                        changeMap(deck.get(index), false);
+                        deck.remove(index);
+                        drawDeck();
+                    }
                 }
             }
         } else if (h == 7) {
@@ -92,15 +100,15 @@ public class CardSelectionScreen implements Screen {
                     page = 0;
                 }
                 drawPage();
-            } else if (v == 1 && cards.size() == Constants.MAX_CARDS_PER_DECK){
-                //en
+            } else if (v == 1 && deck.size() == Constants.MAX_CARDS_PER_DECK){
+                //end
                 if(sPlayer1){
                     sPlayer1 = false;
                     player1.setDeck(new Deck(deck));
-                    show();
                     page = 0;
                     deckPage = 0;
                     deck.clear();
+                    show();
                 }else{
                     player2.setDeck(new Deck(deck));
                     ui.setScreen(new GameScreen(ui, player1, player2));
@@ -114,9 +122,9 @@ public class CardSelectionScreen implements Screen {
                 drawDeck();
             }
         }else{
-            if(selectedV == -1 && selecteH == -1 && h != 6 && h != 7){
+            if(h != 6 && h != 7){
                 selectedV = v;
-                selecteH = h;
+                selectedH = h;
             }
         }
     }
@@ -124,6 +132,18 @@ public class CardSelectionScreen implements Screen {
     @Override
     public void hide() {
 
+    }
+
+    public void changeMap(Card card, boolean add){
+        if(map.get(card) == null && add){
+            map.put(card, 1);
+        }else if(map.get(card) == 1 && add){
+            map.put(card, 2);
+        }else if(map.get(card) == 1 && !add){
+            map.put(card, 0);
+        }else if(map.get(card) == 2 && !add){
+            map.put(card, 1);
+        }
     }
 
     public void drawPage() {
@@ -142,7 +162,7 @@ public class CardSelectionScreen implements Screen {
     }
 
     public void drawDeck(){
-        for (int i = deckPage; i < 6; i++) {
+        for (int i = 0; i < 6; i++) {
             if(deckPage * 6 + i < deck.size()){
                 ui.setImageOnCell(2, i, deck.get(deckPage * 6 + i).image());
             } else {
