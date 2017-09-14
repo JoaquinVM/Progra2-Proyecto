@@ -22,8 +22,8 @@ public class CardSelectionScreen implements Screen {
     private MemeStoneUI ui;
     private Player player1;
     private Player player2;
-    private List<Card> cards = new LinkedList<>();
-    private List<Card> deck = new LinkedList<>();
+    private List<Card> cards;
+    private List<Card> deck;
     private int page = 0;
     private int deckPage = 0;
     private int selectedV = -1;
@@ -32,18 +32,28 @@ public class CardSelectionScreen implements Screen {
     private Map<Card, Integer> map = new HashMap<>();
 
     public CardSelectionScreen(MemeStoneUI ui, Player player1, Player player2) {
+        cards = new LinkedList<>();
+        deck = new LinkedList<>();
         this.ui = ui;
         this.player1 = player1;
         this.player2 = player2;
         cards.addAll(CardDatabase.getInstance().getSpells());
         cards.addAll(CardDatabase.getInstance().getMemes());
+        Collections.sort(cards);
+    }
+
+    public void init(){
+        page = 0;
+        deckPage = 0;
+        selectedV = -1;
+        selectedH = -1;
+        map.clear();
+        deck.clear();
     }
 
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
-
-        Collections.sort(cards);
 
         drawPage();
         drawDeck();
@@ -84,7 +94,7 @@ public class CardSelectionScreen implements Screen {
             } else if (v == 2) {
                 if (selectedV == 2 && selectedH < 6) {
                     //delete
-                    int index = page * 6 + selectedH;
+                    int index = deckPage * 6 + selectedH;
                     if(index < deck.size()){
                         changeMap(deck.get(index), false);
                         deck.remove(index);
@@ -105,9 +115,7 @@ public class CardSelectionScreen implements Screen {
                 if(sPlayer1){
                     sPlayer1 = false;
                     player1.setDeck(new Deck(deck));
-                    page = 0;
-                    deckPage = 0;
-                    deck.clear();
+                    init();
                     show();
                 }else{
                     player2.setDeck(new Deck(deck));
@@ -134,8 +142,10 @@ public class CardSelectionScreen implements Screen {
 
     }
 
+
     public void changeMap(Card card, boolean add){
-        if(map.get(card) == null && add){
+
+        if((map.get(card) == null || map.get(card) == 0)&& add){
             map.put(card, 1);
         }else if(map.get(card) == 1 && add){
             map.put(card, 2);
@@ -144,6 +154,8 @@ public class CardSelectionScreen implements Screen {
         }else if(map.get(card) == 2 && !add){
             map.put(card, 1);
         }
+
+
     }
 
     public void drawPage() {
