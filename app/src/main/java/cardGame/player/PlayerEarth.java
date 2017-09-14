@@ -20,7 +20,7 @@ public class PlayerEarth extends Player {
 
     @Override
     public void power(Meme meme){
-        getGame().increaseHealth(4, meme);
+        getGame().heal(meme, 4);
     }
 
 
