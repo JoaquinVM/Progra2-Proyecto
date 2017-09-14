@@ -42,7 +42,7 @@ public class PlayerSelectionScreen implements Screen {
 
     @Override
     public void onCellPressed(int v, int h) {
-        Player p = new PlayerFire();
+        Player p = null;
         if (v == 0){
             if (h == 0){
                 ui.setScreen(new CardPreviewScreen(ui, this, "fire_power"));
@@ -64,7 +64,7 @@ public class PlayerSelectionScreen implements Screen {
                 p = new PlayerWind();
             }
         }
-        if (sPlayer1) {
+        if (sPlayer1 && p != null) {
             player1 = p;
             sPlayer1 = false;
             show();
