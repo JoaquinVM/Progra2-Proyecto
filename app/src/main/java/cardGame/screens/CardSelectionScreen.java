@@ -77,9 +77,9 @@ public class CardSelectionScreen implements Screen {
             if (v == 0) {
                 //show
                 if(selectedV == 0 || selectedV == 1){
-                    ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + 6 * selectedV + selectedH)));
+                    ui.setScreen(new CardPreviewScreen(ui, this, cards.get(12 * page + 6 * selectedV + selectedH).image()));
                 }else{
-                    ui.setScreen(new CardPreviewScreen(ui, this, deck.get(deckPage * 6 + selectedH)));
+                    ui.setScreen(new CardPreviewScreen(ui, this, deck.get(deckPage * 6 + selectedH).image()));
                 }
             } else if (v == 1) {
                 //add

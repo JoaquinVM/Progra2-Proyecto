@@ -9,13 +9,13 @@ import cardGame.cards.Card;
 
 public class CardPreviewScreen implements Screen {
     MemeStoneUI ui;
-    Card card;
+    String image;
     Screen screen;
 
-    public CardPreviewScreen(MemeStoneUI ui, Screen screen, Card card) {
+    public CardPreviewScreen(MemeStoneUI ui, Screen screen, String image) {
         this.ui = ui;
         this.screen = screen;
-        this.card=card;
+        this.image = image;
     }
 
 
@@ -24,7 +24,7 @@ public class CardPreviewScreen implements Screen {
     public void show() {
         ui.configureGrid(1, 3, 0, 0, 0);
         ui.setImageOnCell(0, 0, "fondo_v");
-        ui.setImageOnCell(0, 1, card.image());
+        ui.setImageOnCell(0, 1, image);
         ui.setImageOnCell(0,2,"fondo_v");
     }
 
