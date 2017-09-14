@@ -19,6 +19,8 @@ public class GameScreen implements Screen {
 	public GameScreen(MemeStoneUI ui, Player player, Player enemy) {
 		this.ui = ui;
 		game = ui.getGame();
+		game.setPlayer(player);
+		game.setPlayer(enemy);
 	}
 
 	@Override
