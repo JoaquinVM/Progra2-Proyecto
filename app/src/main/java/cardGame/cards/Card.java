@@ -1,7 +1,5 @@
 package cardGame.cards;
 
-import android.support.annotation.NonNull;
-
 import cardGame.Damagable;
 import cardGame.Game;
 
@@ -40,12 +38,17 @@ public class Card implements Cloneable,Comparable{
         return game;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void ability(Meme meme){}
 
     public void ability(Damagable damagable){}
 
     public void ability(){}
 
+    @Override
     public boolean equals(Object o) {
         if(o instanceof Card){
             Card card = (Card) o;
@@ -53,12 +56,18 @@ public class Card implements Cloneable,Comparable{
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() * 11 + cost * 17;
+    }
+
     public String image(){
         return name;
     }
 
     @Override
-    public int compareTo(@NonNull Object another) {
+    public int compareTo(Object another) {
         if(another instanceof Card){
             Card c = (Card)another;
             if(cost < c.getCost()){

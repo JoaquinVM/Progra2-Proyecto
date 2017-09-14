@@ -184,9 +184,6 @@ public class CardDatabase {
         kitten.setSpellinmune(true);
         memes.add(kitten);
 
-        Meme mexican = new Meme("mexican", 0, 1, 1, game);
-        memes.add(mexican);
-
         Meme noMeDigas = new Meme("no_me_digas", 3, 2, 1, game);
         noMeDigas.setSpellinmune(true);
         memes.add(noMeDigas);
@@ -211,12 +208,15 @@ public class CardDatabase {
         uglyface.setTaunt(true);
         memes.add(uglyface);
 
-        Meme yoda = new Meme("yoda", 0, 1, 1, game);
-        memes.add(yoda);
     }
 
-    public Card getYoda(){
-        return null;
-        //TODO
+    public Card getYoda(Game game){
+        Meme yoda = new Meme("yoda", 0, 1, 1, game);
+        return  yoda;
+    }
+
+    public Card getMexicano(Game game){
+        Meme mexican = new Meme("mexican", 0, 1, 1, game);
+        return mexican;
     }
 }
