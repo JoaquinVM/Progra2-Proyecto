@@ -3,6 +3,7 @@ package cardGame;
 import java.util.Random;
 
 import cardGame.cards.Meme;
+import cardGame.utils.Constants;
 
 /**
  * Created by Rodrigo on 5/9/2017.
@@ -17,6 +18,18 @@ public class Game {
 
     public Game(MemeStoneUI ui){
         this.memeUI = ui;
+        for(int i = 0; i < 3; i++){
+            player.drawCard();
+            enemy.drawCard();
+        }
+    }
+
+    public void nextTurn(){
+        Player aux = player;
+        player = enemy;
+        enemy = aux;
+        player.increaseMana();
+        player.drawCard();
     }
 
     public void freeze(Meme meme) {
@@ -24,20 +37,22 @@ public class Game {
     }
 
     public void burn(Meme meme) {
-        //TODO completar
-    }
-
-    public void increaseHealth(int n, Meme meme) {
-        meme.increaseHealth(n, meme);
+        meme.damage(1);
     }
 
     public void damageAll(int damage) {
-        //TODO pensar
-        //TODO que habra aqui?//ni idea
+        for(Meme m : player.getArena()){
+            m.damage(damage);
+        }
+        player.damage(1);
+        damageEnemies(damage);
     }
 
     public void damageEnemies(int damage){
-
+        for(Meme m : enemy.getArena()){
+            m.damage(damage);
+        }
+        enemy.damage(1);
     }
 
     public void dealDamage(cardGame.Damagable d, int damage) {
@@ -53,7 +68,8 @@ public class Game {
     }
 
     public void control(Meme m){
-
+        enemy.getArena().remove(m);
+        player.getArena().add(m);
     }
 
     public void damageRandomEnemies(int numEnemy, int damage){
@@ -64,15 +80,22 @@ public class Game {
     }
 
     public void healAllies(int health){
-        //TODO hacer
+        for(Meme m : player.getArena())m.heal(health);
     }
 
     public void resurrect(){
-        //TODO
+        int index = r.nextInt(player.getGraveyard().size());
+        player.getArena().add(player.getGraveyard().get(index));
     }
     public void discard(){
         int n = r.nextInt(player.getHand().size());
         player.getHand().remove(n);
+    }
+
+    public void summon(Meme meme){
+        if(player.getArena().size() < Constants.MAX_CARDS_PER_ROW){
+            player.getArena().add(meme);
+        }
     }
 
     public Player getPlayer() {

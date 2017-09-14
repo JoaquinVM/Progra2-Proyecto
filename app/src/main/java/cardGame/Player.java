@@ -64,10 +64,6 @@ public abstract class Player implements cardGame.Damagable {
         hand.add(deck.drawCard());
     }
 
-    public void summon(Meme meme) {
-        arena.add(meme);
-    }
-
     public Game getGame() {
         return game;
     }
