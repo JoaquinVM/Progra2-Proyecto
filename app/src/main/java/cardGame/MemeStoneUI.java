@@ -15,6 +15,8 @@ public class MemeStoneUI implements UI {
 
     Screen screen ;
 
+    Game game;
+
     public MemeStoneUI(AndroidGameGUI gui) {
         this.gui = gui;
     }
@@ -37,7 +39,7 @@ public class MemeStoneUI implements UI {
     }
 
     public void newGame(){
-        Game game = new Game(this);
+        game = new Game(this);
         CardDatabase.getInstance().initMemes(game);
         CardDatabase.getInstance().initSpells(game);
         setScreen(new PlayerSelectionScreen(this));
@@ -57,5 +59,9 @@ public class MemeStoneUI implements UI {
         }
         this.screen = screen;
         this.screen.show();
+    }
+
+    public Game getGame() {
+        return game;
     }
 }

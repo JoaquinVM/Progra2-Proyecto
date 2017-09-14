@@ -81,8 +81,7 @@ public class CardDatabase {
             @Override
             public void ability() {
                 game.getPlayer().increaseMana();
-                //TODO complete
-                //game.getPlayer().summon();
+                game.summon(getMexicano(game));
             }
         };
         spells.add(trumpcito);
@@ -149,8 +148,8 @@ public class CardDatabase {
         Meme darthOzman = new Meme("darthoz_man", 4, 3, 2, game) {
             @Override
             public void ability() {
-                //game.getPlayer().summon(d);
-                //TODO
+                game.summon(getYoda(game));
+                game.summon(getYoda(game));
             }
         };
         memes.add(darthOzman);
@@ -210,12 +209,12 @@ public class CardDatabase {
 
     }
 
-    public Card getYoda(Game game){
+    public Meme getYoda(Game game){
         Meme yoda = new Meme("yoda", 0, 1, 1, game);
         return  yoda;
     }
 
-    public Card getMexicano(Game game){
+    public Meme getMexicano(Game game){
         Meme mexican = new Meme("mexican", 0, 1, 1, game);
         return mexican;
     }

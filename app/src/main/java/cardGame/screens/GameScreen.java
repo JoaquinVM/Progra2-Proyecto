@@ -1,35 +1,33 @@
 package cardGame.screens;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 import cardGame.Game;
 import cardGame.MemeStoneUI;
 import cardGame.Player;
+import cardGame.cards.Card;
 import cardGame.cards.Meme;
 
 public class GameScreen implements Screen {
 	private MemeStoneUI ui;
-	private Screen sc;
 	private Game game;
-	private Player player;
-	private Player enemy;
+	private int selectedH = -1;
+	private int selectedV = -1;
+
 	public GameScreen(MemeStoneUI ui, Player player, Player enemy) {
 		this.ui = ui;
-		this.player = player;
-		this.enemy = enemy;
-	}
-
-
-
-
-	public GameScreen(Player p1, Player p2){
-		//TODO improve constructor
+		game = ui.getGame();
 	}
 
 	@Override
 	public void show() {
-	//	ui.setImageOnCell(0,0,p1);
-		
+		ui.configureGrid(3, 8, 0, 0, 0);
+		drawHand();
+		drawArena(game.getPlayer());
+		drawArena(game.getEnemy());
+		drawOther();
 	}
 
 	@Override
@@ -40,8 +38,9 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void onCellPressed(int v, int h) {
-		// TODO Auto-generated method stub
-		
+		if(v == 0 && h == 7){
+			game.nextTurn();
+		}
 	}
 
 	@Override
@@ -50,5 +49,27 @@ public class GameScreen implements Screen {
 		
 	}
 
+	public void drawHand(){
+		List<Card> hand = game.getPlayer().getHand();
+		int index = 0;
+		for (Card c : hand){
+			ui.setImageOnCell(2, index, c.image());
+			index++;
+		}
 
+	}
+
+	public void drawArena(Player player){
+		List<Meme> arena = player.getArena();
+		int index = 0;
+		for(Meme m : arena){
+			ui.setImageOnCell(1, index, m.image());
+		}
+	}
+
+	public void drawOther(){
+		ui.setImageOnCell(0, 0, game.getEnemy().image());
+		ui.setImageOnCell(2, 7, game.getPlayer().image());
+		ui.setImageOnCell(1, 7, "show");
+	}
 }
