@@ -18,6 +18,9 @@ public class Game {
 
     public Game(MemeStoneUI ui){
         this.memeUI = ui;
+    }
+
+    public void init(){
         for(int i = 0; i < 3; i++){
             player.drawCard();
             enemy.drawCard();

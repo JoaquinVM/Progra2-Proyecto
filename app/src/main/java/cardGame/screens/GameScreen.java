@@ -21,6 +21,7 @@ public class GameScreen implements Screen {
 		game = ui.getGame();
 		game.setPlayer(player);
 		game.setPlayer(enemy);
+		game.init();
 	}
 
 	@Override
