@@ -124,7 +124,7 @@ public class CardSelectionScreen implements Screen {
             }else if(v == 2){
                 //rightDeck
                 deckPage++;
-                if (deckPage > deck.size() / 6){
+                if (deckPage >  deck.size() / 6){
                     deckPage = 0;
                 }
                 drawDeck();
