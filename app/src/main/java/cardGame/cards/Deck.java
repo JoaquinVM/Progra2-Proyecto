@@ -21,6 +21,7 @@ public class Deck {
 
     public Deck (List<Card> initialDeck) {
         this.initialDeck = initialDeck;
+        shuffle();
     }
 
     public void add(Card card){
