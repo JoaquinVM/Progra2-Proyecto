@@ -214,4 +214,9 @@ public class CardDatabase {
         Meme yoda = new Meme("yoda", 0, 1, 1, game);
         memes.add(yoda);
     }
+
+    public Card getYoda(){
+        return null;
+        //TODO
+    }
 }

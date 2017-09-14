@@ -14,7 +14,7 @@ import cardGame.cards.CardDatabase;
 public class Prueba implements Screen {
     List<Card> list = new LinkedList<>();
     MemeStoneUI ui;
-
+    //ujhsdfj
     public Prueba(MemeStoneUI ui){
         this.ui = ui;
     }
