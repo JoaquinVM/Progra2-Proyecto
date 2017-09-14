@@ -1,29 +1,5 @@
 [
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 206,
-                        "endColumn": 58,
-                        "endOffset": 260
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
@@ -72,7 +48,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -83,13 +59,13 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 200,
+                        "startOffset": 206,
                         "endColumn": 58,
-                        "endOffset": 254
+                        "endOffset": 260
                     }
                 }
             }
@@ -108,6 +84,54 @@
                 },
                 "from": {
                     "file": "C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 200,
+                        "endColumn": 58,
+                        "endOffset": 254
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 206,
+                        "endColumn": 58,
+                        "endOffset": 260
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,

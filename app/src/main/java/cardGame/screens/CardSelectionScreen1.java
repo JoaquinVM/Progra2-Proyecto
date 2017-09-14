@@ -130,9 +130,6 @@ public class CardSelectionScreen1 implements Screen {
                 cardList.add(s.clone());
             }
         }
-
-
-
         //orderList(cardList);
         setCardsOnBoard(cardList, 0);
         //createMatrix(cardList);

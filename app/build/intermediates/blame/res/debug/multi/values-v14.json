@@ -1,5 +1,31 @@
 [
     {
+        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 201
+                },
+                "from": {
+                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 227,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 375
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
@@ -52,7 +78,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "outputFile": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -64,7 +90,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -104,7 +130,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
                 "to": {
@@ -116,7 +142,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values-v14\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
