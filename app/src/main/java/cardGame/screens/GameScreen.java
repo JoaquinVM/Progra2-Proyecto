@@ -20,7 +20,7 @@ public class GameScreen implements Screen {
 		this.ui = ui;
 		game = ui.getGame();
 		game.setPlayer(player);
-		game.setPlayer(enemy);
+		game.setEnemy(enemy);
 		game.init();
 	}
 

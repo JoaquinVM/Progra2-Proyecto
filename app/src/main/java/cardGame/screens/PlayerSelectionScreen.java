@@ -42,33 +42,38 @@ public class PlayerSelectionScreen implements Screen {
 
     @Override
     public void onCellPressed(int v, int h) {
-        Player p = null;
+        Player p = new PlayerFire();
+        boolean choosed = false;
         if (v == 0){
             if (h == 0){
                 ui.setScreen(new CardPreviewScreen(ui, this, "fire_power"));
             }else if(h == 1){
                 p = new PlayerFire();
+                choosed = true;
             }else if (h == 2){
                 ui.setScreen(new CardPreviewScreen(ui, this, "ice_power"));
             }else {
                 p = new PlayerIce();
+                choosed = true;
             }
         } else if (v == 1){
             if (h == 0){
                 ui.setScreen(new CardPreviewScreen(ui, this, "earth_power"));
             }else if(h == 1){
                 p = new PlayerEarth();
+                choosed = true;
             }else if (h == 2){
                 ui.setScreen(new CardPreviewScreen(ui, this, "wind_power"));
             }else {
                 p = new PlayerWind();
+                choosed = true;
             }
         }
-        if (sPlayer1 && p != null) {
+        if (sPlayer1 && choosed) {
             player1 = p;
             sPlayer1 = false;
             show();
-        } else {
+        } else if(choosed){
             player2 = p;
             ui.setScreen(new CardSelectionScreen(ui, player1, player2));
         }
