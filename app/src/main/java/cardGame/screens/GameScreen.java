@@ -27,6 +27,8 @@ public class GameScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
+		ui.setImageOnCell(2,0,"mana_4");
+        //hola
         drawHand();
         drawArena(game.getPlayer(), 1);
         drawArena(game.getEnemy(), 2);

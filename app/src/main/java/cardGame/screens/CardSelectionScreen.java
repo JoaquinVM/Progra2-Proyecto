@@ -167,7 +167,6 @@ public class CardSelectionScreen implements Screen {
                 index++;
             }
         }
-
     }
 
     public void drawDeck(){
