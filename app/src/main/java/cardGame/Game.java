@@ -101,6 +101,11 @@ public class Game {
         }
     }
 
+    public void fight(Meme meme1, Meme meme2){
+        meme1.damage(meme2.getDamage());
+        meme2.damage(meme1.getDamage());
+    }
+
     public Player getPlayer() {
         return player;
     }

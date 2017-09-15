@@ -28,8 +28,8 @@ public class GameScreen implements Screen {
 	public void show() {
 		ui.configureGrid(3, 8, 0, 0, 0);
 		drawHand();
-		drawArena(game.getPlayer());
-		drawArena(game.getEnemy());
+		drawArena(game.getPlayer(), 1);
+		drawArena(game.getEnemy(), 2);
 		drawOther();
 	}
 
@@ -54,25 +54,33 @@ public class GameScreen implements Screen {
 
 	public void drawHand(){
 		List<Card> hand = game.getPlayer().getHand();
-		int index = 0;
+		int index = 1;
 		for (Card c : hand){
 			ui.setImageOnCell(2, index, c.image());
 			index++;
 		}
-
+		drawBackground(0, index, 6);
 	}
 
-	public void drawArena(Player player){
+	public void drawArena(Player player, int row){
 		List<Meme> arena = player.getArena();
-		int index = 0;
+		int index = 1;
 		for(Meme m : arena){
 			ui.setImageOnCell(1, index, m.image());
+			index++;
 		}
+		drawBackground(row, index, 6);
 	}
 
 	public void drawOther(){
 		ui.setImageOnCell(0, 0, game.getEnemy().image());
 		ui.setImageOnCell(2, 7, game.getPlayer().image());
 		ui.setImageOnCell(1, 7, "show");
+	}
+
+	public void drawBackground(int row, int start, int end){
+		for(int i = start; i <= end; i++){
+			ui.setImageOnCell(row, start, "fondo_v");
+		}
 	}
 }
