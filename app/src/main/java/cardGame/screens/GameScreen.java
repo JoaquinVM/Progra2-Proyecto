@@ -42,7 +42,17 @@ public class GameScreen implements Screen {
 	@Override
 	public void onCellPressed(int v, int h) {
 		if(v == 0 && h == 7){
-			game.nextTurn();
+			//Menu
+		}
+		else if(v == 1 && h==0){
+			//ui.setScreen(new CardPreviewScreen(ui,this,));
+		}
+		else if(v == 1 && h == 7){
+			//end turn
+		}
+		else if(v!=2 && h!=0){
+			selectedH=h;
+			selectedV=v;
 		}
 	}
 
