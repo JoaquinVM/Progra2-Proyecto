@@ -49,7 +49,9 @@ public class MenuScreen implements Screen  {
             if(firstMenu){
                 System.exit(0);
             }else{
-
+                if(screen != null){
+                    ui.setScreen(screen);
+                }
             }
         }
     }

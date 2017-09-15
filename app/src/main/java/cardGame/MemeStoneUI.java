@@ -35,7 +35,7 @@ public class MemeStoneUI implements UI {
     @Override
     public void initialiseInterface() {
         gui.setBottomSectionProportion(0);
-        setScreen(new MenuScreen(this));
+        setScreen(new MenuScreen(this, true, null));
     }
 
     public void newGame(){
