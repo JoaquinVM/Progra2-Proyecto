@@ -171,7 +171,7 @@ public class CardSelectionScreen implements Screen {
 
     public void drawDeck(){
         for (int i = 0; i < 6; i++) {
-            if(deckPage * 6 + i < deck.size()){
+            if(deckPage * 6+ i < deck.size()){
                 ui.setImageOnCell(2, i, deck.get(deckPage * 6 + i).image());
             } else {
                 ui.setImageOnCell(2,i ,"fondo_v");
