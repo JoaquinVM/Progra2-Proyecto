@@ -50,6 +50,9 @@ public class GameScreen implements Screen {
         } else if (v == 1 && h == 7) {
             game.nextTurn();
             drawHand();
+            drawArena(game.getEnemy(), 0);
+            drawArena(game.getPlayer(), 1);
+            drawOther();
         } else if (v != 2 && h != 0) {
             selectedH = h;
             selectedV = v;
