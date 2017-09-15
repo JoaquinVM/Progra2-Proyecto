@@ -30,8 +30,8 @@ public class GameScreen implements Screen {
 		ui.setImageOnCell(2,0,"mana_4");
         //hola
         drawHand();
-        drawArena(game.getPlayer(), 1);
-        drawArena(game.getEnemy(), 2);
+        drawArena(game.getPlayer(), 0);
+        drawArena(game.getEnemy(), 1);
         drawOther();
     }
 
