@@ -27,7 +27,7 @@ public class MenuScreen implements Screen  {
         int k = 1;
         for (int i = 0; i < 2; i++){
             for (int j = 0; j < 4; j++){
-                if(i == 0 && j == 3)
+                if(i == 0 && j == 2)
                     ui.setImageOnCell(j, i, "menu_screen_return");
                 else
                     ui.setImageOnCell(j, i, "menu_screen_" + k);
