@@ -40,7 +40,7 @@ public class GameScreen implements Screen {
 	}
 
 	@Override
-	public void onCellPressed(int v, int h) {
+		public void onCellPressed(int v, int h) {
 		if(v == 0 && h == 7){
 			//Menu
 		}
@@ -85,7 +85,10 @@ public class GameScreen implements Screen {
 	public void drawOther(){
 		ui.setImageOnCell(0, 0, game.getEnemy().image());
 		ui.setImageOnCell(2, 7, game.getPlayer().image());
-		ui.setImageOnCell(1, 7, "show");
+		ui.setImageOnCell(1, 0, "show");
+		ui.setImageOnCell(1, 2, "add");
+		ui.setImageOnCell(0, 7, "menu");
+		ui.setImageOnCell(1, 7, "end");
 	}
 
 	public void drawBackground(int row, int start, int end){
