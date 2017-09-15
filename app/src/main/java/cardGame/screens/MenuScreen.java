@@ -1,5 +1,6 @@
 package cardGame.screens;
 
+import cardGame.Game;
 import cardGame.MemeStoneUI;
 
 /**
@@ -10,10 +11,13 @@ import cardGame.MemeStoneUI;
 public class MenuScreen implements Screen  {
 
     private MemeStoneUI ui;
+    private boolean firstMenu;
+    private Screen screen;
 
-
-    public MenuScreen(MemeStoneUI ui){
+    public MenuScreen(MemeStoneUI ui, boolean firstMenu, Screen screen){
         this.ui = ui;
+        this.firstMenu = firstMenu;
+        this.screen = screen;
     }
 
 
@@ -23,6 +27,9 @@ public class MenuScreen implements Screen  {
         int k = 1;
         for (int i = 0; i < 2; i++){
             for (int j = 0; j < 4; j++){
+                if(i == 0 && j == 3)
+                    ui.setImageOnCell(j, i, "menu_screen_return");
+                else
                     ui.setImageOnCell(j, i, "menu_screen_" + k);
                 k++;
             }
@@ -39,7 +46,11 @@ public class MenuScreen implements Screen  {
         if(v==1 && h==0){
             ui.newGame();
         }else if(v==2 && h==0){
-            System.exit(0);
+            if(firstMenu){
+                System.exit(0);
+            }else{
+
+            }
         }
     }
 
