@@ -31,7 +31,7 @@ public class GameScreen implements Screen {
         //hola
         drawHand();
         drawArena(game.getPlayer(), 1);
-        drawArena(game.getEnemy(), 2);
+        drawArena(game.getEnemy(), 0);
         drawOther();
     }
 
@@ -68,7 +68,7 @@ public class GameScreen implements Screen {
             ui.setImageOnCell(2, index, c.image());
             index++;
         }
-        drawBackground(0, index, 6);
+        drawBackground(2, index, 6);
     }
 
     public void drawArena(Player player, int row) {
@@ -91,7 +91,7 @@ public class GameScreen implements Screen {
 
     public void drawBackground(int row, int start, int end) {
         for (int i = start; i <= end; i++) {
-            ui.setImageOnCell(row, start, "fondo_v");
+            ui.setImageOnCell(row, i, "fondo_v");
         }
     }
 }
