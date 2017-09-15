@@ -91,7 +91,7 @@ public class GameScreen implements Screen {
 
     public void drawBackground(int row, int start, int end) {
         for (int i = start; i <= end; i++) {
-            ui.setImageOnCell(row, start, "fondo_v");
+            ui.setImageOnCell(row, i, "fondo_v");
         }
     }
 }
