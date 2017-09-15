@@ -49,6 +49,7 @@ public class GameScreen implements Screen {
             //ui.setScreen(new CardPreviewScreen(ui,this,));
         } else if (v == 1 && h == 7) {
             game.nextTurn();
+            drawHand();
         } else if (v != 2 && h != 0) {
             selectedH = h;
             selectedV = v;
