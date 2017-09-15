@@ -1,5 +1,4 @@
 package cardGame.screens;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -12,6 +11,7 @@ import cardGame.cards.Card;
 import cardGame.cards.CardDatabase;
 import cardGame.cards.Deck;
 import cardGame.utils.Constants;
+
 
 /**
  * Created by Samuel on 12/09/2017.
@@ -54,7 +54,6 @@ public class CardSelectionScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
-
         drawPage();
         drawDeck();
         ui.setImageOnCell(0, 6, "show");
@@ -139,9 +138,7 @@ public class CardSelectionScreen implements Screen {
 
     @Override
     public void hide() {
-
     }
-
 
     public void changeMap(Card card, boolean add){
 
