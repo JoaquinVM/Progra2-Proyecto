@@ -50,6 +50,30 @@ public class Meme extends Card implements cardGame.Damagable {
         this.canAttack = canAttack;
     }
 
+    public boolean isDead() {
+        return dead;
+    }
+
+    public boolean isTaunt() {
+        return taunt;
+    }
+
+    public boolean isPoisonous() {
+        return poisonous;
+    }
+
+    public boolean isCharge() {
+        return charge;
+    }
+
+    public boolean isSpeelInmune() {
+        return speelInmune;
+    }
+
+    public boolean isFreeze() {
+        return freeze;
+    }
+
     public boolean canAttack() {
         return canAttack;
     }

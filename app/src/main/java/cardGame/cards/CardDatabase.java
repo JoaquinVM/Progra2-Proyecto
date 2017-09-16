@@ -54,7 +54,7 @@ public class CardDatabase {
                 game.destroy(meme);
             }
         };
-        chuckApproves.setSelect(true);
+        chuckApproves.setSelectMeme(true);
         spells.add(chuckApproves);
 
         Card controlMental = new Card("control_mental", 6, game) {
@@ -63,7 +63,7 @@ public class CardDatabase {
                 game.control(meme);
             }
         };
-        controlMental.setSelect(true);
+        controlMental.setSelectMeme(true);
         spells.add(controlMental);
 
         Card crazyPeach = new Card("crazy_peach", 5, game) {
@@ -105,7 +105,7 @@ public class CardDatabase {
                 game.dealDamage(damagable, 2);
             }
         };
-        unknown.setSelect(true);
+        unknown.setSelectMeme(true);
         spells.add(unknown);
 
         Card vamoACalmarno = new Card("vamo_a_calmarno", 6, game) {
@@ -222,7 +222,6 @@ public class CardDatabase {
         Meme uglyface = new Meme("ugly_face", 2, 2, 4, game);
         uglyface.setTaunt(true);
         memes.add(uglyface);
-
     }
 
     public Meme getYoda(Game game){

@@ -3,6 +3,7 @@ package cardGame.screens;
 import java.util.List;
 
 import cardGame.Constants;
+import cardGame.Damagable;
 import cardGame.Game;
 import cardGame.MemeStoneUI;
 import cardGame.player.Player;
@@ -14,6 +15,7 @@ public class GameScreen implements Screen {
     private Game game;
     private int selectedH = -1;
     private int selectedV = -1;
+    private boolean waiting = false;
 
     public GameScreen(MemeStoneUI ui, Player player, Player enemy) {
         this.ui = ui;
@@ -56,27 +58,51 @@ public class GameScreen implements Screen {
                 ui.setScreen(new CardPreviewScreen(ui, this, game.getEnemy().getArena().get(selectedH - 1).image()));
             } else if (selectedV == 1 && selectedH > 0 && selectedH < 7) {
                 ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getArena().get(selectedH - 1).image()));
-            } else if(selectedV == 0 && selectedH > 0 && selectedH < 7){
+            } else if (selectedV == 0 && selectedH > 0 && selectedH < 7) {
                 ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getHand().get(selectedH - 1).image()));
             }
-        }else if(selectedH != -1 && selectedV != -1){
+        } else if (selectedH != -1 && selectedV != -1) {
             selectedH = h;
             selectedV = v;
-        }else{
-            if(selectedV == 2 && v == 1){
+        } else if (v == 2) {
+            Card c = game.getPlayer().getHand().get(h + 1);
+            if (!(c instanceof Meme) && c.isSelectMeme()) {
+                waiting = true;
+            } else {
+                c.ability();
+            }
+        } else if (!waiting) {
+            if (selectedV == 2 && v == 1) {
+                //Summon
                 Card c = game.getPlayer().getHand().get(h + 1);
-                if(c instanceof Meme && game.getPlayer().getArena().size() <= Constants.MAX_CARDS_PER_ROW){
+                if (c instanceof Meme && game.getPlayer().getArena().size() <= Constants.MAX_CARDS_PER_ROW) {
                     game.summon((Meme) c);
                 }
-                c.ability();
-
-
+            } else if (selectedV == 1 && v == 0) {
+                //Attack
+                Meme m = game.getPlayer().getArena().get(h + 1);
+                Meme enemy = game.getPlayer().getArena().get(h + 1);
+                if (m.canAttack()) {
+                    boolean taunt = false;
+                    for (int i = 0; i < game.getEnemy().getArena().size() && !taunt; i++) {
+                        taunt = game.getEnemy().getArena().get(i).isTaunt();
+                    }
+                    if (taunt && game.getEnemy().getArena().get(h + 1).isTaunt()) {
+                        game.fight(m, enemy);
+                    } else if (!taunt) {
+                        game.fight(m, enemy);
+                    }
+                }
+                selectedH = -1;
+                selectedV = -1;
             }
+        } else if (waiting) {
+            if (selectedV == 0){
+                Card c = game.getPlayer().getHand().get(selectedH + 1);
+                if(c.isSelectDamagable()){
 
-
-
-            selectedH = -1;
-            selectedV = -1;
+                }
+            }
         }
     }
 
@@ -85,7 +111,6 @@ public class GameScreen implements Screen {
         int index = 1;
         for (Card c : hand) {
             ui.setImageOnCell(2, index, c.image());
-            index++;
         }
         drawBackground(2, index);
     }
