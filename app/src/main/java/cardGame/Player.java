@@ -8,7 +8,6 @@ import cardGame.cards.Card;
 import cardGame.cards.Deck;
 import cardGame.cards.Meme;
 import cardGame.utils.Constants;
-import cardGame.utils.Enums;
 
 /**
  * Created by Rodrigo on 5/9/2017.
