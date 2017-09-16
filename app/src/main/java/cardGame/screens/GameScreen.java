@@ -26,8 +26,7 @@ public class GameScreen implements Screen {
     @Override
     public void show() {
         ui.configureGrid(3, 8, 0, 0, 0);
-		ui.setImageOnCell(2,0,"red_4");
-        //hola
+        ui.setImageOnCell(2, 0, "red_4");
         drawHand();
         drawArena(game.getPlayer(), 1);
         drawArena(game.getEnemy(), 0);
@@ -39,17 +38,45 @@ public class GameScreen implements Screen {
         if (v == 0 && h == 7) {
             //Menu
             ui.setScreen(new MenuScreen(ui, false, this));
-        } else if (v == 1 && h == 0) {
-            //ui.setScreen(new CardPreviewScreen(ui,this,));
         } else if (v == 1 && h == 7) {
+            //next turn
             game.nextTurn();
             drawHand();
             drawArena(game.getEnemy(), 0);
             drawArena(game.getPlayer(), 1);
             drawOther();
-        } else if (v != 0 && v!= 7) {
+
+        } else if (v == 1 && h == 0) {
+            //Show
+            if (selectedV == 0 && selectedH == 0) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getEnemy().getPowerImage()));
+            } else if (selectedV == 2 && selectedH == 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getPowerImage()));
+            } else if (selectedV == 0 && selectedH > 0 && selectedH < 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getEnemy().getArena().get(selectedH - 1).image()));
+            } else if (selectedV == 1 && selectedH > 0 && selectedH < 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getArena().get(selectedH - 1).image()));
+            } else if(selectedV == 0 && selectedH > 0 && selectedH < 7){
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getHand().get(selectedH - 1).image()));
+            }
+        }else if(selectedH != -1 && selectedV != -1){
             selectedH = h;
             selectedV = v;
+        }else{
+            if(selectedV == 2 && v == 1){
+                Card c = game.getPlayer().getHand().get(h + 1);
+                if(c instanceof Meme && game.getPlayer().getArena().size() <= Constants.MAX_CARDS_PER_ROW){
+                    game.summon((Meme) c);
+                }
+                c.ability();
+
+
+            }
+
+
+
+            selectedH = -1;
+            selectedV = -1;
         }
     }
 
@@ -81,7 +108,7 @@ public class GameScreen implements Screen {
         ui.setImageOnCell(1, 7, "end");
 
         String s = "blue";
-        if(selectedV == 1 && game.getPlayer().getArena().get(selectedH - 1).canAttack()){
+        if (selectedV == 1 && game.getPlayer().getArena().get(selectedH - 1).canAttack()) {
             s = "red";
         }
         ui.setImageOnCell(2, 0, s + "_" + game.getPlayer().getMana());

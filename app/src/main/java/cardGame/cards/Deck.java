@@ -60,7 +60,6 @@ public class Deck {
                 cards.add(memes.get(r.nextInt(memes.size())));
             }
         }
-
         return  new Deck(cards);
     }
 

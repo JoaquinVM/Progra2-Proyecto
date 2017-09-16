@@ -4,12 +4,13 @@ import java.util.Random;
 
 import cardGame.cards.Meme;
 import cardGame.player.Player;
+import cardGame.screens.Screen;
 
 /**
  * Created by Rodrigo on 5/9/2017.
  */
 
-public class Game {
+public class Game{
     private MemeStoneUI memeUI;
     private Player player;
     private Player enemy;
@@ -32,7 +33,6 @@ public class Game {
         for(Meme m : player.getArena()){
                 m.setCanAttack(true);
         }
-
         Player aux = player;
         player = enemy;
         enemy = aux;
