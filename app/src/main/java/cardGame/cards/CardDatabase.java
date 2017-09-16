@@ -154,6 +154,7 @@ public class CardDatabase {
                 game.damageEnemies(1);
             }
         };
+        chuckNorris.setEndTurn(true);
         memes.add(chuckNorris);
 
         Meme darthOzman = new Meme("darthoz_man", 4, 3, 2, game) {
