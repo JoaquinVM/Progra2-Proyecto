@@ -138,6 +138,7 @@ public class CardDatabase {
         bobToronja.setCharge(true);
         memes.add(bobToronja);
 
+
         Meme brianMalaSuerte = new Meme("brian_mala_suerte", 2, 5, 2, game) {
             @Override
             public void ability() {
