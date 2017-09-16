@@ -1,12 +1,11 @@
 package cardGame.screens;
 
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
+import cardGame.Constants;
 import cardGame.Game;
 import cardGame.MemeStoneUI;
-import cardGame.Player;
+import cardGame.player.Player;
 import cardGame.cards.Card;
 import cardGame.cards.Meme;
 
@@ -36,14 +35,9 @@ public class GameScreen implements Screen {
     }
 
     @Override
-    public void update() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
     public void onCellPressed(int v, int h) {
         if (v == 0 && h == 7) {
+            //Menu
             ui.setScreen(new MenuScreen(ui, false, this));
         } else if (v == 1 && h == 0) {
             //ui.setScreen(new CardPreviewScreen(ui,this,));
@@ -53,16 +47,10 @@ public class GameScreen implements Screen {
             drawArena(game.getEnemy(), 0);
             drawArena(game.getPlayer(), 1);
             drawOther();
-        } else if (v != 2 && h != 0) {
+        } else if (v != 0 && v!= 7) {
             selectedH = h;
             selectedV = v;
         }
-    }
-
-    @Override
-    public void hide() {
-        // TODO Auto-generated method stub
-
     }
 
     public void drawHand() {
@@ -72,7 +60,7 @@ public class GameScreen implements Screen {
             ui.setImageOnCell(2, index, c.image());
             index++;
         }
-        drawBackground(2, index, 6);
+        drawBackground(2, index);
     }
 
     public void drawArena(Player player, int row) {
@@ -82,7 +70,7 @@ public class GameScreen implements Screen {
             ui.setImageOnCell(1, index, m.image());
             index++;
         }
-        drawBackground(row, index, 6);
+        drawBackground(row, index);
     }
 
     public void drawOther() {
@@ -91,11 +79,18 @@ public class GameScreen implements Screen {
         ui.setImageOnCell(1, 0, "show");
         ui.setImageOnCell(0, 7, "menu");
         ui.setImageOnCell(1, 7, "end");
+
+        String s = "blue";
+        if(selectedV == 1 && game.getPlayer().getArena().get(selectedH - 1).canAttack()){
+            s = "red";
+        }
+        ui.setImageOnCell(2, 0, s + "_" + game.getPlayer().getMana());
     }
 
-    public void drawBackground(int row, int start, int end) {
-        for (int i = start; i <= end; i++) {
+    public void drawBackground(int row, int start) {
+        for (int i = start; i <= Constants.MAX_CARDS_PER_ROW; i++) {
             ui.setImageOnCell(row, i, "fondo_v");
         }
     }
+
 }

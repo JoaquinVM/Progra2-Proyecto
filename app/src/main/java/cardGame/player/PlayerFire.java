@@ -1,8 +1,7 @@
 package cardGame.player;
 
-import cardGame.Player;
 import cardGame.cards.Meme;
-import cardGame.utils.Constants;
+import cardGame.Constants;
 
 
 /**

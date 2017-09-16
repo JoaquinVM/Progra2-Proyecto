@@ -3,9 +3,8 @@ package cardGame.screens;
 import java.util.LinkedList;
 import java.util.List;
 
-import cardGame.Game;
 import cardGame.MemeStoneUI;
-import cardGame.Player;
+import cardGame.player.Player;
 import cardGame.cards.Card;
 import cardGame.cards.CardDatabase;
 import cardGame.cards.Deck;
@@ -147,10 +146,6 @@ public class CardSelectionScreen1 implements Screen {
         }
     }
 
-    @Override
-    public void update() {
-
-    }
 
     @Override
     public void onCellPressed(int v, int h) {
@@ -189,8 +184,4 @@ public class CardSelectionScreen1 implements Screen {
         }
     }
 
-    @Override
-    public void hide() {
-        //TODO
-    }
 }

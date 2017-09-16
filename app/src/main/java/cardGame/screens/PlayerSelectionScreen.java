@@ -1,7 +1,7 @@
 package cardGame.screens;
 
 import cardGame.MemeStoneUI;
-import cardGame.Player;
+import cardGame.player.Player;
 import cardGame.player.PlayerEarth;
 import cardGame.player.PlayerFire;
 import cardGame.player.PlayerIce;
@@ -35,10 +35,6 @@ public class PlayerSelectionScreen implements Screen {
         ui.setImageOnCell(1, 2, "wind_power");
     }
 
-    @Override
-    public void update() {
-
-    }
 
     @Override
     public void onCellPressed(int v, int h) {
@@ -75,12 +71,9 @@ public class PlayerSelectionScreen implements Screen {
             show();
         } else if(choosed){
             player2 = p;
-            ui.setScreen(new CardSelectionScreen(ui, player1, player2));
+            ui.setScreen(new DeckModeScreen(ui, player1, player2));
         }
 
     }
 
-    @Override
-    public void hide() {
-    }
 }

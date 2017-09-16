@@ -1,7 +1,6 @@
 package cardGame.screens;
 
 import cardGame.MemeStoneUI;
-import cardGame.cards.Card;
 
 /**
  * Created by Joaco99 on 06/09/2017.
@@ -29,18 +28,8 @@ public class CardPreviewScreen implements Screen {
     }
 
     @Override
-    public void update() {
-
-    }
-
-    @Override
     public void onCellPressed(int v, int h) {
         ui.setScreen(screen);
     }
-
-    @Override
-    public void hide() {
-    }
-
 
 }

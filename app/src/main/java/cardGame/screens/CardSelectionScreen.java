@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import cardGame.MemeStoneUI;
-import cardGame.Player;
+import cardGame.player.Player;
 import cardGame.cards.Card;
 import cardGame.cards.CardDatabase;
 import cardGame.cards.Deck;
-import cardGame.utils.Constants;
+import cardGame.Constants;
 
 
 /**
@@ -65,10 +65,6 @@ public class CardSelectionScreen implements Screen {
 
     }
 
-    @Override
-    public void update() {
-
-    }
 
     @Override
     public void onCellPressed(int v, int h) {
@@ -136,9 +132,6 @@ public class CardSelectionScreen implements Screen {
         }
     }
 
-    @Override
-    public void hide() {
-    }
 
     public void changeMap(Card card, boolean add){
 

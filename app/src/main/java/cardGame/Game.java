@@ -3,7 +3,7 @@ package cardGame;
 import java.util.Random;
 
 import cardGame.cards.Meme;
-import cardGame.utils.Constants;
+import cardGame.player.Player;
 
 /**
  * Created by Rodrigo on 5/9/2017.
@@ -21,6 +21,7 @@ public class Game {
     }
 
     public void init(){
+        player.increaseMana();
         for(int i = 0; i < 3; i++){
             player.drawCard();
             enemy.drawCard();
@@ -28,11 +29,19 @@ public class Game {
     }
 
     public void nextTurn(){
+        for(Meme m : player.getArena()){
+                m.setCanAttack(true);
+        }
+
         Player aux = player;
         player = enemy;
         enemy = aux;
         player.increaseMana();
+
         player.drawCard();
+        if(player.getHand().size() > 6){
+            player.getHand().remove(player.getHand().size() - 1);
+        }
     }
 
     public void freeze(Meme meme) {

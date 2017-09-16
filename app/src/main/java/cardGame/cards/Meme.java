@@ -1,7 +1,6 @@
 package cardGame.cards;
 
 import cardGame.Game;
-import cardGame.utils.Assets;
 
 /**
  * Created by Joaco99 on 05/09/2017.
@@ -49,6 +48,10 @@ public class Meme extends Card implements cardGame.Damagable {
 
     public void setCanAttack(boolean canAttack) {
         this.canAttack = canAttack;
+    }
+
+    public boolean canAttack() {
+        return canAttack;
     }
 
     public void increaseHealth(int n, Meme healedMeme) {

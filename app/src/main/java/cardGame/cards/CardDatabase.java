@@ -13,11 +13,21 @@ import cardGame.Game;
 public class CardDatabase {
     private List<Meme> memes = new ArrayList<>();
     private List<Card> spells = new ArrayList<>();
+    private Game game;
 
     private static CardDatabase instance = new CardDatabase();
 
     public static CardDatabase getInstance() {
         return instance;
+    }
+
+    public CardDatabase(){
+        initMemes();
+        initSpells();
+    }
+
+    public void setGame(Game game){
+        this.game = game;
     }
 
     public List<Meme> getMemes() {
@@ -28,7 +38,7 @@ public class CardDatabase {
         return spells;
     }
 
-    public void initSpells(Game game) {
+    public void initSpells() {
         Card aliens = new Card("aliens", 2, game) {
             @Override
             public void ability() {
@@ -119,7 +129,7 @@ public class CardDatabase {
         spells.add(yisus);
     }
 
-    public void initMemes(Game game) {
+    public void initMemes() {
         Meme alexis = new Meme("alexis", 5, 5, 5, game);
         alexis.setCharge(true);
         memes.add(alexis);

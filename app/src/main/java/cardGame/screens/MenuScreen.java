@@ -1,6 +1,5 @@
 package cardGame.screens;
 
-import cardGame.Game;
 import cardGame.MemeStoneUI;
 
 /**
@@ -37,11 +36,6 @@ public class MenuScreen implements Screen  {
     }
 
     @Override
-    public void update() {
-        // TODO
-    }
-
-    @Override
     public void onCellPressed(int v, int h) {
         if(v==1 && h==0){
             ui.newGame();
@@ -56,8 +50,4 @@ public class MenuScreen implements Screen  {
         }
     }
 
-    @Override
-    public void hide() {
-
-    }
 }
