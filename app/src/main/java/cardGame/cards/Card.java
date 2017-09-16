@@ -11,6 +11,11 @@ public class Card implements Cloneable,Comparable{
     private int cost;
     private String name;
     private Game game;
+    private boolean select = false;
+
+
+
+    private boolean endTurn = false;
 
     public Card clone() {
         try{
@@ -26,6 +31,13 @@ public class Card implements Cloneable,Comparable{
         this.game = game;
     }
 
+    public void setSelect(boolean select) {
+        this.select = select;
+    }
+
+    public void setEndTurn(boolean endTurn) {
+        this.endTurn = endTurn;
+    }
     public int getCost() {
         return cost;
     }
