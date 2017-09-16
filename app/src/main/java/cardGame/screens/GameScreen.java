@@ -1,7 +1,6 @@
 package cardGame.screens;
 
 import java.util.List;
-
 import cardGame.Constants;
 import cardGame.Damagable;
 import cardGame.Game;
@@ -9,6 +8,7 @@ import cardGame.MemeStoneUI;
 import cardGame.player.Player;
 import cardGame.cards.Card;
 import cardGame.cards.Meme;
+
 
 public class GameScreen implements Screen {
     private MemeStoneUI ui;
@@ -71,13 +71,11 @@ public class GameScreen implements Screen {
             } else {
                 c.ability();
             }
-        } else if (!waiting) {
-            if (selectedV == 2 && v == 1) {
-                //Summon
-                Card c = game.getPlayer().getHand().get(h + 1);
-                if (c instanceof Meme && game.getPlayer().getArena().size() <= Constants.MAX_CARDS_PER_ROW) {
-                    game.summon((Meme) c);
-                }
+        } else if (!waiting && selectedV == 2 && v == 1) {
+            //Summon
+            Card c = game.getPlayer().getHand().get(h + 1);
+            if (c instanceof Meme && game.getPlayer().getArena().size() <= Constants.MAX_CARDS_PER_ROW) {
+                game.summon((Meme) c);
             } else if (selectedV == 1 && v == 0) {
                 //Attack
                 Meme m = game.getPlayer().getArena().get(h + 1);
@@ -96,14 +94,24 @@ public class GameScreen implements Screen {
                 selectedH = -1;
                 selectedV = -1;
             }
-        } else if (waiting) {
-            if (selectedV == 0){
-                //s
-                Card c = game.getPlayer().getHand().get(selectedH + 1);
-                if(c.isSelectDamagable()){
-
-                }
+        } else if (waiting && v == 0 && h == 0) {
+            //s
+            Card c = game.getPlayer().getHand().get(selectedH + 1);
+            if (c.isSelectDamagable()) {
+                c.ability(game.getEnemy());
             }
+        } else if (waiting && v == 0 && v > 0 && v < 7) {
+            Card c = game.getPlayer().getHand().get(selectedH + 1);
+            Meme enemy = game.getPlayer().getArena().get(h + 1);
+            if (c.isSelectDamagable()) {
+                Damagable d = enemy;
+                c.ability(d);
+            } else if (!c.isSelectDamagable() && c.isSelectMeme()) {
+                c.ability(enemy);
+            }
+            waiting = false;
+            selectedH = -1;
+            selectedV = -1;
         }
     }
 
