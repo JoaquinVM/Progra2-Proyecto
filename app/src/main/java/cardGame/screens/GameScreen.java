@@ -98,6 +98,7 @@ public class GameScreen implements Screen {
             }
         } else if (waiting) {
             if (selectedV == 0){
+                //s
                 Card c = game.getPlayer().getHand().get(selectedH + 1);
                 if(c.isSelectDamagable()){
 
