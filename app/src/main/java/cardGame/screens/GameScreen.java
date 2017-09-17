@@ -65,10 +65,10 @@ public class GameScreen implements Screen {
         }else if(waitingAttack && v == 0){
             //Attack
             waitingAttack = false;
-            Damagable d;
+            Damagable d = game.getEnemy();
             if(h == 0){
                 d = game.getEnemy();
-            }else{
+            }else if(h - 1 < game.getEnemy().getArena().size()){
                 d = game.getEnemy().getArena().get(v - 1);
             }
             game.fight(game.getPlayer().getArena().get(selectedH - 1), d);
@@ -77,7 +77,7 @@ public class GameScreen implements Screen {
             //Summon
             waitingSummon = false;
             Meme m = (Meme)game.getPlayer().getHand().get(selectedH - 1);
-            game.getPlayer().getHand().remove(h - 1);
+            game.getPlayer().getHand().remove(selectedH - 1);
             game.getPlayer().getArena().add(m);
             drawSide();
         }else if(waitingSelect && v == 0 && game.getPlayer().getHand().get(selectedH - 1).isSelectDamagable()){
@@ -95,18 +95,20 @@ public class GameScreen implements Screen {
             game.getPlayer().getHand().get(selectedH - 1).ability(enemy);
         }else{
             if(h > 0 && h < 7){
-                if(v == 2){
+                if(v == 2 && h - 1 < game.getPlayer().getHand().size()){
                     Card c = game.getPlayer().getHand().get(h - 1);
                     waitingSummon = c instanceof Meme;
                     waitingSelect = c.isSelectDamagable() || c.isSelectMeme();
                 }else if(v == 1){
-                    if(h <= game.getPlayer().getArena().size() && game.getPlayer().getArena().get(h - 1).canAttack()){
+                    if(h - 1 < game.getPlayer().getArena().size() && game.getPlayer().getArena().get(h - 1).canAttack()){
                         drawMana(true);
                         waitingAttack = true;
                     }
                 }
             }
-            if(v != 2 || h != 0){
+            if((v != 2 || h != 0) && ((v == 0 && h - 1 < game.getPlayer().getArena().size()) ||
+                    (v == 1 && h - 1 < game.getPlayer().getArena().size()) ||
+                    (v == 2 && h - 1 < game.getPlayer().getHand().size()))){
                 selectedH = h;
                 selectedV = v;
             }
