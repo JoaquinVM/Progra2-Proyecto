@@ -76,6 +76,7 @@ public class Game{
 
     public void destroy(Meme m){
         m.killMeme(m);
+        player.getArena().remove(m);
     }
 
     public void control(Meme m){
@@ -113,6 +114,16 @@ public class Game{
         target.damage(meme.getDamage());
         if(target instanceof Meme){
             meme.damage(((Meme) target).getDamage());
+        }
+        for(Meme m : player.getArena()){
+            if(m.getHealth() <= 0){
+                player.getArena().remove(m);
+            }
+        }
+        for(Meme m : enemy.getArena()){
+            if(m.getHealth() <= 0){
+                enemy.getArena().remove(m);
+            }
         }
     }
 

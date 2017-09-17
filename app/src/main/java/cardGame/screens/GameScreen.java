@@ -16,8 +16,9 @@ public class GameScreen implements Screen {
     private int selectedH = -1;
     private int selectedV = -1;
     private boolean waitingSelect = false;
-    private boolean waitingSummon = false;
+    private boolean waitingPlace = false;
     private boolean waitingAttack = false;
+    private boolean waitingCast = false;
 
     public GameScreen(MemeStoneUI ui, Player player, Player enemy) {
         this.ui = ui;
@@ -35,7 +36,7 @@ public class GameScreen implements Screen {
 
     @Override
     public void onCellPressed(int v, int h){
-        if(v == 1 && h == 0){
+        if(v == 1 && h == 0 && selectedH != -1 && selectedV != -1){
             //show
             String image;
             if(selectedV == 0){
@@ -69,17 +70,31 @@ public class GameScreen implements Screen {
             if(h == 0){
                 d = game.getEnemy();
             }else if(h - 1 < game.getEnemy().getArena().size()){
-                d = game.getEnemy().getArena().get(v - 1);
+                d = game.getEnemy().getArena().get(h - 1);
             }
             game.fight(game.getPlayer().getArena().get(selectedH - 1), d);
+            game.getPlayer().getArena().get(selectedH - 1).setCanAttack(false);
             drawPlayers();
-        }else if(waitingSummon && v == 1 && game.getPlayer().getHand().size() < Constants.MAX_CARDS_PER_ROW){
+        }else if(waitingPlace && v == 1 && game.getPlayer().getHand().size() < Constants.MAX_CARDS_PER_ROW){
             //Summon
-            waitingSummon = false;
-            Meme m = (Meme)game.getPlayer().getHand().get(selectedH - 1);
+            waitingPlace = false;
+            game.getPlayer().getHand().get(selectedH - 1).ability();
+            if(game.getPlayer().getHand().get(selectedH - 1) instanceof Meme) {
+                Meme m = (Meme) game.getPlayer().getHand().get(selectedH - 1);
+                game.getPlayer().getArena().add(m);
+            }
             game.getPlayer().getHand().remove(selectedH - 1);
-            game.getPlayer().getArena().add(m);
-            drawSide();
+            for(Meme m : game.getPlayer().getArena()){
+                if(m.getHealth() <= 0){
+                    game.getPlayer().getArena().remove(m);
+                }
+            }
+            for(Meme m : game.getEnemy().getArena()){
+                if(m.getHealth() <= 0){
+                    game.getEnemy().getArena().remove(m);
+                }
+            }
+            drawBoard();
         }else if(waitingSelect && v == 0 && game.getPlayer().getHand().get(selectedH - 1).isSelectDamagable()){
             waitingSelect = false;
             Damagable d;
@@ -93,16 +108,23 @@ public class GameScreen implements Screen {
             waitingSelect = false;
             Meme enemy = game.getEnemy().getArena().get(h - 1);
             game.getPlayer().getHand().get(selectedH - 1).ability(enemy);
-        }else{
+        } else{
             if(h > 0 && h < 7){
                 if(v == 2 && h - 1 < game.getPlayer().getHand().size()){
                     Card c = game.getPlayer().getHand().get(h - 1);
-                    waitingSummon = c instanceof Meme;
-                    waitingSelect = c.isSelectDamagable() || c.isSelectMeme();
+
+
+                    if(c.isSelectDamagable() || c.isSelectMeme()){
+                        waitingSelect = true;
+                    }else{
+                        waitingPlace = true;
+                    }
                 }else if(v == 1){
                     if(h - 1 < game.getPlayer().getArena().size() && game.getPlayer().getArena().get(h - 1).canAttack()){
-                        drawMana(true);
+                        drawMana(false);
                         waitingAttack = true;
+                    }else if(!game.getPlayer().getArena().get(h - 1).canAttack()){
+                        drawMana(true);
                     }
                 }
             }
@@ -149,7 +171,7 @@ public class GameScreen implements Screen {
         List<Meme> arena = player.getArena();
         int index = 1;
         for (Meme m : arena) {
-            ui.setImageOnCell(1, index, m.image());
+            ui.setImageOnCell(row, index, m.image());
             index++;
         }
         drawBackground(row, index);

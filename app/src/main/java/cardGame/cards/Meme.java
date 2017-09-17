@@ -122,6 +122,11 @@ public class Meme extends Card implements cardGame.Damagable {
     }
 
     @Override
+    public int hashCode() {
+        return getName().hashCode() * 11 + getCost() * 17 + damage * 23 + health * 13;
+    }
+
+    @Override
     public Meme clone() {
         return (Meme) super.clone();
     }
