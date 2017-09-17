@@ -37,7 +37,6 @@ public class Game{
         player = enemy;
         enemy = aux;
         player.increaseMana();
-
         player.drawCard();
         if(player.getHand().size() > 6){
             player.getHand().remove(player.getHand().size() - 1);

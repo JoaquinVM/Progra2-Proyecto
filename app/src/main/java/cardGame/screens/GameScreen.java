@@ -36,7 +36,45 @@ public class GameScreen implements Screen {
     }
 
     @Override
-    public void onCellPressed(int v, int h) {
+    public void onCellPressed(int v, int h){
+
+        if(v == 1 && h == 0){
+            if (selectedV == 0 && selectedH == 0) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getEnemy().getPowerImage()));
+            } else if (selectedV == 2 && selectedH == 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getPowerImage()));
+            } else if (selectedV == 0 && selectedH > 0 && selectedH < 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getEnemy().getArena().get(selectedH - 1).image()));
+            } else if (selectedV == 1 && selectedH > 0 && selectedH < 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getArena().get(selectedH - 1).image()));
+            } else if (selectedV == 0 && selectedH > 0 && selectedH < 7) {
+                ui.setScreen(new CardPreviewScreen(ui, this, game.getPlayer().getHand().get(selectedH - 1).image()));
+            }
+        }else if(v == 0 && h == 7){
+            ui.setScreen(new MenuScreen(ui, false, this));
+        }else if( v == 7 && h == 7){
+            game.nextTurn();
+        }else if(!waiting && v == 1 && h > 0 && h < 7){
+            Card c = game.getPlayer().getHand().get(h + 1);
+            waiting = true;
+        }else if(waiting && v == 0){
+            Card c  = game.getPlayer().getHand().get(h + 1);
+            Damagable enemy =  game.getEnemy().getArena().get(h + 1);
+            Meme enemyMeme = (Meme) enemy;
+            if(c.isSelectMeme()){
+                c.ability(enemyMeme);
+            }
+            if(c.isSelectDamagable()){
+                c.ability(enemy);
+            }
+            selectedH = -1;
+            selectedV = -1;
+        }
+    }
+
+
+
+    public void onCellPressed1(int v, int h) {
         if (v == 0 && h == 7) {
             //Menu
             ui.setScreen(new MenuScreen(ui, false, this));
