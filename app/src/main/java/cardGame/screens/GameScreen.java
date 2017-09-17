@@ -19,6 +19,7 @@ public class GameScreen implements Screen {
     private boolean waitingPlace = false;
     private boolean waitingAttack = false;
     private boolean waitingCast = false;
+    private boolean waitingPower = false;
 
     public GameScreen(MemeStoneUI ui, Player player, Player enemy) {
         this.ui = ui;
@@ -38,20 +39,20 @@ public class GameScreen implements Screen {
     public void onCellPressed(int v, int h){
         if(v == 1 && h == 0 && selectedH != -1 && selectedV != -1){
             //show
-            String image;
+            String image="red_"+ game.getPlayer().getMana();
             if(selectedV == 0){
                 if(selectedH == 0){
                     image = game.getEnemy().getPowerImage();
                 }else{
-                    image =  game.getEnemy().getArena().get(selectedH - 1).image();
+                    image=game.getEnemy().getArena().get(selectedH - 1).image();
                 }
             }else if(selectedV == 1){
                 image = game.getPlayer().getArena().get(selectedH - 1).image();
-            }else{
+            }else {
                 if(selectedH == 7){
                     image = game.getPlayer().getPowerImage();
-                }else{
-                    image = game.getPlayer().getArena().get(selectedH - 1).image();
+                }else if(selectedH>0) {
+                    image = game.getPlayer().getHand().get(selectedH -1).image();
                 }
             }
             ui.setScreen(new CardPreviewScreen(ui, this, image));
@@ -61,6 +62,10 @@ public class GameScreen implements Screen {
             ui.setScreen(new MenuScreen(ui, false, this));
         }else if( v == 1 && h == 7){
             //next turn
+            for(Meme m : game.getPlayer().getArena()){
+                if(m.isBurning())
+                    m.damage(1);
+            }
             game.nextTurn();
             drawBoard();
         }else if(waitingAttack && v == 0){
@@ -72,49 +77,58 @@ public class GameScreen implements Screen {
             }else if(h - 1 < game.getEnemy().getArena().size()){
                 d = game.getEnemy().getArena().get(h - 1);
             }
-            game.fight(game.getPlayer().getArena().get(selectedH - 1), d);
-            game.getPlayer().getArena().get(selectedH - 1).setCanAttack(false);
+
+            Meme m = game.getPlayer().getArena().get(selectedH - 1);
+            game.fight(m, d);
+            if(game.getPlayer().getArena().contains(m)){
+                game.getPlayer().getArena().get(selectedH - 1).setCanAttack(false);
+            }
             drawPlayers();
-        }else if(waitingPlace && v == 1 && game.getPlayer().getHand().size() < Constants.MAX_CARDS_PER_ROW){
+        }else if(waitingPlace && v == 1 && game.getPlayer().getHand().size() < Constants.MAX_CARDS_PER_ROW && game.getPlayer().getMana() >= game.getPlayer().getHand().get(selectedH - 1).getCost()){
             //Summon
             waitingPlace = false;
-            game.getPlayer().getHand().get(selectedH - 1).ability();
             if(game.getPlayer().getHand().get(selectedH - 1) instanceof Meme) {
                 Meme m = (Meme) game.getPlayer().getHand().get(selectedH - 1);
                 game.getPlayer().getArena().add(m);
             }
+            game.getPlayer().getHand().get(selectedH - 1).ability();
+            game.getPlayer().reduceMana(game.getPlayer().getHand().get(selectedH - 1).getCost());
             game.getPlayer().getHand().remove(selectedH - 1);
-            for(Meme m : game.getPlayer().getArena()){
-                if(m.getHealth() <= 0){
-                    game.getPlayer().getArena().remove(m);
+            drawMana(true);
+            int i = 0;
+            while(i < game.getPlayer().getArena().size()){
+                if(game.getPlayer().getArena().get(i).getHealth() <= 0){
+                    game.getPlayer().getArena().remove(i);
+                }else{
+                    i++;
                 }
             }
-            for(Meme m : game.getEnemy().getArena()){
-                if(m.getHealth() <= 0){
-                    game.getEnemy().getArena().remove(m);
+            i = 0;
+            while(i < game.getEnemy().getArena().size()){
+                if(game.getEnemy().getArena().get(i).getHealth() <= 0){
+                    game.getEnemy().getArena().remove(i);
+                }else{
+                    i++;
                 }
             }
             drawBoard();
-        }else if(waitingSelect && v == 0 && game.getPlayer().getHand().get(selectedH - 1).isSelectDamagable()){
-            waitingSelect = false;
-            Damagable d;
-            if(h == 0){
-                d = game.getPlayer();
-            }else{
-                d = game.getEnemy().getArena().get(h - 1);
-            }
-            game.getPlayer().getHand().get(selectedH - 1).ability(d);
-        }else if(waitingSelect && v == 0 && game.getPlayer().getHand().get(selectedH - 1).isSelectMeme() && h > 0){
+        }else if(waitingSelect && v == 0 && h > 0 && h < 7){
             waitingSelect = false;
             Meme enemy = game.getEnemy().getArena().get(h - 1);
             game.getPlayer().getHand().get(selectedH - 1).ability(enemy);
-        } else{
-            if(h > 0 && h < 7){
+        }else if(waitingPower && v == 0 && h > 0 && h < 7){
+            waitingPower = false;
+            game.getPlayer().power(game.getEnemy().getArena().get(h - 1));
+        }
+        else{
+            if(v == 2 && v == 7){
+                waitingPower = true;
+            }else if(h > 0 && h < 7){
                 if(v == 2 && h - 1 < game.getPlayer().getHand().size()){
                     Card c = game.getPlayer().getHand().get(h - 1);
 
 
-                    if(c.isSelectDamagable() || c.isSelectMeme()){
+                    if(c.isSelect() && game.getEnemy().getArena().size() > 0){
                         waitingSelect = true;
                     }else{
                         waitingPlace = true;
@@ -123,12 +137,12 @@ public class GameScreen implements Screen {
                     if(h - 1 < game.getPlayer().getArena().size() && game.getPlayer().getArena().get(h - 1).canAttack()){
                         drawMana(false);
                         waitingAttack = true;
-                    }else if(!game.getPlayer().getArena().get(h - 1).canAttack()){
+                    }else if(h - 1< game.getPlayer().getArena().size() &&  game.getPlayer().getArena().get(h - 1).canAttack()){
                         drawMana(true);
                     }
                 }
             }
-            if((v != 2 || h != 0) && ((v == 0 && h - 1 < game.getPlayer().getArena().size()) ||
+            if((v != 2 || h != 0) || ((v == 0 && h - 1 < game.getEnemy().getArena().size()) ||
                     (v == 1 && h - 1 < game.getPlayer().getArena().size()) ||
                     (v == 2 && h - 1 < game.getPlayer().getHand().size()))){
                 selectedH = h;

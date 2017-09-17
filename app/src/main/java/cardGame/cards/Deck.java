@@ -47,18 +47,15 @@ public class Deck {
 
     public static Deck randomDeck(){
         List<Card> cards = new LinkedList<>();
-        List<Card> spells = CardDatabase.getInstance().getSpells();
+        //List<Card> spells = CardDatabase.getInstance().getSpells();
         List<Meme> memes = CardDatabase.getInstance().getMemes();
 
         Random r = new Random();
 
         for(int i = 0; i < Constants.MAX_CARDS_PER_DECK; i++){
             boolean s = r.nextBoolean();
-            if(s){
-                cards.add(spells.get(r.nextInt(spells.size())));
-            }else{
-                cards.add(memes.get(r.nextInt(memes.size())));
-            }
+            cards.add(memes.get(r.nextInt(memes.size())));
+
         }
         return  new Deck(cards);
     }

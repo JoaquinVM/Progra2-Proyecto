@@ -3,7 +3,6 @@ package cardGame.cards;
 import java.util.ArrayList;
 import java.util.List;
 
-import cardGame.Damagable;
 import cardGame.Game;
 
 /**
@@ -23,7 +22,7 @@ public class CardDatabase {
 
     public CardDatabase(){
         initMemes();
-        initSpells();
+        //initSpells();
     }
 
     public void setGame(Game game){
@@ -54,7 +53,7 @@ public class CardDatabase {
                 game.destroy(meme);
             }
         };
-        chuckApproves.setSelectMeme(true);
+        chuckApproves.setSelect(true);
         spells.add(chuckApproves);
 
         Card controlMental = new Card("control_mental", 6, game) {
@@ -63,7 +62,7 @@ public class CardDatabase {
                 game.control(meme);
             }
         };
-        controlMental.setSelectMeme(true);
+        controlMental.setSelect(true);
         spells.add(controlMental);
 
         Card crazyPeach = new Card("crazy_peach", 5, game) {
@@ -101,11 +100,11 @@ public class CardDatabase {
 
         Card unknown = new Card("unknown", 1, game) {
             @Override
-            public void ability(Damagable damagable) {
-                game.dealDamage(damagable, 2);
+            public void ability(Meme meme) {
+                game.dealDamage(meme, 2);
             }
         };
-        unknown.setSelectMeme(true);
+        unknown.setSelect(true);
         spells.add(unknown);
 
         Card vamoACalmarno = new Card("vamo_a_calmarno", 6, game) {
@@ -203,12 +202,7 @@ public class CardDatabase {
         noMeDigas.setSpellinmune(true);
         memes.add(noMeDigas);
 
-        Meme pitereElKoala = new Meme("piter_el_koala", 5, 6, 5, game) {
-            @Override
-            public void ability() {
-                game.discard();
-            }
-        };
+        Meme pitereElKoala = new Meme("piter_el_koala", 5, 6, 5, game);
         memes.add(pitereElKoala);
 
         Meme really = new Meme("really", 2, 0, 5, game);

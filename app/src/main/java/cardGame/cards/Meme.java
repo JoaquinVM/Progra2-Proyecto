@@ -18,6 +18,7 @@ public class Meme extends Card implements cardGame.Damagable {
     private boolean speelInmune = false;
     private boolean freeze = false;
     private boolean canAttack = false;
+    private boolean burning = false;
 
     public Meme(String name, int cost, int damage, int health, Game game) {
         super(name, cost, game);
@@ -95,6 +96,14 @@ public class Meme extends Card implements cardGame.Damagable {
     }
     public void killMeme(Meme meme){
         meme.health=0;
+    }
+
+    public boolean isBurning() {
+        return burning;
+    }
+
+    public void setBurning(boolean burning) {
+        this.burning = burning;
     }
 
     @Override

@@ -41,6 +41,8 @@ public class Game{
         if(player.getHand().size() > 6){
             player.getHand().remove(player.getHand().size() - 1);
         }
+        player.resetMana();
+        enemy.resetMana();
     }
 
     public void freeze(Meme meme) {
@@ -48,7 +50,7 @@ public class Game{
     }
 
     public void burn(Meme meme) {
-        meme.damage(1);
+        meme.setBurning(true);
     }
 
     public void damageAll(int damage) {
@@ -115,14 +117,20 @@ public class Game{
         if(target instanceof Meme){
             meme.damage(((Meme) target).getDamage());
         }
-        for(Meme m : player.getArena()){
-            if(m.getHealth() <= 0){
-                player.getArena().remove(m);
+        int i = 0;
+        while(i < player.getArena().size()){
+            if(player.getArena().get(i).getHealth() <= 0){
+                player.getArena().remove(i);
+            }else{
+                i++;
             }
         }
-        for(Meme m : enemy.getArena()){
-            if(m.getHealth() <= 0){
-                enemy.getArena().remove(m);
+        i = 0;
+        while(i < enemy.getArena().size()){
+            if(enemy.getArena().get(i).getHealth() <= 0){
+                enemy.getArena().remove(i);
+            }else{
+                i++;
             }
         }
     }

@@ -21,6 +21,7 @@ public abstract class Player implements cardGame.Damagable {
     private int maxHealth = Constants.MAX_PLAYER_HEALTH;
     private int health = Constants.MAX_PLAYER_HEALTH;
     private int mana = 0;
+    private int actualMana = 0;
     private Deck deck;
     private Game game;
     private List<Card> hand = new LinkedList<>();
@@ -85,7 +86,7 @@ public abstract class Player implements cardGame.Damagable {
     }
 
     public int getMana() {
-        return mana;
+        return actualMana;
     }
 
     public void increaseMana() {
@@ -93,6 +94,14 @@ public abstract class Player implements cardGame.Damagable {
         if (mana > 7) {
             mana = 7;
         }
+    }
+
+    public void reduceMana(int mana){
+        this.actualMana -= mana;
+    }
+
+    public void resetMana(){
+        actualMana = mana;
     }
 
     public void setName(String name) {
