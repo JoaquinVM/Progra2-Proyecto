@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -69,7 +69,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -90,7 +90,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -104,7 +104,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -115,7 +115,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -134,7 +134,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -153,7 +153,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -173,7 +173,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -194,7 +194,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -208,7 +208,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -219,7 +219,111 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/app/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 89,
+                        "endColumn": 57,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/app/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 55,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 44,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 44,
+                        "endOffset": 96
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 500
+                },
+                "from": {
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/app/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 186,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 472
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 505,
+                    "endLine": 14,
+                    "endColumn": 12,
+                    "endOffset": 660
+                },
+                "from": {
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/app/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 510,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 665
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -238,7 +342,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -257,7 +361,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -277,7 +381,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -298,7 +402,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -312,7 +416,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -323,7 +427,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -342,7 +446,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -361,7 +465,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -381,7 +485,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -402,7 +506,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -416,7 +520,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -427,7 +531,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -446,7 +550,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -465,7 +569,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -485,7 +589,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -506,7 +610,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -520,7 +624,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -531,7 +635,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -550,7 +654,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -569,7 +673,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -589,7 +693,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -610,7 +714,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Joaco99\\Desktop\\Game\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -624,7 +728,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -635,7 +739,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -654,7 +758,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -673,7 +777,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -693,7 +797,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -714,7 +818,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\Rodrigo\\AndroidStudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -728,7 +832,7 @@
         ]
     },
     {
-        "outputFile": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -739,7 +843,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -758,7 +862,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -777,7 +881,7 @@
                     "endOffset": 209
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -797,7 +901,7 @@
                     "endOffset": 500
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -818,7 +922,7 @@
                     "endOffset": 660
                 },
                 "from": {
-                    "file": "C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
+                    "file": "/Users/joaquin/Downloads/Progra2-Proyecto/C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\joaquin\\Downloads\\Progra2-Proyecto\\C:\\Users\\Samuel\\StudioProjects\\Progra2-Proyecto\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
