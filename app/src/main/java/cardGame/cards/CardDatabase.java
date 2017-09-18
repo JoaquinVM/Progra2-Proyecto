@@ -211,6 +211,8 @@ public class CardDatabase {
         Meme uglyface = new Meme("ugly_face", 2, 2, 4, game);
         uglyface.setTaunt(true);
         memes.add(uglyface);
+
+
     }
 
     public Meme getYoda(Game game){
@@ -221,5 +223,9 @@ public class CardDatabase {
     public Meme getMexicano(Game game){
         Meme mexican = new Meme("mexican", 0, 1, 1, game);
         return mexican;
+    }
+    public  Meme getElemental(Game game){
+        Meme elemental = new Meme("elemental_1",0,1,1,game);
+        return elemental;
     }
 }
