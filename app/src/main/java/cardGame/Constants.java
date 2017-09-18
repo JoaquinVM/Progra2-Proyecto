@@ -6,7 +6,7 @@ package cardGame;
 
 public class Constants {
     public static final int MAX_CARDS_PER_DECK = 20;
-    public static final int MAX_PLAYER_HEALTH = 20;
+    public static final int MAX_PLAYER_HEALTH = 2;
     public static final int MAX_CARDS_PER_ROW = 6;
 
     public static final String FIRE_POWER = "fire_power";

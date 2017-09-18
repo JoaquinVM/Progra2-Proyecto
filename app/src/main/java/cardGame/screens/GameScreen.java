@@ -84,7 +84,7 @@ public class GameScreen implements Screen {
                 game.getPlayer().getArena().get(selectedH - 1).setCanAttack(false);
             }
             drawPlayers();
-        }else if(waitingPlace && v == 1 && game.getPlayer().getHand().size() < Constants.MAX_CARDS_PER_ROW && game.getPlayer().getMana() >= game.getPlayer().getHand().get(selectedH - 1).getCost()){
+        }else if(waitingPlace && v == 1 && game.getPlayer().getArena().size() <= Constants.MAX_CARDS_PER_ROW && game.getPlayer().getMana() >= game.getPlayer().getHand().get(selectedH - 1).getCost()){
             //Summon
             waitingPlace = false;
             if(game.getPlayer().getHand().get(selectedH - 1) instanceof Meme) {
@@ -137,7 +137,7 @@ public class GameScreen implements Screen {
                     if(h - 1 < game.getPlayer().getArena().size() && game.getPlayer().getArena().get(h - 1).canAttack()){
                         drawMana(false);
                         waitingAttack = true;
-                    }else if(h - 1< game.getPlayer().getArena().size() &&  game.getPlayer().getArena().get(h - 1).canAttack()){
+                    }else if(h - 1< game.getPlayer().getArena().size() &&  !game.getPlayer().getArena().get(h - 1).canAttack()){
                         drawMana(true);
                     }
                 }
@@ -148,6 +148,9 @@ public class GameScreen implements Screen {
                 selectedH = h;
                 selectedV = v;
             }
+        }
+        if(game.getPlayer().getHealth() <= 0 || game.getEnemy().getHealth() <= 0){
+            ui.setScreen(new WinScreen(ui));
         }
     }
 

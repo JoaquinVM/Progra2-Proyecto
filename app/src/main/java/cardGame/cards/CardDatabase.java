@@ -151,14 +151,9 @@ public class CardDatabase {
         brianMalaSuerte.setCharge(true);
         memes.add(brianMalaSuerte);
 
-        Meme chuckNorris = new Meme("chuck_norris", 6, 6, 6, game) {
-            @Override
-            public void ability() {
-                game.damageEnemies(1);
-            }
-        };
+        Meme chuckNorris = new Meme("chuck_norris", 6, 6, 6, game);
         chuckNorris.setEndTurn(true);
-        memes.add(chuckNorris);
+        //memes.add(chuckNorris);
 
         Meme darthOzman = new Meme("darthoz_man", 4, 3, 2, game) {
             @Override

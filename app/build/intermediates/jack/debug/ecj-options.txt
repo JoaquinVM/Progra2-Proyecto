@@ -19,6 +19,7 @@
 "C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/cardGame/screens/MenuScreen.java"
 "C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/cardGame/screens/PlayerSelectionScreen.java"
 "C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/cardGame/screens/Screen.java"
+"C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/cardGame/screens/WinScreen.java"
 "C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/edu/upb/lp/androidInternalFiles/AndroidGameActivity.java"
 "C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/edu/upb/lp/progra/adapterFiles/AndroidGameGUI.java"
 "C:/Users/Rodrigo/AndroidStudioProjects/Progra2-Proyecto/app/src/main/java/edu/upb/lp/progra/adapterFiles/GameAdapter.java"

@@ -54,7 +54,7 @@ public class Deck {
 
         for(int i = 0; i < Constants.MAX_CARDS_PER_DECK; i++){
             boolean s = r.nextBoolean();
-            cards.add(memes.get(r.nextInt(memes.size())));
+            cards.add(memes.get(r.nextInt(memes.size())).clone());
 
         }
         return  new Deck(cards);
