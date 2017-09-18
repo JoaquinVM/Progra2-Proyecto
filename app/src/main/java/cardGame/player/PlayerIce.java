@@ -1,5 +1,7 @@
 package cardGame.player;
 
+import cardGame.Game;
+import cardGame.cards.CardDatabase;
 import cardGame.cards.Meme;
 import cardGame.Constants;
 
@@ -14,8 +16,7 @@ public class PlayerIce extends Player {
         setPowerImage(Constants.ICE_POWER);
     }
     @Override
-    public void power(){
-
-        getGame().freeze(meme);
+    public void power(Game game){
+        game.summon(CardDatabase.getInstance().getElemental(game));
     }
 }

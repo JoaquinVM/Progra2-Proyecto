@@ -37,7 +37,7 @@ public class CardSelectionScreen implements Screen {
         this.ui = ui;
         this.player1 = player1;
         this.player2 = player2;
-        //cards.addAll(CardDatabase.getInstance().getSpells());
+        cards.addAll(CardDatabase.getInstance().getSpells());
         cards.addAll(CardDatabase.getInstance().getMemes());
         Collections.sort(cards);
     }
