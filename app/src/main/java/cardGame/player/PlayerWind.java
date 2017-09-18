@@ -1,5 +1,6 @@
 package cardGame.player;
 
+import cardGame.Game;
 import cardGame.cards.Meme;
 import cardGame.Constants;
 
@@ -14,7 +15,7 @@ public class PlayerWind extends Player {
         setPowerImage(Constants.WIND_POWER);
     }
     @Override
-    public void power(Meme meme){
-        getGame().damageAll(1);
+    public void power(Game game){
+        game.damageAll(1);
     }
 }

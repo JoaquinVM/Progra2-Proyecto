@@ -29,8 +29,12 @@ public class Deck {
         initialDeck.add(card);
     }
 
-    public Card drawCard(){
-        return deck.pop();
+    public Card drawCard() throws DeckIsEmptyException{
+        if(deck.size() > 0){
+            return deck.pop();
+        }else{
+            throw new DeckIsEmptyException();
+        }
     }
 
     public void shuffle(){

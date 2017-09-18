@@ -1,5 +1,6 @@
 package cardGame.cards;
 
+import cardGame.Damagable;
 import cardGame.Game;
 
 /**
@@ -10,8 +11,6 @@ public class Card implements Cloneable,Comparable{
     private int cost;
     private String name;
     private Game game;
-    private boolean select = false;
-    private boolean endTurn = false;
 
     public Card clone() {
         try{
@@ -25,22 +24,6 @@ public class Card implements Cloneable,Comparable{
         this.name = name;
         this.cost = cost;
         this.game = game;
-    }
-
-    public void setSelect(boolean select) {
-        this.select = select;
-    }
-
-    public void setEndTurn(boolean endTurn) {
-        this.endTurn = endTurn;
-    }
-
-    public boolean isSelect() {
-        return select;
-    }
-
-    public boolean isEndTurn() {
-        return endTurn;
     }
 
     public int getCost() {
@@ -60,6 +43,8 @@ public class Card implements Cloneable,Comparable{
     }
 
     public void ability(Meme meme){}
+
+    public void ability(Damagable damagable){}
 
     public void ability(){}
 

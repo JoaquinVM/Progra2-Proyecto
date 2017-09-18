@@ -1,5 +1,6 @@
 package cardGame.player;
 
+import cardGame.Game;
 import cardGame.cards.Meme;
 import cardGame.Constants;
 
@@ -17,8 +18,8 @@ public class PlayerEarth extends Player {
 
 
     @Override
-    public void power(Meme meme){
-        getGame().heal(meme, 4);
+    public void power(Game game){
+        game.healAllies(1);
     }
 
 

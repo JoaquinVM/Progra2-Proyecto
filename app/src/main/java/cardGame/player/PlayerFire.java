@@ -1,5 +1,6 @@
 package cardGame.player;
 
+import cardGame.Game;
 import cardGame.cards.Meme;
 import cardGame.Constants;
 
@@ -15,8 +16,7 @@ public class PlayerFire extends Player {
     }
 
     @Override
-    public void power(Meme meme) {
-
-        getGame().burn(meme);
+    public void power(Game game) {
+        game.getEnemy().damage(2);
     }
 }

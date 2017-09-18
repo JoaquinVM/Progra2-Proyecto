@@ -14,7 +14,8 @@ public class PlayerIce extends Player {
         setPowerImage(Constants.ICE_POWER);
     }
     @Override
-    public void power(Meme meme){
+    public void power(){
+
         getGame().freeze(meme);
     }
 }

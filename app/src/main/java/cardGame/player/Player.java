@@ -8,6 +8,7 @@ import cardGame.Constants;
 import cardGame.Game;
 import cardGame.cards.Card;
 import cardGame.cards.Deck;
+import cardGame.cards.DeckIsEmptyException;
 import cardGame.cards.Meme;
 
 /**
@@ -35,7 +36,7 @@ public abstract class Player implements cardGame.Damagable {
         return health;
     }
 
-    public abstract void power(Meme meme);
+    public abstract void power(Game game);
 
     public void setPowerImage(String powerImage) {
         this.powerImage = powerImage;
@@ -62,7 +63,11 @@ public abstract class Player implements cardGame.Damagable {
     }
 
     public void drawCard() {
-        hand.add(deck.drawCard());
+        try{
+            hand.add(deck.drawCard());
+        }catch (DeckIsEmptyException e){
+            health--;
+        }
     }
 
     public Game getGame() {
