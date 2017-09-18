@@ -22,7 +22,7 @@ public class CardDatabase {
 
     public CardDatabase(){
         initMemes();
-        //initSpells();
+        initSpells();
     }
 
     public void setGame(Game game){
@@ -46,24 +46,6 @@ public class CardDatabase {
         };
         spells.add(aliens);
 
-        Card chuckApproves = new Card("chuck_approves", 5, game) {
-
-            @Override
-            public void ability(Meme meme) {
-                game.destroy(meme);
-            }
-        };
-        chuckApproves.setSelect(true);
-        spells.add(chuckApproves);
-
-        Card controlMental = new Card("control_mental", 6, game) {
-            @Override
-            public void ability(Meme meme) {
-                game.control(meme);
-            }
-        };
-        controlMental.setSelect(true);
-        spells.add(controlMental);
 
         Card crazyPeach = new Card("crazy_peach", 5, game) {
             @Override
@@ -98,14 +80,6 @@ public class CardDatabase {
         };
         spells.add(trumpcito);
 
-        Card unknown = new Card("unknown", 1, game) {
-            @Override
-            public void ability(Meme meme) {
-                game.dealDamage(meme, 2);
-            }
-        };
-        unknown.setSelect(true);
-        spells.add(unknown);
 
         Card vamoACalmarno = new Card("vamo_a_calmarno", 6, game) {
             @Override
@@ -123,13 +97,7 @@ public class CardDatabase {
         };
         spells.add(yas);
 
-        Card yisus = new Card("yisus", 3, game) {
-            @Override
-            public void ability() {
-                game.resurrect();
-            }
-        };
-        spells.add(yisus);
+
     }
 
     public void initMemes() {
@@ -152,7 +120,6 @@ public class CardDatabase {
         memes.add(brianMalaSuerte);
 
         Meme chuckNorris = new Meme("chuck_norris", 6, 6, 6, game);
-        chuckNorris.setEndTurn(true);
         //memes.add(chuckNorris);
 
         Meme darthOzman = new Meme("darthoz_man", 4, 3, 2, game) {

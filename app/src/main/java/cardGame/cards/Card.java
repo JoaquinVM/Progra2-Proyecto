@@ -42,9 +42,6 @@ public class Card implements Cloneable,Comparable{
         this.name = name;
     }
 
-    public void ability(Meme meme){}
-
-    public void ability(Damagable damagable){}
 
     public void ability(){}
 
