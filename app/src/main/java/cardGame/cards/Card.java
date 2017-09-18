@@ -1,6 +1,5 @@
 package cardGame.cards;
 
-import cardGame.Damagable;
 import cardGame.Game;
 
 /**

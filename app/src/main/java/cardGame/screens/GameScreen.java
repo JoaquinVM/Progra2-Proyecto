@@ -16,7 +16,6 @@ public class GameScreen implements Screen {
     private Game game;
     private int selectedH = -1;
     private int selectedV = -1;
-    private boolean waitingSelect = false;
     private boolean waitingPlace = false;
     private boolean waitingAttack = false;
     private boolean waitingPower = false;
@@ -108,15 +107,30 @@ public class GameScreen implements Screen {
                 }
             }
             drawBoard();
-        } else if (waitingSelect && v == 0 && h > 0 && h < 7) {
-            waitingSelect = false;
-            Meme enemy = game.getEnemy().getArena().get(h - 1);
-            game.getPlayer().getHand().get(selectedH - 1).ability(enemy);
-        } else if (waitingPower && v == 2 && h == 7) {
+        } else if (waitingPower && v == 2 && h == 7 && game.getPlayer().getMana() >= Constants.PLAYER_POWER_MANA_COST) {
             waitingPower = false;
+            game.getPlayer().reduceMana(Constants.PLAYER_POWER_MANA_COST);
             game.getPlayer().power(game);
+            int i = 0;
+            while (i < game.getPlayer().getArena().size()) {
+                if (game.getPlayer().getArena().get(i).getHealth() <= 0) {
+                    game.getPlayer().getArena().remove(i);
+                } else {
+                    i++;
+                }
+            }
+            i = 0;
+            while (i < game.getEnemy().getArena().size()) {
+                if (game.getEnemy().getArena().get(i).getHealth() <= 0) {
+                    game.getEnemy().getArena().remove(i);
+                } else {
+                    i++;
+                }
+            }
+            drawBoard();
+            drawMana(true);
         } else {
-            if (v == 2 && v == 7) {
+            if (v == 2 && h == 7) {
                 waitingPower = true;
             } else if (h > 0 && h < 7) {
                 if (v == 2 && h - 1 < game.getPlayer().getHand().size()) {

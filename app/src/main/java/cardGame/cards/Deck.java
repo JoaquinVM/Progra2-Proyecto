@@ -18,7 +18,6 @@ public class Deck {
 
     private List<Card> initialDeck = new LinkedList<>();
     private Stack<Card> deck = new Stack<>();
-    private int maxCards = Constants.MAX_CARDS_PER_DECK;
 
     public Deck (List<Card> initialDeck) {
         this.initialDeck = initialDeck;

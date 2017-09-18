@@ -4,22 +4,15 @@ import java.util.Random;
 
 import cardGame.cards.Meme;
 import cardGame.player.Player;
-import cardGame.screens.Screen;
 
 /**
  * Created by Rodrigo on 5/9/2017.
  */
 
 public class Game{
-    private MemeStoneUI memeUI;
     private Player player;
     private Player enemy;
     private Random r = new Random();
-
-
-    public Game(MemeStoneUI ui){
-        this.memeUI = ui;
-    }
 
     public void init(){
         player.increaseMana();
@@ -65,7 +58,6 @@ public class Game{
         for(Meme m : enemy.getArena()){
             m.damage(damage);
         }
-        enemy.damage(1);
     }
 
     public void dealDamage(cardGame.Damagable d, int damage) {
@@ -88,13 +80,14 @@ public class Game{
 
     public void damageRandomEnemies(int numEnemy, int damage){
         for(int i = 0; i < numEnemy; i++){
-            int n = r.nextInt(player.getArena().size());
-            dealDamage(player.getArena().get(n), damage);
+            int n = r.nextInt(enemy.getArena().size());
+            dealDamage(enemy.getArena().get(n), damage);
         }
     }
 
     public void healAllies(int health){
         for(Meme m : player.getArena())m.heal(health);
+        player.heal(health);
     }
 
     public void resurrect(){

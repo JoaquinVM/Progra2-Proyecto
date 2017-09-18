@@ -20,12 +20,12 @@ public class CardDatabase {
         return instance;
     }
 
-    public CardDatabase(){
+    public CardDatabase() {
         initMemes();
         initSpells();
     }
 
-    public void setGame(Game game){
+    public void setGame(Game game) {
         this.game = game;
     }
 
@@ -119,8 +119,7 @@ public class CardDatabase {
         brianMalaSuerte.setCharge(true);
         memes.add(brianMalaSuerte);
 
-        Meme chuckNorris = new Meme("chuck_norris", 6, 6, 6, game);
-        //memes.add(chuckNorris);
+
 
         Meme darthOzman = new Meme("darthoz_man", 4, 3, 2, game) {
             @Override
@@ -138,6 +137,14 @@ public class CardDatabase {
             }
         };
         memes.add(diCaprio);
+
+        Meme chuckNorris = new Meme("chuck_norris", 6, 6, 6, game) {
+            @Override
+            public void ability() {
+                game.damageEnemies(1);
+            }
+        };
+        memes.add(chuckNorris);
 
         Meme dockyG = new Meme("docky_g", 4, 3, 6, game);
         dockyG.setFreeze(true);
@@ -182,17 +189,18 @@ public class CardDatabase {
 
     }
 
-    public Meme getYoda(Game game){
+    public Meme getYoda(Game game) {
         Meme yoda = new Meme("yoda", 0, 1, 1, game);
-        return  yoda;
+        return yoda;
     }
 
-    public Meme getMexicano(Game game){
+    public Meme getMexicano(Game game) {
         Meme mexican = new Meme("mexican", 0, 1, 1, game);
         return mexican;
     }
-    public  Meme getElemental(Game game){
-        Meme elemental = new Meme("elemental_1",0,1,1,game);
+
+    public Meme getElemental(Game game) {
+        Meme elemental = new Meme("elemental", 0, 1, 1, game);
         return elemental;
     }
 }

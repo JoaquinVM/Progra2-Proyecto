@@ -5,4 +5,5 @@ package cardGame.cards;
  */
 
 public class DeckIsEmptyException extends Exception {
+    //Android Studio no pide serial number
 }

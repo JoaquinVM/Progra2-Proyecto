@@ -37,7 +37,7 @@ public class MemeStoneUI implements UI {
     }
 
     public void newGame(){
-        game = new Game(this);
+        game = new Game();
         CardDatabase.getInstance().setGame(game);
         setScreen(new PlayerSelectionScreen(this));
     }

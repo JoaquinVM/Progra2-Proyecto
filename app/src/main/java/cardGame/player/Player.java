@@ -29,7 +29,6 @@ public abstract class Player implements cardGame.Damagable {
     private List<Meme> arena = new LinkedList<>();
     private List<Meme> graveyard = new LinkedList<>();
 
-    private boolean dead = false;
 
 
     public int getHealth() {
@@ -49,9 +48,6 @@ public abstract class Player implements cardGame.Damagable {
     @Override
     public void damage(int damage) {
         health -= damage;
-        if (health <= 0) {
-            dead = true;
-        }
     }
 
     @Override
